@@ -1,4 +1,7 @@
-// Project URL и Publishable/anon key из Supabase -> Project Settings -> API.
-// НЕ вставляй сюда service_role или secret key.
-window.BOBIK_SUPABASE_URL = "YOUR_SUPABASE_PROJECT_URL";
-window.BOBIK_SUPABASE_ANON_KEY = "YOUR_SUPABASE_PUBLISHABLE_OR_ANON_KEY";
+// Bobik Run — публичная конфигурация Supabase. Этот файл должен лежать рядом с index.html.
+// Используется только publishable key; secret/service_role key здесь запрещён.
+(function (w) {
+  w.BOBIK_SUPABASE_URL = w.BOBIK_SUPABASE_URL || "https://nrmfygckxovwkkhvsywe.supabase.co";
+  w.BOBIK_SUPABASE_ANON_KEY = w.BOBIK_SUPABASE_ANON_KEY || "sb_publishable_UZcS1P6Ucx8mXpSRj3l7XA_Dzu3h8IH";
+  w.BOBIK_SUPABASE_PUBLISHABLE_KEY = w.BOBIK_SUPABASE_PUBLISHABLE_KEY || w.BOBIK_SUPABASE_ANON_KEY;
+})(window);

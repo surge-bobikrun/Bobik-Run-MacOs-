@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru"><head>
-<link rel="manifest" href="./manifest.json"><meta name="theme-color" content="#111827"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Bobik Run"><meta name="mobile-web-app-capable" content="yes"><link rel="apple-touch-icon" href="./icon-512.png">
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Bobik run 1.7.2</title>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="manifest" href="./manifest.json"><title>Bobik run 1.7.10</title>
 <style>
 :root{--ink:#fff;--bg:#12122b;--ac:#ffb020;--pn:#12122bb8}
 html,body{height:100%;margin:0;overflow:hidden;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;touch-action:none;user-select:none;-webkit-user-select:none}
 canvas{position:fixed;inset:0;display:block}
 .scr{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;gap:14px;padding:calc(env(safe-area-inset-top,0px) + 6vh) 18px calc(env(safe-area-inset-bottom,0px) + 18px);background:linear-gradient(#12122bd9,#12122b40 55%,#12122bd9);overflow:auto}
-.hide{display:none!important}
+.hide{display:none!important}#pavw{position:relative;display:inline-block}.pen{position:absolute;right:-8px;bottom:-8px;width:36px;height:36px;padding:0;border-radius:50%;border:2px solid #fff7;background:#ffb020;color:#241400;font-size:17px;cursor:pointer}.lav{display:inline-flex;vertical-align:middle;margin-right:8px}.lav svg,.lav img{width:30px;height:30px;border-radius:50%;object-fit:cover;border:2px solid var(--ac)}.leader-row{align-items:center}.leader-row[data-pu]{cursor:pointer}#pubAv svg,#pubAv img{width:110px;height:110px;border-radius:50%;object-fit:cover;border:4px solid var(--ac)}#pubRec{width:min(86vw,340px)}.admin-tools{display:flex;gap:8px;align-items:center;width:min(92vw,420px)}.admin-tools .pf{width:auto;flex:1;min-width:0;margin:0}.admin-tools .b{width:auto;margin:0;padding:10px 14px}.admin-tools select{padding:8px;border-radius:10px;border:0;background:#292e52;color:#fff}
 h1{font:900 italic clamp(46px,14vw,96px)/1 Impact,"Arial Black",system-ui,sans-serif;margin:0 0 5vh;letter-spacing:2px;text-align:center;background:linear-gradient(#fff 25%,var(--ac));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 0 #b3261e) drop-shadow(0 8px 16px #000a)}
 h2{margin:0;font-size:30px}p{margin:0;font-size:18px;text-align:center}
 .b{display:block;box-sizing:border-box;width:min(80vw,320px);padding:15px 18px;font:800 19px system-ui,sans-serif;color:#1a1305;background:var(--ac);border:0;border-radius:14px;box-shadow:0 5px 0 #a8620a,0 10px 18px #0008;cursor:pointer;text-align:center}
@@ -26,7 +24,7 @@ h2{margin:0;font-size:30px}p{margin:0;font-size:18px;text-align:center}
 #ml{display:flex;flex-direction:column;gap:14px;align-items:center}
 .gl{display:grid;grid-template-columns:1fr 1fr;gap:16px;width:min(92vw,420px)}.gl .fr{box-sizing:border-box;width:100%;border-width:5px;transform:none}.gl p{font-size:15px;font-weight:800;margin-top:6px}
 .cl{width:min(92vw,420px)}.cl h3{margin:14px 0 4px;color:var(--ac)}.cl ul{margin:0;padding-left:20px}.cl li{font-size:15px;margin:3px 0}
-#vr{font-size:14px;opacity:.7}
+#vr{font-size:14px;opacity:.7}.newbtn{position:fixed;right:14px;top:calc(env(safe-area-inset-top,0px) + 62px);z-index:5;width:34px;height:34px;border-radius:50%;border:1px solid #ffffff55;background:#ffb020;color:#241400;font-weight:1000;font-size:22px;box-shadow:0 3px 10px #0008}.leader-tabs{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}.leader-tabs button{padding:8px 10px;border-radius:10px;border:1px solid #ffffff33;background:#292e52;color:white}.leader-tabs button.on{background:#ffb020;color:#211500}.leader-row{display:flex;justify-content:space-between;gap:12px;padding:9px 12px;margin:5px 0;border-radius:10px;background:#202544}.leader-box{width:min(92vw,420px);max-height:55vh;overflow:auto}.admin-row{display:flex;gap:8px;align-items:center;justify-content:space-between;padding:8px;background:#202544;border-radius:10px;margin:5px 0}.admin-row button{padding:6px 9px}
 #tt{position:fixed;left:0;right:0;top:18%;text-align:center;font:900 26px system-ui;opacity:0;transition:opacity .3s;pointer-events:none;text-shadow:0 2px 8px #000}
 .cmx{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:min(94vw,440px)}.pn{border:4px solid #fff;background:#000;box-shadow:0 6px 14px #0008}.pn:nth-child(5){grid-column:span 2}.pn svg{display:block;width:100%}.pn i{display:block;background:#fffbe6;color:#111;font:700 12px/1.25 system-ui;padding:5px 7px}
 .cmx{display:block}#cmx .pn i{font-size:15px;padding:8px 10px}#cmn{display:flex;gap:12px;align-items:center;margin:14px 0}#cmn .b{width:100px}#cmn span{font-weight:800;min-width:56px;text-align:center}
@@ -53,6 +51,7 @@ h1{animation:sh 4s ease-in-out infinite}@keyframes sh{50%{filter:drop-shadow(0 4
 #set2 .b{width:100%;min-width:0;padding:10px 8px;font-size:13px;line-height:1.2;border-radius:11px;box-shadow:0 3px 0 #151934,0 5px 10px #0006}
 #resetSettings{width:min(92vw,420px);padding:11px 14px;font-size:15px}
 #mdiff{width:min(90vw,380px);padding:11px 14px;font-size:15px}
+.settings-code-link{width:auto;min-width:0;padding:7px 13px;font-size:12px;line-height:1.1;box-shadow:0 2px 0 #151934,0 4px 8px #0005;opacity:.82}
 @media(max-width:360px){#set2{gap:6px}#set2 .b{font-size:12px;padding:9px 5px}}
 .scr>button.b:not(.g)[data-go="menu"]{display:none}
 #bk{position:fixed;left:0;top:50%;transform:translateY(-50%);z-index:6;width:38px;height:84px;padding:0 4px 4px 0;border:1px solid #ffffff38;border-left:0;border-radius:0 22px 22px 0;background:#12122bc0;backdrop-filter:blur(8px);color:#fff;font:700 34px/1 system-ui;box-shadow:0 4px 14px #0007;cursor:pointer}
@@ -105,19 +104,26 @@ h1.lg .r:before{content:"";position:absolute;right:calc(100% + .14em);top:12%;bo
 <div id="fd"></div><div id="fl"></div><div id="tt"></div>
 <div id="hud" class="hide"><div class="t"><span>🏁 <b id="sc">0</b> м</span><span id="sp"></span><span>🏆 <b id="bs2">0</b> м</span></div><div id="lc"></div><div id="cw">🪙 <b id="cn">+0</b><small>за заезд</small></div><div id="hint">Води пальцем влево и вправо · или ← → / A D</div><div id="bar"><i id="gf"></i><em id="bt">ПОГОНЯ</em></div></div>
 <div id="menu" class="scr"><h1 class="lg" aria-label="Bobik run"><span class="a">BOBIK</span><span class="r">RUN</span></h1><p class="tg">Оторвись от погони!</p>
-<button class="b" data-go="mode">Играть</button><button class="b g" data-go="shop">Магазин</button><button class="chip" id="pb" data-go="prof"><span id="pa2"></span><b id="pn2"></b></button><button class="b g" data-go="leaders">🏆 Таблица лидеров</button><button class="gear" data-go="set" aria-label="Настройки">⚙</button><button class="gear" data-go="log" aria-label="Что нового">!</button><p id="vr"></p></div>
-<div id="set" class="scr hide"><h2>Настройки</h2><button class="b g" id="resetSettings">↺ Сбросить настройки</button><h3>🎟 Коды</h3><input class="pf" id="redeemCode" maxlength="40" placeholder="Введи код"><button class="b g" id="redeemBtn">Активировать код</button><button class="b g" id="adminOpen" style="display:none">🛡 Админ-панель</button><button class="b" data-go="menu">Назад</button></div>
-<div id="mode" class="scr hide"><h2>Режим игры</h2><button class="b g" id="mdiff"></button><div id="ml"></div><button class="b" data-go="menu">Назад</button></div><div id="cm" class="scr hide"><div class="cmx" id="cmx"></div><div id="cmn"><button class="b g" data-cm="-1">◀</button><span id="cmc"></span><button class="b" id="cmf" data-cm="1">▶</button></div><button class="b g" data-go="go">Пропустить</button></div><div id="shop" class="scr hide"><h2>Магазин</h2><p>🪙 <b id="sk2">0</b></p><div id="stb"><button class="b g" data-t="0">Персонажи</button><button class="b g" data-t="1">Машины</button></div><div id="sl"></div><button class="b" data-go="menu">Назад</button></div><div id="prof" class="scr hide"><h2>Профиль</h2><div id="pav"></div><label class="b g" for="pfi">📷 Своё фото из галереи</label><input type="file" id="pfi" accept="image/*" hidden><button class="b g" id="pfx">Убрать своё фото</button><input class="pf" id="pnm" maxlength="14" placeholder="Твоё имя"><textarea class="pf" id="pds" maxlength="90" rows="2" placeholder="Описание"></textarea><div id="pgl"></div><p id="pst"></p><button class="b g" id="lg">🚪 Выйти из аккаунта</button><button class="b" data-go="menu">Назад</button></div><div id="log" class="scr hide"><h2>Что нового</h2><div class="cl" id="cg"></div><button class="b" data-go="menu">Назад</button></div>
-<div id="leaders" class="scr hide"><h2>🏆 Таблица лидеров</h2><div id="leaderModes"></div><div id="leaderDiffs"></div><div id="leaderRows"></div><button class="b" data-go="menu">Назад</button></div><div id="admin" class="scr hide"><h2>🛡 Админ-панель</h2><div id="adminRows"></div><button class="b" data-go="set">Назад</button></div>
-<div id="acc" class="scr hide"><h2>Создай аккаунт</h2><p>Твой игрок сохранится на этом устройстве</p><div id="aav"></div><label class="b g" for="acf">📷 Фото из галереи</label><input type="file" id="acf" accept="image/*" hidden><input class="pf" id="anm" maxlength="14" placeholder="Твоё имя"><div id="agl"></div><button class="b" id="aok">Создать аккаунт</button></div>
+<button class="b" data-go="mode">Играть</button><button class="b g" data-go="shop">Магазин</button><button class="chip" id="pb" data-go="prof"><span id="pa2"></span><b id="pn2"></b></button><button class="b g" data-go="leaders">🏆 Таблица лидеров</button><button class="gear" data-go="set" aria-label="Настройки">⚙</button><button class="newbtn" data-go="log" aria-label="Что нового">!</button><p id="vr"></p></div>
+<div id="set" class="scr hide"><h2>Настройки</h2><button class="b g" id="resetSettings">↺ Сбросить настройки</button><button class="b g settings-code-link" data-go="codes">🎟 Промокоды</button><button class="b" data-go="menu">Назад</button></div><div id="codes" class="scr hide"><h2>Активация кода</h2><input class="pf" id="codeInput" maxlength="40" placeholder="Введи код"><button class="b" id="redeemCode">Активировать</button><p id="codeStatus"></p><button class="b g" data-go="set">Назад</button></div><div id="leaders" class="scr hide"><h2>🏆 Таблица лидеров</h2><div id="leaderTabs"></div><div id="leaderRows"></div><button class="b" data-go="menu">Назад</button></div><div id="pubp" class="scr hide"><div id="pubAv"></div><h2 id="pubName"></h2><p id="pubBio"></p><div id="pubRec"></div><button class="b" id="pubBack">Назад</button></div><div id="admin" class="scr hide"><h2>🛡 Админ-панель</h2><p id="adminInfo">Управление аккаунтами Supabase</p><div class="admin-tools"><input class="pf" id="adminCoins" type="number" inputmode="numeric" min="1" placeholder="Сколько монет"><button class="b" id="adminGive">Выдать себе</button></div><div class="admin-tools"><span>Срок бана:</span><select id="adminHours"><option value="2">2 часа</option><option value="24" selected>24 часа</option><option value="876000">Навсегда</option></select></div><div id="adminRows"></div><button class="b g" data-go="set">Назад</button></div>
+<div id="mode" class="scr hide"><h2>Режим игры</h2><button class="b g" id="mdiff"></button><div id="ml"></div><button class="b" data-go="menu">Назад</button></div><div id="cm" class="scr hide"><div class="cmx" id="cmx"></div><div id="cmn"><button class="b g" data-cm="-1">◀</button><span id="cmc"></span><button class="b" id="cmf" data-cm="1">▶</button></div><button class="b g" data-go="go">Пропустить</button></div><div id="shop" class="scr hide"><h2>Магазин</h2><p>🪙 <b id="sk2">0</b></p><div id="stb"><button class="b g" data-t="0">Персонажи</button><button class="b g" data-t="1">Машины</button></div><div id="sl"></div><button class="b" data-go="menu">Назад</button></div><div id="prof" class="scr hide"><h2>Профиль</h2><div id="pavw"><div id="pav"></div><button class="pen" id="pen" aria-label="Изменить аватарку">✏️</button></div><div id="pedit" class="hide"><label class="b g" for="pfi">📷 Загрузить своё фото</label><input type="file" id="pfi" accept="image/*" hidden><button class="b g" id="pfx">Убрать своё фото</button><div id="pgl"></div></div><input class="pf" id="pnm" maxlength="14" placeholder="Твоё имя"><textarea class="pf" id="pds" maxlength="90" rows="2" placeholder="Описание"></textarea><p id="pst"></p><button class="b g" id="lg">🚪 Выйти из аккаунта</button><button class="b" data-go="menu">Назад</button></div><div id="log" class="scr hide"><h2>Что нового</h2><div class="cl" id="cg"></div><button class="b" data-go="menu">Назад</button></div>
+<div id="acc" class="scr hide"><h2>Создай аккаунт</h2><p>Аккаунт и игровой прогресс сохраняются в облаке</p><div id="aav"></div><label class="b g" for="acf">📷 Фото из галереи</label><input type="file" id="acf" accept="image/*" hidden><input class="pf" id="anm" maxlength="14" placeholder="Твоё имя"><div id="agl"></div><button class="b" id="aok">Создать аккаунт</button></div>
 <div id="over" class="scr hide"><h2 id="ot">Поймали!</h2><p id="res"></p><button class="b" data-go="play">Ещё раз</button><button class="b g" data-go="menu">В меню</button></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="./supabase-config.js"></script>
+<script>
+/* Резерв конфигурации: облако продолжит работать, даже если хостинг не отдал отдельный supabase-config.js. */
+(function(){
+  if(!window.BOBIK_SUPABASE_URL) window.BOBIK_SUPABASE_URL="https://nrmfygckxovwkkhvsywe.supabase.co";
+  if(!window.BOBIK_SUPABASE_ANON_KEY && !window.BOBIK_SUPABASE_PUBLISHABLE_KEY) window.BOBIK_SUPABASE_ANON_KEY="sb_publishable_UZcS1P6Ucx8mXpSRj3l7XA_Dzu3h8IH";
+})();
+</script>
 <script>
 const HC={},E=i=>document.getElementById(i),Q=(i,v)=>{if(HC[i]!==v){HC[i]=v;E(i).textContent=v}},R=Math.random,PI=Math.PI,cl=(v,a,b)=>Math.max(a,Math.min(b,v));
 const LN=[-7.2,-3.6,0,3.6,7.2],ln=x=>LN[Math.max(0,Math.min(4,Math.round(x/3.6)+2))];
-let cfg={d:1,q:2,b:0,m:0,r:[0,0,0],lr:[[0,0,0],[0,0,0],[0,0,0]],c:60,oc:[0],ov:[0],ch:0,vh:0,pn:"",pd:"",pa:0};
+let cfg={d:1,q:2,b:0,m:0,r:[0,0,0],c:60,oc:[0],ov:[0],ch:0,vh:0,pn:"",pd:"",pa:0};
 try{Object.assign(cfg,JSON.parse(localStorage.getItem("zr")||"{}"))}catch(e){}
-cfg.r[0]=Math.max(cfg.r[0]|0,cfg.b|0);if(!Array.isArray(cfg.lr)||cfg.lr.length!==3)cfg.lr=[[0,0,0],[0,0,0],[0,0,0]];cfg.lr=cfg.lr.map(a=>Array.isArray(a)?[0,1,2].map(i=>Math.max(0,a[i]|0)):[0,0,0]);cfg.b=0;cfg.m=cfg.m|0;if(!cfg.v7){cfg.q=2;cfg.v7=cfg.v4=1}cfg.q=2;const sv=()=>{try{localStorage.setItem("zr",JSON.stringify(cfg))}catch(e){}window.svA&&svA()};
+cfg.r[0]=Math.max(cfg.r[0]|0,cfg.b|0);cfg.b=0;if(!Array.isArray(cfg.lr)||cfg.lr.length!==3)cfg.lr=[[0,0,0],[0,0,0],[0,0,0]];cfg.lr=cfg.lr.map(a=>Array.isArray(a)?[0,1,2].map(i=>Math.max(0,a[i]|0)):[0,0,0]);if(!Array.isArray(cfg.redeemed))cfg.redeemed=[];cfg.m=cfg.m|0;if(!cfg.v7){cfg.q=2;cfg.v7=cfg.v4=1}cfg.q=2;const sv=()=>{try{localStorage.setItem("zr",JSON.stringify(cfg))}catch(e){}window.svA&&svA()};
 const DN=["Легко","Нормально","Сложно"],QN=["Низкая","Высокая","Максимум"],DM=[{c:.95,s:1.4},{c:1,s:1},{c:1.04,s:.75}];
 const rd=new THREE.WebGLRenderer({antialias:true,powerPreference:"high-performance"});rd.shadowMap.type=THREE.PCFSoftShadowMap;document.body.prepend(rd.domElement);
 const sc=new THREE.Scene();sc.background=cv(256,256,(g,w,h)=>{const q=g.createLinearGradient(0,0,0,h);q.addColorStop(0,"#07061a");q.addColorStop(.55,"#2a1d5c");q.addColorStop(1,"#7a3d6e");g.fillStyle=q;g.fillRect(0,0,w,h);const mo=g.createRadialGradient(w*.78,h*.2,2,w*.78,h*.2,40);mo.addColorStop(0,"#fff");mo.addColorStop(.3,"rgba(255,238,192,.8)");mo.addColorStop(1,"rgba(255,238,192,0)");g.fillStyle=mo;g.fillRect(0,0,w,h);g.fillStyle="#fff";for(let i=0;i<70;i++)g.fillRect(R()*w,R()*h*.45,1,1)});sc.fog=new THREE.Fog(0x2a1d5c,40,170);
@@ -225,14 +231,14 @@ E("resetSettings").onclick=()=>{Object.assign(cfg,{d:1,q:2,lo:0,tt:0,dl:1,wx:1,f
 document.addEventListener("click",e=>{const sb=e.target.closest("[data-s]");if(sb){const i=+sb.dataset.s,o=(tab?VN:CD)[i],own=tab?cfg.ov:cfg.oc;if(!own.includes(i)){if(cfg.c<o[1]){toast("Не хватает монет");return}cfg.c-=o[1];own.push(i)}if(tab)cfg.vh=i;else cfg.ch=i;sv();setR(cfg.ch);setV(cfg.vh);shp();return}
 const tb=e.target.closest("[data-t]");if(tb){tab=+tb.dataset.t;shp();return}
 const pa=e.target.closest("[data-a]");if(pa){cfg.pa=+pa.dataset.a;sv();prf();return}
-const cg=e.target.closest("[data-cm]");if(cg){cmg(+cg.dataset.cm);return}const mb=e.target.closest("[data-m]");if(mb){cfg.m=+mb.dataset.m;sv();ui();start();return}const b=e.target.closest("[data-go]");if(!b)return;const g=b.dataset.go;if(g=="go"){cfg.cs=1;sv();start()}else if(g=="play")start();else{if(g=="menu"){S="menu";reset()}show(g);ui();if(g=="shop")shp();if(g=="prof")prf()}});
+const cg=e.target.closest("[data-cm]");if(cg){cmg(+cg.dataset.cm);return}const mb=e.target.closest("[data-m]");if(mb){cfg.m=+mb.dataset.m;sv();ui();start();return}const b=e.target.closest("[data-go]");if(!b)return;const g=b.dataset.go;if(g=="go"){cfg.cs=1;sv();start()}else if(g=="play")start();else{if(g=="menu"){S="menu";reset()}show(g);ui();if(g=="shop")shp();if(g=="prof")prf();if(g=="leaders")drawLeaders();if(g=="admin")drawAdmin()}});
 addEventListener("keydown",e=>keys[e.code]=1);addEventListener("keyup",e=>keys[e.code]=0);
 const pt=e=>{if(S=="play")tx=cl((e.clientX/innerWidth-.5)*22,-8.4,8.4)};
 addEventListener("pointerdown",pt);addEventListener("pointermove",e=>{if(e.buttons)pt(e)});
 const MN=["Обычный","Три жизни","Хардкор"],sg2=c=>'<svg viewBox="0 0 64 64">'+c+'</svg>',hr=x=>'<path transform="translate('+x+' 34)" d="M0-4C-8-14-16-2 0 12 16-2 8-14 0-4z" fill="#ff3b5c"/>',
 MI=[sg2('<path d="M8 42a24 24 0 0148 0" stroke="#ffb020" stroke-width="7" fill="none"/><path d="M32 42l13-17" stroke="#fff" stroke-width="4"/><circle cx="32" cy="42" r="5" fill="#fff"/>'),sg2(hr(12)+hr(32)+hr(52)),sg2('<circle cx="32" cy="28" r="19" fill="#eee"/><rect x="21" y="40" width="22" height="14" rx="4" fill="#eee"/><circle cx="25" cy="29" r="5" fill="#12122b"/><circle cx="39" cy="29" r="5" fill="#12122b"/><path d="M32 35l-3 6h6z" fill="#12122b"/>')],
 MT=["Классика: столкновение или ракета отбрасывает назад и сокращает отрыв от погони. Поймали — конец.","Три сердца. Каждое попадание ракеты или врезание в препятствие отнимает жизнь. Сердца кончились — конец.","Одна жизнь, выше скорость и гуще препятствия. Любое попадание или врезание — сразу конец."],
-CL=[["1.7.2","Откат лишних изменений и обновление меню",["Возвращена основа версии 1.7.1: без новых персонажей, машин и локаций из 1.8.0","Выбор сложности перенесён наверх экрана выбора режима","Настройки собраны в компактную сетку; удалены лишние кнопки графики, рекордов и обучения","Добавлена отдельная кнопка сброса настроек без удаления аккаунта, монет, покупок и рекордов","Выход из аккаунта перенесён в профиль"]],["1.7.1","Плавная графика",["Убрана динамическая оптимизация разрешения и пропуск кадров; возвращены сглаживание, мягкие тени и чёткое небо как в 4.5","Стартовая скорость — 80 км/ч; кривая разгона, частота препятствий и темп сложности восстановлены по версии 4.5; уровни в углу экрана убраны","Новые плашки — регуляторы: возвращают скорость, какая была до замедления, и помогают не попасться","Ускорителей, регуляторов и замедлителей со временем становится больше","Вход как гость","Обучение показывается только перед первой игрой, кнопка в меню убрана","Убран комикс при старте","Предупреждение теперь на весь экран","Надписи в заезде стали легче, а тексты «УСКОРЕНИЕ», «ДРОНЫ» и «БОМБЫ» вверху убраны"]],["1.6.0release","",["Звуки: двигатель, сирена погони, столкновения, ускорение и замедление, ракеты, дроны, бомбы, прыжки с рамп, покупки","Музыка: бодрая тема в гонке, которая ускоряется вместе со скоростью, и спокойная в меню","Настройки звуков и музыки: выкл, тихо, громко","Обучение: короткий курс при первом запуске, повторить можно в меню и в настройках","Плавность: динамическое разрешение, облегчённые тени, ровный темп кадров, реже перерисовывается небо и интерфейс","Новый заголовок игры и обновлённый интерфейс: чёткие кнопки и панели без размытия, виньетка скорости","Персонаж переименован в Прыщавого","Предупреждение при входе в игру","Автосохранение: настройки, монеты, рекорды и покупки сохраняются сами, в том числе при закрытии игры"]],["1.5.0","Бобик ран: релиз",["7 локаций: город, небоскрёбы, мост, лес, поля, пустыня и зима — плавно меняются каждые 1000 м","Время суток меняется: утро, день, вечер и ночь — солнце, луна, звёзды и облака","Погода: дождь и снег","Убрано свечение у фар и мигалок","Графика чётче: дорога и окна в высоком разрешении, тонмаппинг, анизотропная фильтрация, окна днём и ночью","Аккаунты с паролем: вход и регистрация, аватарка из галереи, у каждого свой прогресс","Настройки — шестерёнка сбоку, профиль — аватарка и имя сбоку","Новые настройки: локация, время суток, длина суток, погода, обзор камеры, счётчик FPS","Новое: пауза в гонке, счётчик монет заезда, часы и погода на экране; «назад» — стрелка сбоку"]],["4.0.0beta","Бета 4",["Игра переименована: Bobik run","Комикс идёт после выбора режима: по кадрам, со стрелками","Монетки: +1 в секунду, в «Трёх жизнях» +1,5, в «Хардкоре» +3","Магазин: 9 персонажей и 4 машины","Профиль: имя, описание и аватарка — свою можно загрузить из галереи телефона (старая галерея убрана)","Препятствий стало ещё больше, а зона лазеров дронов растёт со временем","Максимальная графика: тени, свечение, выхлоп, мокрая дорога и луна","Убрана тряска при поворотах"]],["3.0.0beta","Бета 3",["Комикс-заставка: Прыщавый угоняет цистерну, его ловит полиция — и начинается погоня","Дорога в 5 полос и 5 полицейских машин: стрелять могут все","Сложность растёт с дистанцией: до 1000 м — средне, до 3000 м — сложно, с 5000 м — экспертный уровень","Дроны с лазерами: с 1000 м летят по прямым траекториям, с 2000 м — по хаотичным","Бомбы с неба с 3000 м","Новые препятствия: грузовик, конусы и бетонный блок","Препятствий и замедлителей больше, но без перегиба","Цистерна стала заметно отзывчивее","Графика: звёздное небо, фонари, блики на машинах, линии скорости и наклон камеры"]],["2.3.0beta","Бета 2.3",["Препятствия идут реже и нарастают постепенно, а не рывком","Скорость машины растёт без потолка, руль становится отзывчивее","Предметы больше не накладываются друг на друга","Замедлителей стало меньше, и они мягче","Ракеты летят реже","Погоню можно удерживать бесконечно"]],["2.0.0beta","Бета 2",["Горилла вместо Прыщавого: теперь она рулит цистерной","Рампы: разгонись, взлети и перелети препятствие","С каждым уровнем препятствий всё больше","Проезжающие машины: встречные такси и попутные тихоходы","Ускорители и замедлители на дороге","Три режима: Обычный, Три жизни и Хардкор — с описанием и картинками","Галерея вместо загрузки фото: горилла, цистерна, Бобик и пропеллер","Журнал изменений и свой рекорд для каждого режима"]],["1.0.0beta","Бета",["Цистерна на колёсах и Прыщавый за рулём","Погоня с мигалками и шкала отрыва","Ящики, машины, шлагбаумы и ракеты с предупреждением","Настройки сложности и графики, рекорд"]]];
+CL=[["1.7.10","Вход запоминается",["Аккаунт остаётся на устройстве: повторный вход нужен только на новых устройствах","Без интернета игра открывается с сохранённым аккаунтом и локальным прогрессом","Игру можно установить как приложение (иконка 192 px, манифест)"]],["1.7.9","Админ-панель, аватарки и профили",["Админ-панель: выдать себе монеты, бан на 2 часа / 24 часа / навсегда","Таблица лидеров открывается на «Обычный · Нормально»; у игроков видны аватарки, по нажатию открывается профиль","Аватарка меняется карандашом в профиле: все аватарки и своё фото"]],["1.7.7","Исправление подключения к облаку",["Исправлена загрузка Supabase SDK: закреплена проверенная версия и добавлены резервные CDN","Инициализация облачного клиента ждёт загрузку SDK и показывает понятную причину ошибки","Обновлён кэш PWA, чтобы браузер не использовал старые файлы"]],["1.7.6","Облачные аккаунты и админ-панель",["Добавлены регистрация и вход через Supabase Auth с сохранением прогресса в облаке","Глобальная таблица лидеров по режимам и сложностям; боковая стрелка назад","Промокоды: 100 монет, 300 монет и машина «Банан»; каждый код одноразовый","Админ-панель защищена серверным кодом и позволяет блокировать аккаунты на 24 часа"]],["1.7.5","Таблица лидеров и коды",["Добавлена таблица лидеров по трём режимам и трём сложностям","Добавлен раздел активации промокодов в настройках","Кнопка «Что нового» стала компактной кнопкой с восклицательным знаком","Добавлена локальная панель управления аккаунтами на этом устройстве","Сохранены режимы, сложность, магазин и настройки версии 1.7.2"]], ["1.7.2","Откат лишних изменений и обновление меню",["Возвращена основа версии 1.7.1: без новых персонажей, машин и локаций из 1.8.0","Выбор сложности перенесён наверх экрана выбора режима","Настройки собраны в компактную сетку; удалены лишние кнопки графики, рекордов и обучения","Добавлена отдельная кнопка сброса настроек без удаления аккаунта, монет, покупок и рекордов","Выход из аккаунта перенесён в профиль"]],["1.7.1","Плавная графика",["Убрана динамическая оптимизация разрешения и пропуск кадров; возвращены сглаживание, мягкие тени и чёткое небо как в 4.5","Стартовая скорость — 80 км/ч; кривая разгона, частота препятствий и темп сложности восстановлены по версии 4.5; уровни в углу экрана убраны","Новые плашки — регуляторы: возвращают скорость, какая была до замедления, и помогают не попасться","Ускорителей, регуляторов и замедлителей со временем становится больше","Вход как гость","Обучение показывается только перед первой игрой, кнопка в меню убрана","Убран комикс при старте","Предупреждение теперь на весь экран","Надписи в заезде стали легче, а тексты «УСКОРЕНИЕ», «ДРОНЫ» и «БОМБЫ» вверху убраны"]],["1.6.0release","",["Звуки: двигатель, сирена погони, столкновения, ускорение и замедление, ракеты, дроны, бомбы, прыжки с рамп, покупки","Музыка: бодрая тема в гонке, которая ускоряется вместе со скоростью, и спокойная в меню","Настройки звуков и музыки: выкл, тихо, громко","Обучение: короткий курс при первом запуске, повторить можно в меню и в настройках","Плавность: динамическое разрешение, облегчённые тени, ровный темп кадров, реже перерисовывается небо и интерфейс","Новый заголовок игры и обновлённый интерфейс: чёткие кнопки и панели без размытия, виньетка скорости","Персонаж переименован в Прыщавого","Предупреждение при входе в игру","Автосохранение: настройки, монеты, рекорды и покупки сохраняются сами, в том числе при закрытии игры"]],["1.5.0","Бобик ран: релиз",["7 локаций: город, небоскрёбы, мост, лес, поля, пустыня и зима — плавно меняются каждые 1000 м","Время суток меняется: утро, день, вечер и ночь — солнце, луна, звёзды и облака","Погода: дождь и снег","Убрано свечение у фар и мигалок","Графика чётче: дорога и окна в высоком разрешении, тонмаппинг, анизотропная фильтрация, окна днём и ночью","Аккаунты с паролем: вход и регистрация, аватарка из галереи, у каждого свой прогресс","Настройки — шестерёнка сбоку, профиль — аватарка и имя сбоку","Новые настройки: локация, время суток, длина суток, погода, обзор камеры, счётчик FPS","Новое: пауза в гонке, счётчик монет заезда, часы и погода на экране; «назад» — стрелка сбоку"]],["4.0.0beta","Бета 4",["Игра переименована: Bobik run","Комикс идёт после выбора режима: по кадрам, со стрелками","Монетки: +1 в секунду, в «Трёх жизнях» +1,5, в «Хардкоре» +3","Магазин: 9 персонажей и 4 машины","Профиль: имя, описание и аватарка — свою можно загрузить из галереи телефона (старая галерея убрана)","Препятствий стало ещё больше, а зона лазеров дронов растёт со временем","Максимальная графика: тени, свечение, выхлоп, мокрая дорога и луна","Убрана тряска при поворотах"]],["3.0.0beta","Бета 3",["Комикс-заставка: Прыщавый угоняет цистерну, его ловит полиция — и начинается погоня","Дорога в 5 полос и 5 полицейских машин: стрелять могут все","Сложность растёт с дистанцией: до 1000 м — средне, до 3000 м — сложно, с 5000 м — экспертный уровень","Дроны с лазерами: с 1000 м летят по прямым траекториям, с 2000 м — по хаотичным","Бомбы с неба с 3000 м","Новые препятствия: грузовик, конусы и бетонный блок","Препятствий и замедлителей больше, но без перегиба","Цистерна стала заметно отзывчивее","Графика: звёздное небо, фонари, блики на машинах, линии скорости и наклон камеры"]],["2.3.0beta","Бета 2.3",["Препятствия идут реже и нарастают постепенно, а не рывком","Скорость машины растёт без потолка, руль становится отзывчивее","Предметы больше не накладываются друг на друга","Замедлителей стало меньше, и они мягче","Ракеты летят реже","Погоню можно удерживать бесконечно"]],["2.0.0beta","Бета 2",["Горилла вместо Прыщавого: теперь она рулит цистерной","Рампы: разгонись, взлети и перелети препятствие","С каждым уровнем препятствий всё больше","Проезжающие машины: встречные такси и попутные тихоходы","Ускорители и замедлители на дороге","Три режима: Обычный, Три жизни и Хардкор — с описанием и картинками","Галерея вместо загрузки фото: горилла, цистерна, Бобик и пропеллер","Журнал изменений и свой рекорд для каждого режима"]],["1.0.0beta","Бета",["Цистерна на колёсах и Прыщавый за рулём","Погоня с мигалками и шкала отрыва","Ящики, машины, шлагбаумы и ракеты с предупреждением","Настройки сложности и графики, рекорд"]]];
 E("ml").innerHTML=MN.map((n,i)=>'<button class="b g md" data-m="'+i+'">'+MI[i]+'<div><b>'+n+'</b><span>'+MT[i]+'<em>🪙 +'+["1","1,5","3"][i]+' в секунду</em></span></div></button>').join("");
 E("cg").innerHTML=CL.map(([v,n,l])=>"<h3>v"+v+(n?" «"+n+"»":"")+"</h3><ul>"+l.map(x=>"<li>"+x+"</li>").join("")+"</ul>").join("");
 E("vr").textContent="v"+CL[0][0];
@@ -254,7 +260,7 @@ function shp(){const L=tab?VN:CD,own=tab?cfg.ov:cfg.oc,sel=tab?cfg.vh:cfg.ch;E("
 function prf(){window.sd2&&sd2();const cu=cfg.pu?'<img alt="" src="'+cfg.pu+'">':"";E("pav").innerHTML=cfg.pa<0&&cu?cu:AV(Math.max(0,cfg.pa));E("pfx").style.display=cfg.pu?"":"none";E("pnm").value=cfg.pn||"";E("pds").value=cfg.pd||"";E("pgl").innerHTML=(cu?'<div data-a="-1" class="'+(cfg.pa<0?"on":"")+'">'+cu+'</div>':"")+CD.map((o,i)=>'<div data-a="'+i+'" class="'+(i==cfg.pa?"on":"")+'">'+AV(i)+'</div>').join("");E("pst").textContent="🪙 "+(cfg.c|0)+" · Рекорды: "+cfg.r.join(" / ")+" м"}
 E("pnm").oninput=e=>{cfg.pn=e.target.value;sv();window.sd2&&sd2()};E("pds").oninput=e=>{cfg.pd=e.target.value;sv()};
 E("pfi").onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{const im=new Image();im.onerror=()=>toast("Не удалось открыть фото");im.onload=()=>{const c=document.createElement("canvas"),z=160,m=Math.min(im.width,im.height);c.width=c.height=z;c.getContext("2d").drawImage(im,(im.width-m)/2,(im.height-m)/2,m,m,0,0,z,z);cfg.pu=c.toDataURL("image/jpeg",.85);cfg.pa=-1;sv();prf()};im.src=r.result};r.readAsDataURL(f);e.target.value=""};
-E("pfx").onclick=()=>{cfg.pu="";if(cfg.pa<0)cfg.pa=0;sv();prf()};
+E("pfx").onclick=()=>{cfg.pu="";if(cfg.pa<0)cfg.pa=0;sv();prf()};E("pen").onclick=()=>E("pedit").classList.toggle("hide");
 function toast(s,q){if(q)return;const e=E("tt");e.textContent=s;e.style.opacity=1;clearTimeout(tto);tto=setTimeout(()=>e.style.opacity=0,1500)}
 /* главный цикл */
 function loop(now){requestAnimationFrame(loop);const dt=Math.min(.05,(now-last)/1e3||.016);last=now;if(window.PZ){rd.render(sc,cam);return}tm+=dt;const dm=DM[cfg.d];
@@ -395,6 +401,7 @@ window.sui=()=>{sb.innerHTML=ST.map(([k,n,o],i)=>'<button class="b g" data-z="'+
 /* аккаунт и профиль сбоку */
 window.sd2=()=>{E("pa2").innerHTML=cfg.pa<0&&cfg.pu?'<img alt="" src="'+cfg.pu+'">':AV(Math.max(0,cfg.pa|0));E("pn2").textContent=cfg.pn||"Игрок";E("vr").innerHTML="v"+CL[0][0]+"<br>🪙 "+(cfg.c|0)+" · 🏆 "+Math.max(...cfg.r)+" м"};
 const ac={a:cfg.pa<0&&!cfg.pu?0:cfg.pa|0,u:cfg.pu||""};
+window.getSignupAvatar=()=>({a:ac.a,u:ac.u});
 function arf(){const im=ac.u?'<img alt="" src="'+ac.u+'">':"";E("aav").innerHTML=ac.a<0&&im?im:AV(Math.max(0,ac.a));E("agl").innerHTML=(im?'<div data-q="-1" class="'+(ac.a<0?"on":"")+'">'+im+"</div>":"")+CD.map((o,i)=>'<div data-q="'+i+'" class="'+(i==ac.a?"on":"")+'">'+AV(i)+"</div>").join("")}
 const crop=(f,cb)=>{const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const c=D.createElement("canvas"),z=192,m=Math.min(im.width,im.height);c.width=c.height=z;c.getContext("2d").drawImage(im,(im.width-m)/2,(im.height-m)/2,m,m,0,0,z,z);cb(c.toDataURL("image/jpeg",.85))};im.src=r.result};r.readAsDataURL(f)};
 E("acf").onchange=e=>{const f=e.target.files[0];if(f)crop(f,u=>{ac.u=u;ac.a=-1;arf()});e.target.value=""};
@@ -402,61 +409,364 @@ E("aok").onclick=()=>{const n=E("anm").value.trim();if(n.length<2){toast("Вве
 D.addEventListener("click",e=>{const z=e.target.closest("[data-z]"),q=e.target.closest("[data-q]");
 if(z){const[k,,o]=ST[+z.dataset.z];cfg[k]=((cfg[k]|0)+1)%o.length;sv();sui();k=="fv"&&rs();k=="wx"&&!cfg.wx&&(wx=0)}
 else if(q){ac.a=+q.dataset.q;arf()}
-else if(e.target.closest("#lg")){cfg.acc=0;sv();E("anm").value=cfg.pn||"";arf();show("acc")}});
+});
 setLoc(R()*LO.length|0);sd2();sui();arf();E("anm").value=cfg.pn||"";rs();if(!(cfg.acc&&cfg.pn))show("acc");
 const _r=rd.render.bind(rd);rd.render=(s,c)=>{try{upd()}catch(e){console.error(e)}_r(s,c)};
 })();
-</script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="./supabase-config.js"></script>
-<script>
-(() => {
- const D=document,E=id=>D.getElementById(id),cp=v=>JSON.parse(JSON.stringify(v));
- const URL=window.BOBIK_SUPABASE_URL||'',KEY=window.BOBIK_SUPABASE_ANON_KEY||'';
- const ready=!!(window.supabase&&URL.startsWith('https://')&&KEY&&!URL.includes('YOUR_')&&!KEY.includes('YOUR_'));
- const db=ready?window.supabase.createClient(URL,KEY):null; window.BOBIK_DB=db;
- let user=null,username='',mode=0,timer=null,old={u:{},c:''}; window.BOBIK_GET_USER=()=>user; window.BOBIK_GET_USERNAME=()=>username;
- try{Object.assign(old,JSON.parse(localStorage.getItem('bb_acc')||'{}'))}catch(e){}
- try{if(old.c&&old.u?.[old.c]?.d){Object.assign(cfg,cp(old.u[old.c].d));localStorage.setItem('zr',JSON.stringify(cfg))}}catch(e){}
- const defaults=()=>({d:1,q:1,v7:1,b:0,m:0,r:[0,0,0],lr:[[0,0,0],[0,0,0],[0,0,0]],c:60,oc:[0],ov:[0],ch:0,vh:0,pn:'',pd:'',pa:0,v4:1,wx:1,fv:1,dl:1,lo:0,tt:0,fp:0,sn:2,mu:2});
- const localSave=()=>{try{localStorage.setItem('zr',JSON.stringify(cfg));if(!user)localStorage.setItem('bobik_guest_save',JSON.stringify(cfg))}catch(e){}};
- async function cloudSave(){if(!user||!db)return;const {error}=await db.from('player_saves').upsert({id:user.id,username:username||'Игрок',save_data:cp(cfg),updated_at:new Date().toISOString()},{onConflict:'id'});if(error)console.warn('Cloud save:',error.message)}
- function saveSoon(){localSave();if(!user)return;clearTimeout(timer);timer=setTimeout(cloudSave,1000)}
- window.svA=saveSoon;
- const A=E('acc');
- A.insertAdjacentHTML('afterbegin','<div id="atb"><button class="b" data-ta="1">Вход</button><button class="b g" data-ta="0">Создать</button></div>');
- E('anm').insertAdjacentHTML('afterend','<input class="pf" id="aem" type="email" maxlength="120" placeholder="Электронная почта" autocomplete="email">');
- E('aem').insertAdjacentHTML('afterend','<input class="pf" id="apw" type="password" maxlength="72" placeholder="Пароль (минимум 6 символов)" autocomplete="current-password">');
- A.insertAdjacentHTML('beforeend','<button class="b g" id="agt">👤 Играть как гость</button>');
- function modeSet(m){mode=m;A.classList.toggle('lg',!!m);A.querySelector('h2').textContent=m?'Вход в аккаунт':'Создай аккаунт';E('aok').textContent=m?'Войти':'Создать аккаунт';A.querySelectorAll('[data-ta]').forEach(b=>b.classList.toggle('g',+b.dataset.ta!==m));['aav','agl'].forEach(id=>E(id).classList.toggle('rg',!!m));A.querySelector('label[for="acf"]').classList.toggle('rg',!!m);E('anm').classList.toggle('rg',!!m);A.querySelector('p').textContent=m?'Войди по адресу электронной почты и паролю.':'Создай аккаунт. Прогресс будет сохраняться в облаке.'}
- function applySave(data,n){Object.keys(cfg).forEach(k=>delete cfg[k]);Object.assign(cfg,defaults(),data||{});cfg.pn=n||cfg.pn||'Игрок';cfg.acc=1;localSave();try{setR(cfg.ch);setV(cfg.vh);gq();rs();ui()}catch(e){}}
- async function activate(u){user=u;const access=await db.rpc('check_player_access');if(access.error)throw access.error;if(access.data?.blocked){await db.auth.signOut();user=null;throw new Error(access.data.until?'Доступ временно запрещён до '+new Date(access.data.until).toLocaleString():'Аккаунт заблокирован администратором')}let {data:r,error}=await db.from('player_saves').select('username,save_data').eq('id',u.id).maybeSingle();if(error)throw error;if(!r){username=u.user_metadata?.username||(u.email||'Игрок').split('@')[0];let ins=await db.from('player_saves').insert({id:u.id,username,save_data:cp(cfg)}).select('username,save_data').single();if(ins.error)throw ins.error;r=ins.data}username=r.username||'Игрок';applySave(r.save_data,username);show('menu');saveSoon()}
- async function guest(){user=null;username='';let g=null;try{g=JSON.parse(localStorage.getItem('bobik_guest_save')||'null')}catch(e){}Object.keys(cfg).forEach(k=>delete cfg[k]);Object.assign(cfg,defaults(),g||{});if(!cfg.pn)cfg.pn='Гость';cfg.acc=1;localSave();try{setR(cfg.ch);setV(cfg.vh);gq();rs();ui()}catch(e){}show('menu')}
- E('agt').onclick=guest;
- E('aok').onclick=async()=>{if(!ready){A.querySelector('p').textContent='Сначала подключи Supabase: заполни файл supabase-config.js по инструкции.';return}const n=E('anm').value.trim(),email=E('aem').value.trim(),password=E('apw').value;if(!email||!email.includes('@'))return toast('Введи корректную электронную почту');if(password.length<6)return toast('Пароль должен быть не короче 6 символов');if(!mode&&n.length<2)return toast('Имя должно содержать минимум 2 символа');E('aok').disabled=true;try{if(mode){const {data,error}=await db.auth.signInWithPassword({email,password});if(error)throw error;await activate(data.user)}else{const sel=E('agl').querySelector('.on');if(sel){const q=Number(sel.dataset.q||0),im=q<0?sel.querySelector('img'):null;if(im){cfg.pu=im.src;cfg.pa=-1}else{cfg.pa=Math.max(0,q);delete cfg.pu}}cfg.pn=n;cfg.acc=1;const {data,error}=await db.auth.signUp({email,password,options:{data:{username:n}}});if(error)throw error;if(!data.session){A.querySelector('p').textContent='Аккаунт создан. Подтверди email по письму от Supabase, затем войди.';toast('Проверь почту для подтверждения')}else await activate(data.user)}E('apw').value=''}catch(e){console.error(e);toast(e.message||'Ошибка входа/регистрации')}finally{E('aok').disabled=false;E('aok').textContent=mode?'Войти':'Создать аккаунт'}};
- D.addEventListener('click',e=>{const t=e.target.closest('[data-ta]');if(t)modeSet(+t.dataset.ta)});
- E('lg').addEventListener('click',async e=>{if(!user)return;e.stopPropagation();cfg.acc=0;localSave();try{await cloudSave();await db.auth.signOut()}catch(x){}user=null;username='';E('aem').value='';E('apw').value='';modeSet(1);show('acc')});
- async function boot(){if(!ready){modeSet(0);A.querySelector('p').textContent='Облачная база пока не подключена. Можно играть гостем.';show('acc');return}try{const {data,error}=await db.auth.getSession();if(error)throw error;if(data.session)await activate(data.session.user);else{modeSet(0);show('acc')}}catch(e){console.warn(e);modeSet(0);A.querySelector('p').textContent='Не удалось подключиться. Проверь интернет и настройки Supabase. Можно играть гостем.';show('acc')}}
- D.addEventListener('click',e=>{if(e.target.closest('#lg')&&!user){cfg.acc=0;localSave();modeSet(1);E('anm').value=cfg.pn||'';E('aem').value='';E('apw').value='';show('acc')}});
+</script><script>(async()=>{
+const D=document,clone=o=>JSON.parse(JSON.stringify(o));
+const DF=()=>({d:1,q:2,v7:1,b:0,m:0,r:[0,0,0],lr:[[0,0,0],[0,0,0],[0,0,0]],redeemed:[],bannedUntil:0,c:60,oc:[0],ov:[0],ch:0,vh:0,pn:"",pd:"",pa:0,v4:1,wx:1,fv:1,dl:1,lo:0,tt:0,fp:0,sn:2,mu:2});
+let cloud=null,activeUser=null,activeSession=null,loginMode=1,cloudTimer=0,saveBusy=false,saveAgain=false,cloudReady=false;
+let leaderMode=0,leaderDiff=1,lastLeaderSent={},lastLeaderName="",lastPubSig="";
+const accountScreen=E("acc");
+accountScreen.insertAdjacentHTML("afterbegin",'<div id="atb"><button class="b" data-ta="1">Вход</button><button class="b g" data-ta="0">Создать</button></div>');
+E("anm").insertAdjacentHTML("afterend",'<input class="pf" id="apw" type="password" maxlength="72" placeholder="Пароль" autocomplete="current-password">');
+E("apw").insertAdjacentHTML("afterend",'<p id="authStatus" style="font-size:13px;max-width:340px;opacity:.85"></p>');
+E("anm").setAttribute("autocomplete","username");
+E("anm").setAttribute("placeholder","Имя игрока");
 
- // UI extensions: redemption is validated by a protected Supabase RPC.
- let leaderMode=0,leaderDiff=0;
- const isAdmin=async()=>{if(!user||!db)return false;const {data,error}=await db.rpc('is_bobik_admin');return !error&&data===true};
- async function refreshAdminButton(){E('adminOpen').style.display=await isAdmin()?'':'none'}
- E('redeemBtn').onclick=async()=>{if(!user)return toast('Сначала войди в аккаунт');const code=E('redeemCode').value.trim();if(!code)return toast('Введи код');E('redeemBtn').disabled=true;try{const {data,error}=await db.rpc('redeem_bobik_code',{p_code:code});if(error)throw error;if(data.kind==='coins'){cfg.c=(cfg.c|0)+Number(data.reward);saveSoon();toast('Начислено '+data.reward+' монет')}else toast(data.message||'Готово');E('redeemCode').value='';await refreshAdminButton()}catch(e){toast(e.message||'Не удалось активировать код')}finally{E('redeemBtn').disabled=false}};
- async function loadLeaders(){E('leaderModes').innerHTML=['Обычный','Три жизни','Хардкор'].map((n,i)=>`<button class="b ${i===leaderMode?'':'g'}" data-lm="${i}">${n}</button>`).join('');E('leaderDiffs').innerHTML=['Легко','Нормально','Сложно'].map((n,i)=>`<button class="b ${i===leaderDiff?'':'g'}" data-ld="${i}">${n}</button>`).join('');E('leaderRows').innerHTML='<p>Загрузка...</p>';if(!db){E('leaderRows').innerHTML='<p>Таблица лидеров доступна после подключения Supabase.</p>';return}const {data,error}=await db.from('leaderboard_scores').select('username,score').eq('mode',leaderMode).eq('difficulty',leaderDiff).order('score',{ascending:false}).limit(50);if(error){E('leaderRows').textContent='Не удалось загрузить таблицу. Сначала выполни обновлённый database.sql.';return}E('leaderRows').innerHTML=data.length?data.map((r,i)=>`<div class="b g" style="display:flex;justify-content:space-between"><span>${i+1}. ${escapeHtml(r.username)}</span><b>${r.score} м</b></div>`).join(''):'<p>Пока нет результатов.</p>'}
- function escapeHtml(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
- async function loadAdmin(){if(!(await isAdmin())){toast('Нет прав администратора');show('set');return}E('adminRows').innerHTML='<p>Загрузка...</p>';const {data,error}=await db.rpc('admin_list_players');if(error){E('adminRows').textContent=error.message;return}E('adminRows').innerHTML=data.map(p=>`<section class="b g" style="text-align:left;margin:8px 0"><b>${escapeHtml(p.username)}</b><br><small>${escapeHtml(p.email||'')}</small><br><small>${p.banned?(p.ban_until?'Ограничен до '+new Date(p.ban_until).toLocaleString():'Заблокирован'):'Активен'}</small><br><button class="b" data-ban="${p.user_id}" data-kind="perm">${p.banned?'Снять бан':'Забанить'}</button><button class="b g" data-ban="${p.user_id}" data-kind="hour">Запретить на 1 час</button><button class="b g" data-ban="${p.user_id}" data-kind="day">На 24 часа</button></section>`).join('')||'<p>Аккаунтов нет.</p>'}
- D.addEventListener('click',async e=>{const lm=e.target.closest('[data-lm]'),ld=e.target.closest('[data-ld]'),ban=e.target.closest('[data-ban]');if(lm){leaderMode=+lm.dataset.lm;loadLeaders()}if(ld){leaderDiff=+ld.dataset.ld;loadLeaders()}if(ban){if(!(await isAdmin()))return toast('Нет прав');const kind=ban.dataset.kind,uid=ban.dataset.ban;let banned=true,until=null;if(kind==='perm'){banned=ban.textContent.includes('Снять')?false:true}else until=new Date(Date.now()+(kind==='hour'?3600000:86400000)).toISOString();try{const {error}=await db.rpc('admin_set_player_status',{p_user:uid,p_banned:banned,p_until:until});if(error)throw error;toast('Статус аккаунта обновлён');loadAdmin()}catch(x){toast(x.message||'Ошибка изменения статуса')}}});
- E('adminOpen').onclick=()=>{show('admin');loadAdmin()};
- // Menu routing hook: refresh cloud-backed leaderboard/admin access.
- const oldShow=window.show; if(typeof oldShow==='function')window.show=(name)=>{oldShow(name);if(name==='leaders')loadLeaders();if(name==='set')refreshAdminButton();if(name==='admin')loadAdmin()};
- // Keep server-side leaderboard best scores in sync with the saved local best record.
- const previousSave=window.svA;window.svA=()=>{previousSave&&previousSave();if(user&&db){clearTimeout(window._lbTimer);window._lbTimer=setTimeout(async()=>{try{const score=Math.max(0,Math.min(100000,Math.floor(cfg.lr?.[cfg.m]?.[cfg.d]||0)));if(score<=0)return;await db.rpc('submit_bobik_score',{p_mode:cfg.m|0,p_difficulty:cfg.d|0,p_score:score,p_username:cfg.pn||username||'Игрок'});}catch(e){console.warn('Leaderboard sync failed',e)}},1400)}};
- window.BOBIK_FORCE_ADMIN_REFRESH=refreshAdminButton;
- document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden'&&user)cloudSave()});
- window.addEventListener('pagehide',()=>{if(user)cloudSave()});
- setInterval(async()=>{if(user&&db){try{const {data,error}=await db.rpc('check_player_access');if(!error&&data?.blocked){await db.auth.signOut();user=null;toast('Доступ к аккаунту запрещён');show('acc')}}catch(e){}}},30000);
- modeSet(0);boot();
+function tb(mode){
+  loginMode=mode?1:0;
+  accountScreen.classList.toggle("lg",!!loginMode);
+  accountScreen.querySelector("h2").textContent=loginMode?"Вход в аккаунт":"Создай аккаунт";
+  E("aok").textContent=loginMode?"Войти":"Создать аккаунт";
+  E("anm").style.display="";
+  E("atb").querySelectorAll("[data-ta]").forEach(b=>b.classList.toggle("g",+b.dataset.ta!==loginMode));
+  ["aav","agl","acf"].forEach(id=>E(id).classList.toggle("hide",!!loginMode));
+  accountScreen.querySelector("p.rg")?.classList.toggle("hide",!!loginMode);
+  E("apw").setAttribute("autocomplete",loginMode?"current-password":"new-password");
+  E("authStatus").textContent="";
+}
+function sayAuth(message){E("authStatus").textContent=message||"";}
+function cleanName(v){return String(v||"").trim().replace(/[<>]/g,"").slice(0,24)}
+async function usernameAuthEmail(name){
+  const normalized=String(name||"").normalize("NFKC").trim().toLowerCase();
+  const bytes=new TextEncoder().encode(normalized);
+  const digest=await crypto.subtle.digest("SHA-256",bytes);
+  const hash=Array.from(new Uint8Array(digest),b=>b.toString(16).padStart(2,"0")).join("");
+  return "u"+hash+"@accounts.example.com";
+}
+function normalizeCfg(){
+  if(!Array.isArray(cfg.r))cfg.r=[0,0,0];
+  cfg.r=[0,1,2].map(i=>Math.max(0,Number(cfg.r[i])||0));
+  if(!Array.isArray(cfg.lr)||cfg.lr.length!==3)cfg.lr=[[0,0,0],[0,0,0],[0,0,0]];
+  cfg.lr=cfg.lr.map(a=>Array.isArray(a)?[0,1,2].map(i=>Math.max(0,Number(a[i])||0)):[0,0,0]);
+  if(!Array.isArray(cfg.oc))cfg.oc=[0];
+  if(!Array.isArray(cfg.ov))cfg.ov=[0];
+  if(!Array.isArray(cfg.redeemed))cfg.redeemed=[];
+}
+function applyCloudSave(data){
+  if(!data||typeof data!=="object")return;
+  Object.keys(cfg).forEach(k=>delete cfg[k]);
+  Object.assign(cfg,DF(),data);
+  cfg.acc=1;
+  normalizeCfg();
+  setR(cfg.ch|0);setV(cfg.vh|0);gq();rs();ui();
+  window.sui&&sui();window.sd2&&sd2();
+}
+function hasSupabaseConfig(){
+  return !!(String(window.BOBIK_SUPABASE_URL||"").trim() && String(window.BOBIK_SUPABASE_ANON_KEY||window.BOBIK_SUPABASE_PUBLISHABLE_KEY||"").trim());
+}
+function hasSupabaseSdk(){
+  return !!(window.supabase && typeof window.supabase.createClient==="function");
+}
+async function loadSupabaseSdk(){
+  if(hasSupabaseSdk())return true;
+  if(!hasSupabaseConfig())return false;
+  const version="2.119.0";
+  const cdns=[
+    "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@"+version,
+    "https://unpkg.com/@supabase/supabase-js@"+version
+  ];
+  for(const src of cdns){
+    const loaded=await new Promise(resolve=>{
+      const script=D.createElement("script");
+      let finished=false;
+      const finish=ok=>{
+        if(finished)return;
+        finished=true;
+        clearTimeout(timer);
+        if(!ok)script.remove();
+        resolve(!!ok&&hasSupabaseSdk());
+      };
+      const timer=setTimeout(()=>finish(false),6000);
+      script.src=src;
+      script.async=true;
+      script.onload=()=>finish(true);
+      script.onerror=()=>finish(false);
+      (D.head||D.documentElement).appendChild(script);
+    });
+    if(loaded)return true;
+  }
+  // Последний резервный источник — ESM-сборка; createClient выставляется
+  // в то же пространство имён, которое использует остальная игра.
+  let timeoutId;
+  try{
+    const moduleUrl="https://esm.sh/@supabase/supabase-js@"+version+"?bundle";
+    const mod=await Promise.race([
+      import(moduleUrl),
+      new Promise((_,reject)=>{timeoutId=setTimeout(()=>reject(new Error("SDK CDN timeout")),6000);})
+    ]);
+    clearTimeout(timeoutId);
+    if(typeof mod?.createClient==="function"){
+      window.supabase=Object.assign({},window.supabase||{},{createClient:mod.createClient});
+      return true;
+    }
+  }catch(err){
+    clearTimeout(timeoutId);
+    console.warn("Bobik Run: all Supabase SDK sources failed",err);
+  }
+  return hasSupabaseSdk();
+}
+function getClient(){
+  const url=String(window.BOBIK_SUPABASE_URL||"").trim().replace(/\/+$/,"");
+  const key=String(window.BOBIK_SUPABASE_ANON_KEY||window.BOBIK_SUPABASE_PUBLISHABLE_KEY||"").trim();
+  if(!url||!key||!hasSupabaseSdk())return null;
+  try{
+    return window.supabase.createClient(url,key,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});
+  }catch(err){console.error("Bobik Run: Supabase client initialization failed",err);return null;}
+}
+if(hasSupabaseConfig())await loadSupabaseSdk();
+cloud=getClient();
+if(cloud){
+  cloud.auth.onAuthStateChange((_event,session)=>{activeSession=session||null;if(session?.user)activeUser=session.user;else if(_event==="SIGNED_OUT")activeUser=null;});
+}
+
+async function saveCloudNow(){
+  if(!cloud||!activeUser||!activeSession)return;
+  if(saveBusy){saveAgain=true;return;}
+  saveBusy=true;
+  try{
+    normalizeCfg();
+    const snapshot=clone(cfg);
+    const {error:saveError}=await cloud.from("game_saves").upsert({user_id:activeUser.id,data:snapshot,updated_at:new Date().toISOString()},{onConflict:"user_id"});
+    if(saveError)throw saveError;
+    const username=cleanName(snapshot.pn)||"Игрок";
+    const {error:profileError}=await cloud.from("profiles").update({username}).eq("id",activeUser.id);
+    if(profileError)console.warn("Bobik profile sync:",profileError.message);
+    const pPhoto=cfg.pa<0&&safePhoto(cfg.pu)?cfg.pu:null,pSig=[username,cfg.pa|0,pPhoto,cfg.pd].join("|");
+    if(pSig!==lastPubSig){const {error:pubError}=await cloud.from("public_profiles").upsert({user_id:activeUser.id,username,avatar:Math.max(0,cfg.pa|0),photo:pPhoto,bio:String(cfg.pd||"").slice(0,90),updated_at:new Date().toISOString()},{onConflict:"user_id"});if(pubError)console.warn("Bobik public profile:",pubError.message);else lastPubSig=pSig;}
+    const nameChanged=lastLeaderName!==username;
+    for(let m=0;m<3;m++)for(let d=0;d<3;d++){
+      const score=Number(snapshot.lr?.[m]?.[d])||0,key=m+":"+d;
+      if(score>0&&(score>(lastLeaderSent[key]||0)||nameChanged)){
+        const {error:leaderError}=await cloud.rpc("submit_leaderboard_entry",{p_mode:m,p_difficulty:d,p_best_distance:Math.floor(score)});
+        if(leaderError)console.warn("Bobik leaderboard sync:",leaderError.message);
+        else lastLeaderSent[key]=score;
+      }
+    }
+    lastLeaderName=username;
+  }catch(err){console.warn("Bobik cloud save:",err);}
+  finally{saveBusy=false;if(saveAgain){saveAgain=false;saveCloudNow();}}
+}
+function scheduleCloudSave(){
+  if(!activeUser||!cloud)return;
+  clearTimeout(cloudTimer);
+  cloudTimer=setTimeout(saveCloudNow,650);
+}
+window.svA=scheduleCloudSave;
+
+async function finishLogin(session){
+  activeSession=session;activeUser=session.user;
+  sayAuth("Загружаю облачное сохранение…");
+  const [{data:save,error:saveError},{data:profile,error:profileError}]=await Promise.all([
+    cloud.from("game_saves").select("data").eq("user_id",activeUser.id).maybeSingle(),
+    cloud.from("profiles").select("username").eq("id",activeUser.id).maybeSingle()
+  ]);
+  if(saveError&&saveError.code!=="PGRST116")console.warn("Bobik load save:",saveError.message);
+  if(save?.data){
+    applyCloudSave(save.data);
+  }else{
+    const metaName=activeUser.user_metadata?.username||activeUser.email?.split("@")[0]||"Игрок";
+    cfg.pn=cleanName(profile?.username||metaName)||"Игрок";
+    cfg.acc=1;normalizeCfg();
+    await saveCloudNow();
+  }
+  cfg.acc=1;
+  sayAuth("");
+  sv();
+  show("menu");ui();window.sui&&sui();window.sd2&&sd2();
+}
+
+E("aok").onclick=async()=>{
+  if(!cloud){
+    const hasConfig=hasSupabaseConfig();
+    sayAuth(hasConfig?"SDK Supabase не загрузился. Проверь интернет или доступ к CDN и перезагрузи игру.":"Конфигурация Supabase не задана. Проверь адрес проекта и publishable key в supabase-config.js.");
+    return;
+  }
+  const name=cleanName(E("anm").value),password=E("apw").value;
+  if(name.length<2)return sayAuth("Имя игрока — минимум 2 символа.");
+  if(!loginMode&&name.includes("@"))return sayAuth("Для нового аккаунта используй имя игрока без почты.");
+  if(password.length<6)return sayAuth("Пароль должен содержать не менее 6 символов.");
+  E("aok").disabled=true;E("aok").textContent=loginMode?"Входим…":"Создаём…";
+  try{
+    // Старые аккаунты, созданные по почте, могут войти, введя прежнюю почту в поле имени.
+    const email=loginMode&&name.includes("@")?name.trim().toLowerCase():await usernameAuthEmail(name);
+    let result;
+    if(loginMode){
+      result=await cloud.auth.signInWithPassword({email,password});
+    }else{
+      const avatar=window.getSignupAvatar?window.getSignupAvatar():null;
+      if(avatar){if(avatar.a<0&&avatar.u){cfg.pu=avatar.u;cfg.pa=-1;}else cfg.pa=Math.max(0,avatar.a|0);}
+      cfg.pn=name;
+      result=await cloud.auth.signUp({email,password,options:{data:{username:name}}});
+    }
+    if(result.error)throw result.error;
+    if(result.data.session){await finishLogin(result.data.session);}
+    else if(!loginMode){
+      sayAuth("Аккаунт создан, но Supabase не выдал сессию. Для входа без почты отключи Confirm email в настройках Auth → Email.");
+      tb(1);E("anm").value=name;E("apw").value="";
+    }else sayAuth("Вход выполнен, но сессия не получена. Проверь настройки авторизации Supabase.");
+  }catch(err){
+    const msg=String(err?.message||"Ошибка входа");
+    sayAuth(msg.includes("Invalid login credentials")?"Неверное имя игрока или пароль.":msg.includes("User already registered")?"Это имя игрока уже занято.":msg);
+  }finally{E("aok").disabled=false;E("aok").textContent=loginMode?"Войти":"Создать аккаунт";}
+};
+
+async function signOut(){
+  clearTimeout(cloudTimer);
+  while(saveBusy)await new Promise(resolve=>setTimeout(resolve,50));
+  await saveCloudNow();
+  while(saveBusy)await new Promise(resolve=>setTimeout(resolve,50));
+  if(cloud)await cloud.auth.signOut();
+  activeUser=null;activeSession=null;cfg.acc=0;sv();
+  E("anm").value=cfg.pn||"";E("apw").value="";
+  tb(1);show("acc");
+}
+D.addEventListener("click",e=>{
+  const tab=e.target.closest("[data-ta]");
+  if(tab){tb(+tab.dataset.ta);return;}
+  if(e.target.closest("#lg"))signOut();
+});
+
+function esc(v){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function safePhoto(u){return typeof u==="string"&&u.length<60000&&/^data:image\/(jpeg|png);base64,[A-Za-z0-9+\/=]+$/.test(u)}
+function avHtml(p){return p&&safePhoto(p.photo)?'<img alt="" src="'+p.photo+'">':AV(Math.max(0,Math.min(CD.length-1,(p&&p.avatar)|0)))}
+async function drawLeaders(){
+  const tabs=E("leaderTabs");
+  tabs.className="leader-tabs";
+  tabs.innerHTML=MN.map((n,i)=>'<button data-lm="'+i+'" class="'+(leaderMode===i?'on':'')+'">'+n+'</button>').join('')+'<div style="width:100%;height:4px"></div>'+DN.map((n,i)=>'<button data-ld="'+i+'" class="'+(leaderDiff===i?'on':'')+'">'+n+'</button>').join('');
+  E("leaderRows").className="leader-box";
+  if(!cloud){E("leaderRows").innerHTML='<p>Supabase не подключён.</p>';return;}
+  E("leaderRows").innerHTML='<p>Загрузка таблицы…</p>';
+  const {data,error}=await cloud.from("leaderboard").select("user_id,display_name,best_distance").eq("mode",leaderMode).eq("difficulty",leaderDiff).order("best_distance",{ascending:false}).limit(50);
+  if(error){E("leaderRows").innerHTML='<p>Не удалось загрузить таблицу: '+esc(error.message)+'</p>';return;}
+  const ids=(data||[]).map(r=>r.user_id),pm={};
+  if(ids.length){const {data:pp}=await cloud.from("public_profiles").select("user_id,avatar,photo").in("user_id",ids);(pp||[]).forEach(p=>pm[p.user_id]=p);}
+  E("leaderRows").innerHTML=data?.length?data.map((r,i)=>'<div class="leader-row" data-pu="'+esc(r.user_id)+'"><b><span class="lav">'+avHtml(pm[r.user_id])+'</span>'+(i+1)+'. '+esc(r.display_name||"Игрок")+'</b><span>'+Math.floor(r.best_distance||0)+' м</span></div>').join(''):'<p>Пока нет результатов для этого режима и сложности.</p>';
+}
+window.drawLeaders=drawLeaders;
+async function openPublic(uid){
+  show("pubp");E("pubName").textContent="…";E("pubAv").innerHTML="";E("pubBio").textContent="";E("pubRec").innerHTML="";
+  const [{data:p},{data:rec}]=await Promise.all([cloud.from("public_profiles").select("username,avatar,photo,bio").eq("user_id",uid).maybeSingle(),cloud.from("leaderboard").select("mode,difficulty,display_name,best_distance").eq("user_id",uid)]);
+  E("pubAv").innerHTML=avHtml(p);E("pubName").textContent=(p&&p.username)||(rec&&rec[0]&&rec[0].display_name)||"Игрок";E("pubBio").textContent=(p&&p.bio)||"";
+  E("pubRec").innerHTML=(rec||[]).sort((a,b)=>a.mode-b.mode||a.difficulty-b.difficulty).map(r=>'<div class="leader-row"><b>'+MN[r.mode]+' · '+DN[r.difficulty]+'</b><span>'+Math.floor(r.best_distance)+' м</span></div>').join("");
+}
+E("pubBack").onclick=()=>{show("leaders");drawLeaders()};
+
+async function adminRequest(body){
+  if(!cloud)throw new Error("Supabase не подключён.");
+  const {data,error}=await cloud.functions.invoke("admin-panel",{body});
+  if(error)throw new Error(error.message||"Ошибка админ-панели");
+  if(data?.error)throw new Error(data.error);
+  return data;
+}
+async function drawAdmin(){
+  E("adminRows").innerHTML='<p>Загружаю аккаунты…</p>';
+  try{
+    const result=await adminRequest({action:"list"});
+    const rows=result.users||[];
+    E("adminInfo").textContent="Аккаунтов: "+rows.length;
+    E("adminRows").innerHTML=rows.length?rows.map(u=>'<div class="admin-row"><span>'+esc(u.username||"Игрок")+'<small style="display:block;opacity:.65">'+(u.banned?(u.banned_until&&new Date(u.banned_until).getFullYear()>2100?"Заблокирован навсегда":"Заблокирован до "+new Date(u.banned_until).toLocaleString()):"Активен")+'</small></span><button data-'+(u.banned?'unban':'ban')+'-user="'+esc(u.id)+'">'+(u.banned?'Разблокировать':'Заблокировать')+'</button></div>').join(''):'<p>Аккаунтов пока нет.</p>';
+  }catch(err){E("adminRows").innerHTML='<p>Нет доступа или серверная функция не настроена: '+esc(err.message)+'</p>';}
+}
+window.drawAdmin=drawAdmin;
+E("adminGive").onclick=async()=>{const n=Math.floor(+E("adminCoins").value);if(!(n>0))return toast("Введи число монет");try{const r=await adminRequest({action:"coins",amount:n});if(r.save)applyCloudSave(r.save);E("adminCoins").value="";toast("Теперь у тебя 🪙 "+(r.coins|0))}catch(err){toast("Ошибка: "+err.message)}};
+D.addEventListener("click",async e=>{
+  const pu=e.target.closest("[data-pu]");if(pu){openPublic(pu.dataset.pu);return;}
+  const lm=e.target.closest("[data-lm]"),ld=e.target.closest("[data-ld]");
+  if(lm){leaderMode=+lm.dataset.lm;drawLeaders();return;}
+  if(ld){leaderDiff=+ld.dataset.ld;drawLeaders();return;}
+  const ban=e.target.closest("[data-ban-user]"),unban=e.target.closest("[data-unban-user]");
+  if(ban||unban){
+    const button=ban||unban;button.disabled=true;
+    try{await adminRequest({action:ban?"ban":"unban",user_id:button.dataset[ban?"banUser":"unbanUser"],hours:+E("adminHours").value});await drawAdmin();}
+    catch(err){toast("Ошибка: "+err.message);button.disabled=false;}
+  }
+});
+
+E("redeemCode").onclick=async()=>{
+  const code=E("codeInput").value.trim();
+  if(!activeUser)return toast("Сначала войди в аккаунт");
+  if(!code)return toast("Введи код");
+  E("redeemCode").disabled=true;
+  try{
+    let activation=null;
+    try{activation=await adminRequest({action:"activate",code});}
+    catch(adminError){console.warn("Bobik admin activation endpoint:",adminError.message);}
+    if(activation?.is_admin){
+      E("codeStatus").textContent="Доступ подтверждён. Открываю панель…";
+      E("codeInput").value="";
+      show("admin");await drawAdmin();
+      return;
+    }
+    const {data,error}=await cloud.rpc("redeem_game_code",{p_code:code.toLowerCase()});
+    if(error)throw error;
+    if(data?.save)applyCloudSave(data.save);
+    else if(data?.data)applyCloudSave(data.data);
+    E("codeStatus").textContent=data?.message||"Награда получена!";
+    E("codeInput").value="";
+    sv();ui();window.sd2&&sd2();
+  }catch(err){
+    const message=String(err?.message||"Неверный код");
+    if(message.includes("CODE_ALREADY_USED"))E("codeStatus").textContent="Этот код уже использован на этом аккаунте.";
+    else if(message.includes("INVALID_CODE"))E("codeStatus").textContent="Такого кода нет.";
+    else if(message.includes("Function not found")||message.includes("404"))E("codeStatus").textContent="Функция Supabase ещё не развёрнута.";
+    else E("codeStatus").textContent=message;
+  }finally{E("redeemCode").disabled=false;}
+};
+
+/* Боковая стрелка назад; таблица лидеров, коды и админка используют её. */
+D.body.insertAdjacentHTML("beforeend",'<button id="bk" class="hide" data-go="menu" aria-label="Назад">‹</button><button id="pz" class="hide" aria-label="Пауза">⏸</button><div id="pm" class="hide"><div class="pp"><h2>Пауза</h2><p id="ps"></p><button class="b" id="pr">▶ Продолжить</button><button class="b g" id="pq">🔄 Заново</button><button class="b g" id="px">🏠 В меню</button></div></div><div id="cdn" class="hide"></div>');
+window.sh2=id=>{if(id==="prof")E("pedit").classList.add("hide");E("bk").classList.toggle("hide",!["set","mode","shop","prof","log","leaders","codes","admin"].includes(id));E("pz").classList.toggle("hide",id!=="play");};
+let rsm=0;
+const pause=()=>{if(S!=="play"||window.PZ)return;window.PZ=1;E("ps").textContent="🏁 "+(dist|0)+" м · 🪙 +"+(rc|0)+" · 🏆 "+cfg.r[cfg.m]+" м";E("pm").classList.remove("hide");},
+resume=()=>{if(rsm)return;rsm=1;E("pm").classList.add("hide");let c=3;const n=E("cdn");n.classList.remove("hide");const t=()=>{if(c>0){n.textContent=c--;setTimeout(t,700);}else{n.classList.add("hide");window.PZ=0;rsm=0;}};t();},
+hp=()=>{E("pm").classList.add("hide");window.PZ=0;};
+E("pz").onclick=pause;E("pr").onclick=resume;E("pq").onclick=()=>{hp();start();};E("px").onclick=()=>{hp();end();S="menu";reset();show("menu");ui();};
+["pz","pm","cdn"].forEach(i=>["pointerdown","pointermove"].forEach(t=>E(i).addEventListener(t,e=>e.stopPropagation())));
+addEventListener("keydown",e=>{if(e.code==="Escape"||e.code==="KeyP"){E("pm").classList.contains("hide")?pause():resume();}});
+D.addEventListener("visibilitychange",()=>{if(D.hidden)pause();});
+
+/* Cloud-save backup on close + periodic save while playing. */
+function saveOnExit(){
+  if(!activeUser||!activeSession?.access_token||!window.BOBIK_SUPABASE_URL)return;
+  const key=window.BOBIK_SUPABASE_ANON_KEY||window.BOBIK_SUPABASE_PUBLISHABLE_KEY;
+  const payload=JSON.stringify({user_id:activeUser.id,data:clone(cfg),updated_at:new Date().toISOString()});
+  fetch(window.BOBIK_SUPABASE_URL+"/rest/v1/game_saves?on_conflict=user_id",{method:"POST",keepalive:true,headers:{apikey:key,Authorization:"Bearer "+activeSession.access_token,"Content-Type":"application/json",Prefer:"resolution=merge-duplicates,return=minimal"},body:payload}).catch(()=>{});
+}
+D.addEventListener("pagehide",saveOnExit);
+D.addEventListener("visibilitychange",()=>{if(D.hidden){saveOnExit();saveCloudNow();}});
+setInterval(()=>{if(activeUser){sv();}},12000);
+
+/* Восстановление текущей сессии Supabase. */
+(async()=>{
+  try{navigator.storage&&navigator.storage.persist&&navigator.storage.persist()}catch(e){}
+  const offlineOk=()=>{if(!cfg.acc)return false;toast("Нет связи с облаком — играем офлайн");show("menu");ui();return true};
+  if(!cloud){
+    tb(0);
+    if(offlineOk())return;
+    sayAuth(hasSupabaseConfig()?"Не удалось загрузить SDK Supabase с доступных CDN. Проверь интернет и попробуй открыть игру ещё раз.":"Конфигурация Supabase не задана. Проверь адрес проекта и publishable key в supabase-config.js.");
+    show("acc");return;
+  }
+  tb(0);
+  try{
+    const {data,error}=await cloud.auth.getSession();
+    if(error)throw error;
+    if(data.session)await finishLogin(data.session);
+    else show("acc");
+  }catch(err){if(offlineOk())return;sayAuth("Ошибка подключения к Supabase: "+(err.message||"неизвестная ошибка"));show("acc");}
+})();
 })();
 </script>
 <script>(()=>{
@@ -544,5 +854,4 @@ D.addEventListener("click",e=>{e.target.closest("[data-tut]")&&tut()});
 const _s=start;start=function(){if(!cfg.tu){tut(_s);return}_s()};
 })();
 </script>
-<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(console.warn));}</script>
-</body></html>
+<script>if("serviceWorker" in navigator && location.protocol.startsWith("http")){window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(console.warn));}</script></body></html>
