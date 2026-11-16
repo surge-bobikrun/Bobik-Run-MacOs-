@@ -4,7 +4,7 @@ create table if not exists public.public_profiles (
   username text not null default 'Игрок' check (char_length(username) between 1 and 24),
   avatar smallint not null default 0 check (avatar between 0 and 200),
   photo text check (photo is null or (char_length(photo) <= 60000 and photo ~ '^data:image/(jpeg|png);base64,[A-Za-z0-9+/=]+$')),
-  bio text check (bio is null or char_length(bio) <= 90),
+  bio text check (bio is null or char_length(bio) <= 300),
   updated_at timestamptz not null default now()
 );
 alter table public.public_profiles enable row level security;

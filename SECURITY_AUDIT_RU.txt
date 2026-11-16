@@ -1,0 +1,48 @@
+BOBIK RUN v1.9.2 — SECURITY AUDIT / 2026-11-16
+================================================
+
+LIVE PROJECT
+- Supabase project: nrmfygckxovwkkhvsywe
+- Latest checked migration: 20261115195434
+- `admin-panel`: ACTIVE v9, verify_jwt=true.
+- `bobik-run-api`: ACTIVE v7, verify_jwt=true.
+- `bright-processor`: ACTIVE v2, verify_jwt=true; legacy role-code admin endpoint disabled.
+- `account-gateway`: ACTIVE v1, verify_jwt=false by design for unauthenticated username/password sign-in only; it validates the public API key, accepts only `sign-in`, and relies on Supabase Auth password verification/rate limits.
+- Live migration history checked through 20261115194337.
+
+ADMIN PANEL — OWNER ONLY
+- Edge Function validates the bearer token with `auth.getUser()`.
+- It compares the authenticated user's UUID against one hardcoded OWNER_ID before creating a service-role client.
+- All admin actions (search, ban/unban, interrupt, broadcast, news management and dashboard) run after that owner check.
+- The owner UUID is not embedded in the public browser bundle. The button is shown only after a successful server-side dashboard authorization check; the server check remains the actual security boundary.
+- `admin_users` and `user_roles` have no client grants and no RLS policies. The old `bright-processor` endpoint previously allowed role activation using a code hash; it has now been replaced by a minimal endpoint that verifies the JWT and rejects all legacy admin actions. The primary `admin-panel` owner check is authoritative.
+- The service/secret key is read only from Edge Function environment variables and is not placed in browser files.
+
+DATABASE ACCESS
+- Direct client SELECT/INSERT/UPDATE on `admin_users`, economy, player stats, run sessions and hunt records is denied.
+- RLS-enabled internal tables with no policies are intentionally closed; the client roles have no table grants.
+- Public read access is limited to intended game data such as news, global messages, public profiles, public progress and run history.
+- `online_presence` is scoped to the authenticated user's own row.
+- `game_interrupts` allows users to read/acknowledge only their own messages; admin writes are performed server-side.
+- Server-only game RPCs retain EXECUTE only for `service_role`.
+
+SECURITY DEFINER FUNCTIONS — REVIEWED
+- `bobik_username_available`: public by design; validates input and returns only a boolean.
+- `get_bobik_global_hunt_progress`: public by design; returns display name, best distance, percent, completion flag and attempts for the active hunt. It does not return account UUIDs.
+- `get_bobik_hunt_completions`: public by design; returns display name, target/actual distance, percentage and timestamp only; no account UUIDs.
+- Profile registration/update, access check, code redemption and username rename are callable only by authenticated users and scope writes to `auth.uid()`.
+- `get_bobik_hunt_leaderboard` was removed from anon/authenticated EXECUTE because the updated UI no longer needs the UUID-bearing aggregate RPC; service_role retains access.
+- All reviewed SECURITY DEFINER functions use an empty `search_path` setting.
+
+ADVISOR RESULTS
+- No-policy RLS INFO findings remain on 10 internal tables. Their client grants are false, so they remain inaccessible to anon/authenticated.
+- Public SECURITY DEFINER warnings remain for the three intentional public endpoints above. They return only public game/profile information and have fixed search paths.
+- Authenticated SECURITY DEFINER warnings remain for self-scoped profile/account RPCs and the public hunt progress function.
+- Leaked Password Protection is still disabled in Supabase Auth. Enable it in the Supabase dashboard if the current plan exposes the setting.
+- Performance INFO findings concern 23 tables in the historical `bobik_backup_20261115` schema and 4 indexes not yet used. No live index was removed without evidence.
+- Health advisor returned no findings.
+
+LIMITATIONS
+- Client-reported distance is still validated for plausible elapsed time/distance but is not equivalent to server-side physics simulation.
+- Full browser/mobile penetration testing and real-device E2E were not performed in this environment.
+- No security system can guarantee protection against every attack.

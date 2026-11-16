@@ -1,0 +1,45 @@
+BOBIK RUN — LIVE SUPABASE MIGRATION HISTORY
+==========================================
+Project: nrmfygckxovwkkhvsywe
+Checked: 2026-11-16
+
+Applied migrations:
+20261112103418 bobik_run_cloud_accounts_saves_leaderboard
+20261112104232 bobik_run_security_hardening
+20261113121026 bobik_run_v180_accounts
+20261113121056 restrict_definer_rpc_execution
+20261113130055 increase_public_profile_bio_limit_to_300
+20261114060350 add_game_news
+20261115082627 create_internal_pre_server_migration_backup_20261115
+20261115083227 bobik_server_run_sessions_phase1
+20261115083634 preserve_legacy_player_progress_from_cloud_saves
+20261115084835 bobik_secure_run_api_service_role_bridge
+20261115084859 bobik_run_awarded_xp_and_service_only_finish
+20261115085009 bobik_finish_run_bounded_bonus_xp
+20261115105115 bobik_v190_finalize_server_authority_and_rls
+20261115105459 bobik_v190_server_wallet_stats_and_signup_state
+20261115105620 bobik_v190_protect_online_presence_and_fk_indexes
+20261115122741 bobik_v190_abort_unfinished_run_sessions
+20261115122819 bobik_v190_revoke_private_table_grants_and_dedupe_presence_policy
+20261115123320 bobik_v190_bound_coin_award_to_distance
+20261115123437 bobik_v190_expire_stale_run_sessions_after_30m
+20261115124906 bobik_v190_harden_profile_definer_search_path_and_grants
+20261115164220 bobik_server_api_claims_compat_and_owned_item_upgrades
+20261115190859 bobik_run_balanced_rewards_dual_global_hunts
+20261115191606 bobik_rebalance_existing_active_quests
+20261115191826 bobik_align_coin_cap_and_xp_award
+20261115192711 bobik_integer_coin_payout_and_reset_hunt_cycle
+20261115192924 bobik_state_returns_both_hunt_objectives
+20261115192953 bobik_remove_retired_20k_achievement_id
+20261115193806 bobik_progression_balance_hunt_board
+20261115194208 bobik_remove_redundant_hunt_completions_rpc
+20261115194245 bobik_restrict_unused_hunt_leaderboard_rpc
+20261115194337 bobik_restore_public_hunt_completion_feed
+20261115194602 bobik_admin_dashboard_aggregate_stats
+20261115195227 bobik_v192_weekly_quest_targets_tuned
+20261115195434 bobik_v192_achievement_balance_tuning
+
+NOTES
+- The v1.9.2 quest/hunt migration and the follow-up access changes are already applied in the live project.
+- Do not re-run migrations manually against this project. Check the migration history first.
+- The game website itself is not deployed by a database migration. Publish the static files from the v1.9.2 archive separately.
