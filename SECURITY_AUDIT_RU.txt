@@ -46,3 +46,29 @@ LIMITATIONS
 - Client-reported distance is still validated for plausible elapsed time/distance but is not equivalent to server-side physics simulation.
 - Full browser/mobile penetration testing and real-device E2E were not performed in this environment.
 - No security system can guarantee protection against every attack.
+
+
+ДОПОЛНЕНИЕ 2026-11-16 — АДМИН-ПАНЕЛЬ И ТЕЛЕМЕТРИЯ
+- Edge Function admin-panel развернута как version 10 (ACTIVE), verify_jwt=true. До любого действия вызывает auth.getUser() и сравнивает user.id с фиксированным OWNER_ID аккаунта surge.
+- Service-role/secret key читается только из Edge Function environment; ключ не передаётся в HTML, JS или GitHub.
+- Админская выдача наград выполняется серверной RPC admin_grant_rewards, закрытой от anon/authenticated и доступной только service_role; actor ID и actor username дополнительно сверяются в RPC. Действия пишутся в admin_action_audit.
+- Игровое наблюдение ограничено телеметрией: статус забега, режим, дистанция, скорость, ID персонажа/машины и время последнего обновления. Запись экрана, камеры или микрофона не осуществляется.
+- Эффекты slow/boost/manual/bobik/clear ограничены 5–300 секундами и сопровождаются уведомлением с именем surge; изменения записываются в журнал. Клиент не имеет права изменять game_player_controls.
+- Таблицы game_live_state и game_player_controls имеют RLS; пользователь может публиковать/читать только свою телеметрию и читать только собственную команду. admin_player_notices доступна пользователю только для чтения своих уведомлений и отметки их прочитанными.
+- The Rook: титул «Формула 1», стиль rook_green назначен сервером. Защита не позволяет пользователю самостоятельно менять is_creator/custom_title/title_style.
+- Ограничение: телеметрия поступает от клиентской игры и сама по себе не является античитом; игрок может подделать собственные поля скорости/модели. Админ-панель показывает последнее значение и статус свежести, но не скрытое изображение экрана.
+- Остаточные предупреждения Supabase: leaked-password protection отключена; несколько SECURITY DEFINER RPC доступны авторизованным пользователям и требуют ручного просмотра логики перед изменением прав.
+
+
+ПРОВЕРКА LIVE SUPABASE 2026-11-16
+- Подтверждена одна запись bobik_global_hunt_state (id=1), активное задание «БЕГИ» / 👁️ / 3000 м / Кошмар.
+- RPC get_bobik_global_hunt_progress возвращает user_id, display_name, прогресс, выполненность и hold_seconds; EXECUTE доступен только authenticated. RPC get_bobik_hunt_completions возвращает user_id для ссылок на профиль; EXECUTE доступен только authenticated.
+- Прогресс RPC проверен прямым smoke-test: вызов завершается без ошибки. Для только что сменившейся цели отсутствие строк означает отсутствие забегов по новой цели, а не ошибку RPC. История завершений содержит прежние записи.
+- Владелец surge имеет is_creator=true. The Rook имеет custom_title=«Формула 1», title_style=rook_green.
+- Владелец админ-панели проверяется по фиксированному UUID на серверной Edge Function. admin_grant_rewards имеет EXECUTE только service_role. Таблицы админского журнала/команд/уведомлений закрыты RLS и grants согласно модели self-read/service-only.
+- 12 таблиц с RLS без пользовательских политик — закрытые служебные таблицы; это deny-all для anon/authenticated, не открытый доступ.
+- SECURITY DEFINER функции профиля/регистрации используют auth.uid() и обновляют только собственную строку; username_available возвращает только boolean и оставлен публичным для проверки имени при регистрации. Публичные hunt RPC отдают только игровую статистику, имя и публичный UUID профиля.
+- Остаточный пункт: Supabase Auth Leaked Password Protection выключен. Его нужно включить вручную в Dashboard → Authentication → Security/Password Protection; API-инструмент текущей сессии не предоставляет изменения этого Auth-настройки.
+- Ограничение телеметрии: значения публикуются клиентом игрока и могут быть им подделаны; это наблюдение за текущим состоянием, а не серверный античит.
+
+- Глобальная серия из пяти заданий продвигается только сервером; финальное удержание топ-1 проверяется по 10 категориям таблицы лидеров, а таймер сбрасывается при потере первого места.

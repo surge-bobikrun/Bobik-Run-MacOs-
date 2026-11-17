@@ -1,7 +1,7 @@
 BOBIK RUN — LIVE SUPABASE MIGRATION HISTORY
 ==========================================
 Project: nrmfygckxovwkkhvsywe
-Checked: 2026-11-16
+Checked: 2026-11-17
 
 Applied migrations:
 20261112103418 bobik_run_cloud_accounts_saves_leaderboard
@@ -43,3 +43,59 @@ NOTES
 - The v1.9.2 quest/hunt migration and the follow-up access changes are already applied in the live project.
 - Do not re-run migrations manually against this project. Check the migration history first.
 - The game website itself is not deployed by a database migration. Publish the static files from the v1.9.2 archive separately.
+
+
+Дополнительные изменения, применённые в LIVE Supabase 2026-11-16:
+20261116161236 bobik_admin_security_profiles_curated_hunts
+20261116161302 bobik_quest_bonus_and_six_hour_rotation
+20261116161508 bobik_curated_hunt_rotation_reward_and_leader_hold
+20261116161858 bobik_require_unique_first_place_for_final_hunt
+
+Проверка live-схемы:
+- В bobik_global_hunt_state находится ровно одна строка id=1.
+- Активная последовательность глобальных заданий задана на сервере, а не генерируется случайно.
+- Награда каждого из пяти последовательных глобальных заданий: 5 000 XP и 2 000 монет.
+- Обычная охота выключена.
+- Финальное условие требует первого места во всех 10 категориях таблицы лидеров одновременно и 5 часов непрерывного удержания.
+- Обычные задания имеют персональный nextAt в серверном quest_data; замена — через 6 часов после выполнения.
+- Админская Edge Function admin-panel version 10 ACTIVE, verify_jwt=true; владелец проверяется по фиксированному user ID.
+- Секретный/service-role ключ хранится только в secrets Edge Function и не помещается в клиентские файлы.
+- The Rook получил серверный титул «Формула 1» со стилем rook_green; титул Creator у аккаунта surge остаётся защищённым.
+
+Предупреждения аудита Supabase:
+- 12 таблиц с RLS без политик являются закрытыми служебными таблицами; grants для anon/authenticated отсутствуют, доступ остаётся только service_role.
+- SECURITY DEFINER RPC для профилей/доступности имени/промокодов остаются доступны authenticated (username_available также anon); требуется отдельная проверка тел их функций, прежде чем менять grants, так как часть используется в регистрации/профиле.
+- В Supabase Auth выключена проверка скомпрометированных паролей (Leaked Password Protection). Включить в Auth > Security/Password protection.
+20261116162521 bobik_hunt_progress_profile_links
+
+
+Дополнительные миграции LIVE Supabase 2026-11-17:
+20261117052802 bobik_five_sequential_global_hunts
+20261117052847 bobik_hunt_rewards_and_quest_rebalance
+20261117053052 bobik_replace_retired_1500m_daily_quest
+20261117061619 bobik_quest_rewards_and_retired_1500m
+20261117061858 bobik_global_hunt_reward_path_and_task_alignment
+
+Проверки после текущей сборки v1.9.3:
+- Старый обработчик случайной глобальной охоты отключён в базовой функции завершения забега; используется только последовательная серверная обработка пяти заданий.
+- Награды охоты начисляются сервером и возвращаются в global_hunt; клиент показывает их на экране результата.
+- В активных заданиях нет незавершённых целей на 1 500 м.
+- Выплаты активных заданий приведены к диапазону 30–80 XP и столько же монет.
+
+
+Миграции LIVE Supabase 2026-11-17 (дополнительно):
+20261117065310 bobik_global_hunt_fixed_reward
+20261117071801 bobik_profile_favorites_3d
+
+Проверки профиля:
+- public_profiles.favorite_character: smallint, NOT NULL, default 0, допустимый диапазон 0–8.
+- public_profiles.favorite_vehicle: smallint, NOT NULL, default 0, допустимый диапазон 0–3.
+- Публичное чтение остаётся доступным через существующую SELECT policy; изменение профиля ограничено существующей owner-only UPDATE policy.
+- В профиле показываются уровень, XP и шкала до следующего уровня; выбор любимых моделей хранится в public_profiles.
+
+
+Миграция LIVE Supabase 2026-11-17 (исправление начисления наград после забега):
+20261117081224 bobik_fix_unfiltered_hunt_cleanup_deletes
+- В функциях очистки временных записей удержания добавлен явный WHERE TRUE для намеренной очистки всей временной таблицы.
+- Исправлен путь завершения забега: триггер таблицы leaderboard больше не должен прерывать серверную выплату из-за DELETE без WHERE.
+- Балансы игроков и существующие записи прогресса миграция не изменяет.

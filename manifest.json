@@ -1,6 +1,6 @@
 {
-  "name": "Bobik Run v1.9.2",
-  "short_name": "Bobik Run 1.9.2",
+  "name": "Bobik Run v1.9.3",
+  "short_name": "Bobik Run",
   "id": "./index.html",
   "start_url": "./index.html",
   "scope": "./",
