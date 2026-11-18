@@ -1,0 +1,10 @@
+{
+  "stable_object_ids": true,
+  "live_frame_collected": true,
+  "realtime_live_objects": true,
+  "fake_police_generator_removed": true,
+  "banana_tag": true,
+  "old_god_tag": true,
+  "edge_includes_live_frame": true,
+  "migration_written": true
+}
