@@ -34,13 +34,12 @@ SECURITY DEFINER FUNCTIONS — REVIEWED
 - `get_bobik_hunt_leaderboard` was removed from anon/authenticated EXECUTE because the updated UI no longer needs the UUID-bearing aggregate RPC; service_role retains access.
 - All reviewed SECURITY DEFINER functions use an empty `search_path` setting.
 
-ADVISOR RESULTS
-- No-policy RLS INFO findings remain on 10 internal tables. Their client grants are false, so they remain inaccessible to anon/authenticated.
-- Public SECURITY DEFINER warnings remain for the three intentional public endpoints above. They return only public game/profile information and have fixed search paths.
-- Authenticated SECURITY DEFINER warnings remain for self-scoped profile/account RPCs and the public hunt progress function.
-- Leaked Password Protection is still disabled in Supabase Auth. Enable it in the Supabase dashboard if the current plan exposes the setting.
-- Performance INFO findings concern 23 tables in the historical `bobik_backup_20261115` schema and 4 indexes not yet used. No live index was removed without evidence.
-- Health advisor returned no findings.
+ADVISOR RESULTS · 2026-11-18 16:26 UTC
+- Security advisor reports 13 RLS-enabled tables with no policies (INFO). These are intentionally closed internal tables; client grants are false, so anon/authenticated cannot query them.
+- One public SECURITY DEFINER warning remains: `bobik_username_available(p_username)`. It validates usernames and returns only a boolean for registration; keep it public intentionally.
+- Eight authenticated SECURITY DEFINER warnings remain for profile, account-access, code-redemption and public-hunt RPCs. Their current definitions were reviewed earlier for fixed search paths and auth.uid()-scoped writes or public aggregate output.
+- Leaked Password Protection is disabled in Supabase Auth. This is the remaining actionable Auth advisory; no connected Supabase API tool exposes that dashboard setting. Enable it in Supabase Dashboard → Authentication → Security if the project plan supports it.
+- Health advisor returned no findings. Performance INFO findings from the previous audit concern historical backup tables and unused indexes; no production index was removed.
 
 LIMITATIONS
 - Client-reported distance is still validated for plausible elapsed time/distance but is not equivalent to server-side physics simulation.
