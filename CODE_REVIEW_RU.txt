@@ -68,4 +68,29 @@ supabase-config.js, config.toml, четыре Edge Functions, README,
 Проверено локально: основные переходы меню, магазин (персонажи/машины), профиль, уровни/достижения/задания/охота, запуск и завершение забега, начисления, быстрый повтор и перезапуск из паузы. Пробный вход использовал только локальную заглушку на 127.0.0.1:9 и синтетические значения; реальные данные аккаунта не отправлялись.
 
 Непокрыто: настоящий вход владельца и другого пользователя, авторизованные действия admin-panel, полный онлайн-цикл покупок/таблиц/хантов, реальное мобильное устройство, стресс/anti-cheat тест. Неизвестны интеграция и хостинг статического сайта, поэтому GitHub PR нужно опубликовать отдельно.
+
+REWARD FIX + DESKTOP KEYBINDS · 2026-11-18
+==========================================
+
+- Live Postgres logs pinpointed the payout rollback: leaderboard insert triggers
+  bobik_reconcile_hunt_leader_holds(), whose first cleanup statement was an
+  unfiltered DELETE. The older repair migration used case-sensitive text replacement
+  and did not match pg_get_functiondef's uppercase SQL.
+- Applied migration 20261118152818_fix_hunt_hold_reward_delete. It performs a
+  case-insensitive exact-statement replacement with `WHERE user_id IS NOT NULL`;
+  user_id is the NOT NULL primary key. Live function-definition verification shows
+  the safe filter and no remaining unfiltered delete in either affected function.
+- The finish failure handler no longer aborts a run after a transient error. It keeps
+  the exact run ID/result and offers a retry button that only displays server-returned
+  rewards; it never estimates coins or XP.
+- Desktop settings now remap left/right, pause, replay, and keys for all four modes.
+  Bindings are stored locally, duplicate bindings are rejected, and defaults can be
+  restored. Arrow/A-D and mobile pointer controls remain available.
+- v1.9.5 and Build 40 naming are unchanged. The Service Worker cache key was bumped
+  so installed PWAs fetch this patch. Replay continues to consume the prepared server
+  run session, launched in parallel with result settlement.
+
+Not verified with a real player session: successful payout after this live migration.
+The PostgreSQL failure path is confirmed from prod logs and the live function body
+was checked after migration; an end-to-end run requires the owner's active game session.
 Дополнение Build 40: политика новой учётной записи и смены пароля синхронизирована с supabase/config.toml — минимум 8 символов, буква и цифра. Вход сохраняет совместимость со старыми паролями от 6 символов.

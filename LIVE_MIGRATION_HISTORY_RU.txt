@@ -110,3 +110,12 @@ NOTES
 - Синхронизация nickname copies по user_id, backfill устаревших display_name, live_frame jsonb, стилизованные теги для Насрунова и The Rook.
 - Не считать применённой к LIVE до появления этой записи в фактической migration history Supabase.
 - После миграции развернуть новую версию Edge Function admin-panel и обновить статический сайт.
+
+APPLIED AFTER THIS AUDIT · 2026-11-18
+--------------------------------------
+20261118152818_fix_hunt_hold_reward_delete
+- Исправлен DELETE без WHERE в bobik_reconcile_hunt_leader_holds(), который
+  откатывал транзакцию завершения забега и блокировал выдачу монет/XP.
+- Условие WHERE user_id IS NOT NULL охватывает строки временной таблицы удержания
+  (user_id — NOT NULL primary key) и сохраняет назначение очистки.
+- Функция проверена в LIVE по pg_get_functiondef после применения миграции.

@@ -1197,6 +1197,9 @@ body{padding-bottom:env(safe-area-inset-bottom);-webkit-tap-highlight-color:tran
 @media(max-width:560px){.scr{width:100%;max-width:100vw}.admin-live-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.admin-tools>*{min-width:0;max-width:100%}#acc{margin-top:8px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 @media(prefers-reduced-transparency:reduce){.b,.chip,.gear,.pf,.admin-live-panel,.admin-control-panel,.admin-dashboard,.admin-news-panel,.menu-progress,#acc{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background-color:rgba(20,27,50,.96)!important}}
+.keybind-panel{width:min(100%,520px);margin:10px auto;padding:14px;border:1px solid rgba(232,240,255,.2);border-radius:20px;background:linear-gradient(145deg,rgba(40,50,81,.72),rgba(17,22,43,.72));box-shadow:0 14px 40px rgba(3,8,24,.3),inset 0 1px 0 rgba(255,255,255,.13);text-align:left}
+.keybind-panel h3{margin:0 0 6px}.keybind-panel p{margin:0 0 12px;color:rgba(239,243,255,.75);font-size:13px;line-height:1.4}.keybind-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.keybind-list .b{width:100%;min-width:0;font-size:13px}.keybind-list b{color:#ffe08b}.keybind-panel>#resetKeyBindings{width:100%;margin-top:10px}
+@media(max-width:420px){.keybind-list{grid-template-columns:1fr}}
 </style>
 </head><body>
 <div id="fd"></div><div id="fl"></div><div id="tt"></div>
@@ -1392,6 +1395,12 @@ function clh(){DR.forEach(o=>sc.remove(o.g,o.bm,o.sp));DR.length=0;BB.forEach(b=
 function fire(x){const st=new THREE.Mesh(stG,stM);st.position.set(x,.08,-16);sc.add(st);SH.push({id:++bobikLiveObjectId,x,t:.8,st,s:null,z:gz})}
 /* состояние */
 let S="menu",t=0,dist=0,speed=14,gap=14,px=0,tx=0,inv=0,shake=0,flash=0,ns=30,nf=3,gz=6,tm=0,last=performance.now();const keys={};let py=0,vy=0,air=0,wr=0,bst=0,slw=0,rg=0,lives=3,lvl=1,bf=62,fv=62,tto,df=0,mi=0,dn=2,bn=3,rc=0,cx=0,tab=0,cmi=0;const T=[30,90,50,70,60,80],hc=()=>cfg.m==2||cfg.m==3;let rocketWave=0;
+const defaultKeyBindings={left:"ArrowLeft",right:"ArrowRight",pause:"KeyP",retry:"Enter",mode0:"Digit1",mode1:"Digit2",mode2:"Digit3",mode3:"Digit4"};
+let keyBindings={...defaultKeyBindings},bindingAction=null;
+try{const saved=JSON.parse(localStorage.getItem("bobikKeyBindings")||"{}");for(const key of Object.keys(defaultKeyBindings))if(typeof saved[key]==="string"&&saved[key])keyBindings[key]=saved[key];}catch(_){}
+function saveKeyBindings(){try{localStorage.setItem("bobikKeyBindings",JSON.stringify(keyBindings));}catch(_){}}
+function keyBindingLabel(code){if(/^Key[A-Z]$/.test(code))return code.slice(3);if(/^Digit[0-9]$/.test(code))return code.slice(5);if(/^Numpad[0-9]$/.test(code))return "Num "+code.slice(6);return ({ArrowLeft:"←",ArrowRight:"→",ArrowUp:"↑",ArrowDown:"↓",Space:"Пробел",Enter:"Enter",Escape:"Esc",Backspace:"Backspace"})[code]||code;}
+function renderKeyBindings(){const box=E("keybindList");if(box){const rows=[["left","Влево"],["right","Вправо"],["pause","Пауза"],["retry","Играть ещё"],["mode0","Обычный режим"],["mode1","Три жизни"],["mode2","Хардкор"],["mode3","Кошмар"]];box.innerHTML=rows.map(([id,label])=>'<button type="button" class="b g" data-bind="'+id+'">'+label+': <b>'+(bindingAction===id?"Нажми клавишу…":keyBindingLabel(keyBindings[id]))+'</b></button>').join("");}const hint=E("modeKeyHint");if(hint)hint.textContent="Режимы: "+[0,1,2,3].map(i=>keyBindingLabel(keyBindings["mode"+i])).join(" / ")+" · Повтор: "+keyBindingLabel(keyBindings.retry);}
 function hit(k){if(inv>0)return 0;speed=Math.max(8,speed*.45);if(cfg.m===1||cfg.m===2||cfg.m===3)lives--;else gap=Math.max(0,gap-(k?6.5:4.8));inv=1.1;shake=.6;flash=.55;return 1}
 function clr(){clh();OB.forEach(o=>sc.remove(o.m));OB.length=0;SH.forEach(v=>{sc.remove(v.st);v.s&&sc.remove(v.s)});SH.length=0}
 function reset(){clr();t=dist=0;speed=80/3.6;gap=16;T[0]=30;T[1]=90;T[2]=cfg.m===3?speed*7:50;T[3]=70;T[4]=110;T[5]=140;nf=3;rocketWave=0;py=vy=air=wr=bst=slw=rg=0;lvl=1;lives=(cfg.m===2||cfg.m===3)?1:3;df=0;mi=0;dn=2;bn=3;rc=0;inv=0;px=tx=0;shake=flash=0;P.visible=true}
@@ -1437,7 +1446,7 @@ function end(){
   try{clh()}catch(e){}
   SH.forEach(v=>{try{sc.remove(v.st);if(v.s)sc.remove(v.s)}catch(e){}});SH.length=0;
   if(P)P.visible=true;
-  const d=Math.max(0,Math.floor(dist||0)),mi=cl(cfg.m|0,0,3),di=cl(cfg.d|0,0,2);
+  const d=Math.max(0,Math.floor(dist||0)),mi=cl(cfg.m|0,0,3),di=cl(cfg.d|0,0,2),elapsedSeconds=Math.max(1,Math.floor(Number(t)||1));
   if(!Array.isArray(cfg.r))cfg.r=[0,0,0,0];
   cfg.r=Array.from({length:4},(_,i)=>Math.max(0,Number(cfg.r[i])||0));
   if(!Array.isArray(cfg.lr))cfg.lr=[];
@@ -1457,7 +1466,7 @@ function end(){
    progression={earned:0,xp:0,bonusCoins:0,levelCoins:0,missionCoins:0,level:Math.max(1,Number(cfg.level)||1),info:{level:Math.max(1,Number(cfg.level)||1),into:0,needed:0}};
    const runId=bobikServerRunId;bobikServerRunId=null;
    if(runId){
-    const finishRequest=window.BobikCloudApi.finishRun(runId,d,Math.max(1,Math.floor(Number(t)||1)));
+    const finishRequest=window.BobikCloudApi.finishRun(runId,d,elapsedSeconds);
     // Prepare the replay session in parallel with reward settlement, so pressing
     // "Играть ещё" does not wait for another start-run round trip.
     window.BobikCloudApi.prepareRun(mi,di).catch(prewarmErr=>console.warn("next run prewarm",prewarmErr));
@@ -1505,10 +1514,10 @@ function end(){
     });
    }).catch(async err=>{
     console.error("Server run finish failed:",err);
-    try{await window.BobikCloudApi.abortRun(runId);}catch(abortErr){console.warn("Server run cleanup failed:",abortErr);}
     E("ot").textContent="Забег не подтверждён";
     const icon=E("over").querySelector(".result-icon");if(icon)icon.textContent="⚠️";
     const note=document.createElement("article");note.className="result-stat wide server-result-error";note.textContent="Сервер не принял результат. Награда и рекорд не начислены. Причина: "+String(err?.message||"ошибка соединения");E("res").appendChild(note);
+    const retry=document.createElement("button");retry.type="button";retry.className="b wide retry-award";retry.textContent="↻ Повторить начисление";retry.addEventListener("click",async()=>{retry.disabled=true;retry.textContent="Проверяю результат…";try{const paid=await window.BobikCloudApi.finishRun(runId,d,elapsedSeconds);if(!paid?.success)throw new Error(paid?.error||"Сервер не подтвердил награду");const coins=Math.floor(Number(paid.coins_awarded)||0),xp=Math.floor(Number(paid.xp_awarded)||0);const cc=E("res").querySelector(".result-stat.coins .stat-value"),xc=E("res").querySelector(".result-stat.xp .stat-value");if(cc)cc.textContent="+"+coins.toLocaleString("ru-RU");if(xc)xc.textContent="+"+xp.toLocaleString("ru-RU");note.textContent="Награда подтверждена сервером.";E("ot").textContent="Забег окончен";if(icon)icon.textContent="🏁";retry.remove();const state=await window.BobikCloudApi.getState();if(state?.economy){cfg.c=Number(state.economy.coins)||0;cfg.xp=Number(state.progress?.xp)||0;cfg.level=Number(state.progress?.level)||1;sv();window.BobikProgress?.renderMenuProgress?.();}}catch(retryErr){note.textContent="Не удалось подтвердить забег. Попробуй ещё раз: "+String(retryErr?.message||"ошибка соединения");retry.disabled=false;retry.textContent="↻ Повторить начисление";}});E("res").appendChild(retry);
     toast("Не удалось подтвердить забег. Награда не начислена.");
    });}
    else{
@@ -1563,6 +1572,10 @@ function end(){
 function gq(){rd.shadowMap.enabled=dl.castShadow=true;sc.traverse(o=>{if(o.material)o.material.needsUpdate=true});rs()}
 function ui(){E("mdiff").textContent="Сложность: "+DN[cfg.d]+"  ↻";E("mdiff").disabled=false;window.sd2&&sd2();window.sui&&sui();document.querySelectorAll("#ml .md").forEach((e,i)=>e.classList.toggle("on",i==cfg.m))}
 E("mdiff").onclick=()=>{cfg.d=(cfg.d+1)%3;sv();ui();window.BobikCloudApi?.prepareRun?.(cfg.m,cfg.d).catch(err=>console.warn("run prewarm",err));};
+E("resetSettings").insertAdjacentHTML("afterend",'<section class="keybind-panel"><h3>⌨️ Клавиши на компьютере</h3><p>Нажми кнопку действия, затем выбери клавишу. Назначения сохраняются на этом устройстве.</p><div id="keybindList" class="keybind-list"></div><button type="button" class="b g" id="resetKeyBindings">Вернуть стандартные клавиши</button></section>');
+renderKeyBindings();
+document.addEventListener("click",e=>{const bind=e.target.closest("[data-bind]");if(bind){bindingAction=bind.dataset.bind;renderKeyBindings();toast("Нажми новую клавишу или Esc для отмены");return}if(e.target.closest("#resetKeyBindings")){keyBindings={...defaultKeyBindings};bindingAction=null;saveKeyBindings();renderKeyBindings();toast("Стандартные клавиши восстановлены");}});
+addEventListener("keydown",e=>{if(bindingAction){e.preventDefault();e.stopImmediatePropagation();if(e.code==="Escape"){bindingAction=null;renderKeyBindings();return}const conflicts=Object.entries(keyBindings).find(([id,code])=>id!==bindingAction&&code===e.code);if(conflicts){toast("Эта клавиша уже назначена: "+keyBindingLabel(e.code));return}keyBindings[bindingAction]=e.code;bindingAction=null;saveKeyBindings();renderKeyBindings();return}keys[e.code]=1;if(e.repeat)return;if(!E("mode").classList.contains("hide")){const mode=Object.keys(defaultKeyBindings).filter(id=>id.startsWith("mode")).findIndex(id=>keyBindings[id]===e.code);if(mode>=0){e.preventDefault();E("ml").querySelector('[data-m="'+mode+'"]')?.click();return}}if(S==="over"&&e.code===keyBindings.retry){e.preventDefault();E("over").querySelector('[data-go="play"]')?.click();}});
 E("resetSettings").onclick=()=>{Object.assign(cfg,{d:1,q:2,lo:0,tt:0,dl:1,wx:1,fv:1,fp:0,sn:2,mu:2,sv:100,mv:100,sens:100});sv();window.sui&&sui();rs();ui();toast("Настройки сброшены")};
 
 document.addEventListener("click",async e=>{
@@ -1570,7 +1583,7 @@ const buyUp=e.target.closest("[data-upgrade-buy]");if(buyUp){if(buyUp.dataset.bu
 const tb=e.target.closest("[data-t]");if(tb){tab=cl(Number(tb.dataset.t)||0,0,1);spI=0;shp();return;}
 const pa=e.target.closest("[data-a]");if(pa){cfg.pa=+pa.dataset.a;sv();prf();return}
 const cg=e.target.closest("[data-cm]");if(cg){cmg(+cg.dataset.cm);return}const mb=e.target.closest("[data-m]");if(mb){const nextMode=+mb.dataset.m;if(nextMode===3&&cfg.m!==3)cfg.d=2;cfg.m=nextMode;sv();ui();start();return}const b=e.target.closest("[data-go]");if(!b)return;const g=b.dataset.go;if(g=="go"){cfg.cs=1;sv();start()}else if(g=="play")start();else{if(g=="menu"){S="menu";reset()}if(g!=="mode")window.BobikCloudApi?.cancelPreparedRun?.();show(g);ui();if(g=="mode")window.BobikCloudApi?.prepareRun?.(cfg.m,cfg.d).catch(err=>console.warn("run prewarm",err));if(g=="shop")shp();if(g=="prof")prf();if(g=="news")window.loadGameNews?.();if(g=="leaders")window.drawLeaders?.();if(g=="admin")window.drawAdmin?.()}});
-addEventListener("keydown",e=>keys[e.code]=1);addEventListener("keyup",e=>keys[e.code]=0);
+addEventListener("keyup",e=>keys[e.code]=0);
 let pointerSteering=false;const pt=e=>{if(S=="play"){const sens=cl(Number(cfg.sens)||100,50,150)/100;tx=cl((e.clientX/innerWidth-.5)*22*sens,-8.4,8.4)}};
 addEventListener("pointerdown",e=>{if(S=="play"){pointerSteering=true;pt(e)}});addEventListener("pointermove",e=>{if(pointerSteering&&S=="play")pt(e)});addEventListener("pointerup",()=>pointerSteering=false);addEventListener("pointercancel",()=>pointerSteering=false);
 const MN=["Обычный","Три жизни","Хардкор","Кошмар"],sg2=c=>'<svg viewBox="0 0 64 64">'+c+'</svg>',hr=x=>'<path transform="translate('+x+' 34)" d="M0-4C-8-14-16-2 0 12 16-2 8-14 0-4z" fill="#ff3b5c"/>',
@@ -1610,7 +1623,10 @@ CL[0][2].push("Кошмар: одна жизнь и постоянно убыв�
 "Исправлено размещение кнопок режимов и размеры панелей на мобильных экранах."
 );
 E("ml").innerHTML=MN.map((n,i)=>'<button class="b g md mode-'+i+'" data-m="'+i+'">'+MI[i]+'<div><b>'+n+'</b><span>'+MT[i]+'<em>🪙 +'+["1","1,25","1,5","2"][i]+' в секунду</em></span></div></button>').join("");
+E("ml").insertAdjacentHTML("afterend",'<p id="modeKeyHint" style="margin:4px auto 12px;color:rgba(239,243,255,.76);font-size:13px;text-align:center">Режимы: 1–4 · Enter запускает повтора на экране результата</p>');
+renderKeyBindings();
 E("cg").innerHTML=CL.map(([v,n,l])=>"<h3>v"+v+(n?" «"+n+"»":"")+"</h3><ul>"+l.map(x=>"<li>"+x+"</li>").join("")+"</ul>").join("");
+CL[0][2].push("Настраиваемые клавиши компьютера: движение, пауза, повтор и выбор четырёх режимов; назначения сохраняются на устройстве.","Если сервер временно отклоняет завершение забега, его сессия не отменяется автоматически: доступна безопасная повторная отправка результата.","Повторный забег использует подготовленную заранее серверную сессию, чтобы сократить ожидание после смерти.");
 E("vr").textContent="v"+CL[0][0];
 const tf=(x,y,z)=>'<g transform="translate('+x+' '+y+') scale('+z+')">',
 GB=(x,y,z)=>tf(x,y,z)+'<ellipse cy="24" rx="22" ry="12" fill="#2a2a30"/><circle r="15" fill="#2a2a30"/><ellipse cy="3" rx="10" ry="9" fill="#8a7b84"/><circle cx="-4" cy="-2" r="2" fill="#fff"/><circle cx="4" cy="-2" r="2" fill="#fff"/><path d="M-4 7q4 3 8 0" stroke="#111" fill="none"/></g>',
@@ -1625,7 +1641,7 @@ CM=[[BK("#1b1740")+'<circle cx="130" cy="22" r="11" fill="#ffe9a8"/>'+RD+TK(110,
 [BK("#2a1d5c")+'<path d="M0 30h60M0 50h40M0 70h70M0 90h50" stroke="#fff" stroke-opacity=".4" stroke-width="2"/>'+RD+TK(100,76,1.1)+PC(28,84,.9)+BU(110,8,"НЕ ДОГОНИТЕ!"),"Но Прыщавый жмёт на газ — и начинается ПОГОНЯ!"]];
 function cmr(){E("cmx").innerHTML='<div class="pn"><svg viewBox="0 0 160 110">'+CM[cmi][0]+'</svg><i>'+CM[cmi][1]+'</i></div>';E("cmc").textContent=(cmi+1)+" / "+CM.length;E("cmf").textContent=cmi==CM.length-1?"Погнали!":"▶"}
 function cmg(d){if(d>0&&cmi==CM.length-1)start();else{cmi=cl(cmi+d,0,CM.length-1);cmr()}}
-addEventListener("keydown",e=>{if(S!="play"&&!E("cm").classList.contains("hide")){if(e.code=="ArrowRight")cmg(1);if(e.code=="ArrowLeft")cmg(-1)}});
+addEventListener("keydown",e=>{if(S!="play"&&!E("cm").classList.contains("hide")){if(e.code===keyBindings.right)cmg(1);if(e.code===keyBindings.left)cmg(-1)}});
 // Permanent upgrades for the currently selected character and vehicle.
 function ensureUpgrades(){
  if(!cfg.characterUpgrades||typeof cfg.characterUpgrades!=='object')cfg.characterUpgrades={};
@@ -1762,7 +1778,7 @@ function toast(s,q){if(q)return;const e=E("tt");e.textContent=s;e.style.opacity=
 function loop(now){requestAnimationFrame(loop);const dt=Math.min(.05,(now-last)/1e3||.016);last=now;if(window.PZ){rd.render(sc,cam);return}tm+=dt;const dm=DM[cfg.d];
 if(S=="play"){t+=dt;const cr=dt*[1,1.25,1.5,2][cfg.m];if(!isCloudUser())cfg.c+=cr;rc+=cr;const car=CAR_STATS[cl(cfg.vh|0,0,CAR_STATS.length-1)],char=CHAR_STATS[cl(cfg.ch|0,0,CHAR_STATS.length-1)],speedBonus=car.speed*char.speed*upgradeMultiplier("speed"),maneuverBonus=car.maneuver*char.maneuver*upgradeMultiplier("maneuver"),resistanceBonus=car.resistance*char.resistance*upgradeMultiplier("resistance"),vb=(24+12*Math.log10(1+Math.min(dist,6000)/60))*speedBonus,adminCtl=window.__BobikAdminControl||null,avg=adminCtl?.speed_override_kmh?cl(Number(adminCtl.speed_override_kmh)/3.6,5/3.6,250/3.6):vb*(hc()?1.1:1)*cl(Number(adminCtl?.speed_multiplier)||1,.25,3),slowFactor=cl(.62+(resistanceBonus-1)*.22,.48,.82),vt=bst>0?avg*1.3:slw>0?avg*slowFactor:avg;const response=rg>0?1.9:bst>0?2.4:slw>0?1.35:.42;speed+=(vt-speed)*Math.min(1,dt*response);bst=Math.max(0,bst-dt);slw=Math.max(0,slw-dt*resistanceBonus);rg=Math.max(0,rg-dt);
 if(cfg.m===3)gap=Math.max(0,gap-dt*(.58+Math.min(t,180)/520));else gap=Math.min(22,gap+(speed-vb*(.92+Math.min(t,240)/4000)*dm.c*(hc()?1.1:1))*.3*dt);dist+=speed*dt;df=Math.pow(Math.min(dist/6000,1)*.8,.6);lvl=1+(df*10|0);MS.forEach((m,i)=>{if(dist>=m[0]&&mi<=i){mi=i+1;toast(m[1],1)}});
-{const ks=(18+speed*.4)*dt*maneuverBonus*(cl(Number(cfg.sens)||100,50,150)/100);if(keys.ArrowLeft||keys.KeyA)tx-=ks;if(keys.ArrowRight||keys.KeyD)tx+=ks}tx=cl(tx,-8.4,8.4);inv=Math.max(0,inv-dt)}
+{const ks=(18+speed*.4)*dt*maneuverBonus*(cl(Number(cfg.sens)||100,50,150)/100);if(keys[keyBindings.left]||(keyBindings.left==="ArrowLeft"&&keys.KeyA))tx-=ks;if(keys[keyBindings.right]||(keyBindings.right==="ArrowRight"&&keys.KeyD))tx+=ks}tx=cl(tx,-8.4,8.4);inv=Math.max(0,inv-dt)}
 else if(S=="menu"){speed=14;gap=14;tx=Math.sin(tm*.6)*3.2}else speed=Math.max(0,speed-40*dt);
 const d=tx-px,steer=CAR_STATS[cl(cfg.vh|0,0,CAR_STATS.length-1)].maneuver*CHAR_STATS[cl(cfg.ch|0,0,CHAR_STATS.length-1)].maneuver*upgradeMultiplier("maneuver"),mv=Math.sign(d)*Math.min(Math.abs(d),(22+speed*.45)*dt*steer),vl=mv/dt;px+=mv;
 const dz=speed*dt;roadT.offset.y+=dz/14.3;
@@ -3031,7 +3047,7 @@ E("pz").onclick=pause;E("pr").onclick=resume;
 E("pq").onclick=async()=>{hp();S="over";await start();};
 E("px").onclick=()=>{hp();end();S="menu";reset();show("menu");ui();};
 ["pz","pm","cdn"].forEach(i=>["pointerdown","pointermove"].forEach(t=>E(i).addEventListener(t,e=>e.stopPropagation())));
-addEventListener("keydown",e=>{if(e.code==="Escape"||e.code==="KeyP"){E("pm").classList.contains("hide")?pause():resume();}});
+addEventListener("keydown",e=>{if(e.code==="Escape"||e.code===keyBindings.pause){E("pm").classList.contains("hide")?pause():resume();}});
 D.addEventListener("visibilitychange",()=>{if(D.hidden)pause();});
 
 /* Cloud-save backup on close + periodic save while playing. */
