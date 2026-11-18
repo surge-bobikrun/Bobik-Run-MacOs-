@@ -1,4 +1,4 @@
-const CACHE='bobik-run-v195-build40-award-retry-keybinds-20261118';
+const CACHE='bobik-run-v195-build40-award-retry-safe-keys-icons-20261118';
 const FILES=['./','./index.html','./manifest.json','./icon-512.png','./icon-192.png','./supabase-config.js'];
 const SDK_URLS=[
   'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.0',
