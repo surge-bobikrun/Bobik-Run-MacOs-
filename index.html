@@ -1123,7 +1123,6 @@ select option{background:#18213d!important;color:#fff!important}
 .alb-mode{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);padding:4px 10px;border-radius:999px;background:rgba(6,9,26,.55);border:1px solid rgba(255,255,255,.2);font-size:10px;font-weight:800;color:#ffe9b0;z-index:3;pointer-events:none}
 .alb-flash{position:absolute;inset:0;background:#ff2a2a;opacity:0;transition:opacity .18s;z-index:2;pointer-events:none}
 .alb-status{margin-top:8px;color:#c8d0ea;font-size:11.5px}
-.alb-object-count{position:absolute;left:8px;right:8px;bottom:27px;z-index:3;padding:3px 7px;border-radius:8px;background:rgba(6,9,26,.58);color:#e0e8ff;font-size:9px;font-weight:750;line-height:1.2;text-align:center;pointer-events:none}
 @media(max-width:380px){.alb-stage{height:170px}.alb-hud span{font-size:10px;padding:4px 8px}}
 .admin-live-actions{margin-top:12px;padding:12px;border:1px solid rgba(255,255,255,.16);border-radius:16px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.028));-webkit-backdrop-filter:blur(18px) saturate(1.45);backdrop-filter:blur(18px) saturate(1.45)}
 .admin-live-actions h4{margin:0 0 9px;font-size:12px;color:#ffe0a0}
@@ -1166,48 +1165,13 @@ select option{background:#18213d!important;color:#fff!important}
 .hunt-reward-result{border:1px solid rgba(255,211,105,.28)!important;background:linear-gradient(135deg,rgba(255,190,65,.15),rgba(255,255,255,.045))!important}
 </style>
 
-<style>
-.custom-title-badge.banana-yellow{display:inline-flex;align-items:center;gap:5px;margin:3px 4px 3px 0;padding:4px 10px;border:1px solid rgba(255,222,75,.82);border-radius:999px;background:linear-gradient(125deg,#fff3ae,#ffc52e 58%,#e58b12);color:#512900;font-size:.72em;font-weight:1000;letter-spacing:.04em;white-space:nowrap;text-shadow:0 1px 0 rgba(255,255,255,.6);box-shadow:inset 0 1px 0 #fff9,0 0 14px rgba(255,190,30,.28)}
-.custom-title-badge.old-god{display:inline-flex;align-items:center;gap:5px;margin:3px 4px 3px 0;padding:4px 10px;border:1px solid rgba(200,177,255,.7);border-radius:999px;background:linear-gradient(125deg,#5a3c96,#201837 75%);color:#e9dcff;font-size:.72em;font-weight:1000;letter-spacing:.05em;white-space:nowrap;text-shadow:0 0 8px rgba(184,146,255,.85);box-shadow:inset 0 1px 0 #ffffff24,0 0 14px rgba(135,90,255,.32)}
-</style>
-<style id="bobik-build40-glass">
-:root{color-scheme:dark;--glass-line:rgba(232,240,255,.2);--glass-shadow:0 18px 48px rgba(3,8,24,.38);--glass-bg:linear-gradient(145deg,rgba(38,48,78,.78),rgba(19,24,45,.68))}
-body{padding-bottom:env(safe-area-inset-bottom);-webkit-tap-highlight-color:transparent}
-.scr{padding:clamp(16px,4vw,26px);padding-bottom:max(22px,env(safe-area-inset-bottom));box-sizing:border-box}
-.scr h2{letter-spacing:-.025em;text-wrap:balance}
-.b,.chip,.gear,.news-back,.shop-card button,.admin-row button{min-height:44px}
-.b,.chip,.gear,.pf,.admin-live-panel,.admin-control-panel,.admin-dashboard,.admin-news-panel,.menu-progress{border:1px solid var(--glass-line);box-shadow:var(--glass-shadow),inset 0 1px 0 rgba(255,255,255,.16);backdrop-filter:blur(20px) saturate(145%);-webkit-backdrop-filter:blur(20px) saturate(145%)}
-.scr .b:not(:disabled){transition:transform .16s ease,filter .16s ease,box-shadow .16s ease}
-.scr .b:not(:disabled):active{transform:translateY(1px) scale(.99)}
-.b:focus-visible,.chip:focus-visible,.gear:focus-visible,.pf:focus-visible,select:focus-visible,textarea:focus-visible,[role=button]:focus-visible{outline:3px solid #ffe18a;outline-offset:3px}
-.pf,select,textarea{min-height:48px;border-color:rgba(232,240,255,.22)!important;background:linear-gradient(135deg,rgba(255,255,255,.15),rgba(178,193,236,.08))!important;color:#fff!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 10px 28px rgba(5,8,22,.22)!important}
-.pf::placeholder,textarea::placeholder{color:rgba(238,242,255,.62)}
-.pf:focus,select:focus,textarea:focus{border-color:rgba(255,219,128,.78)!important;box-shadow:0 0 0 3px rgba(255,195,75,.16),inset 0 1px 0 rgba(255,255,255,.22)!important}
-#acc{width:min(94vw,480px);margin:0 auto 18px;padding:clamp(18px,5vw,28px);border:1px solid rgba(238,244,255,.28);border-radius:26px;background:linear-gradient(145deg,rgba(48,57,87,.8),rgba(20,25,49,.78));box-shadow:0 24px 70px rgba(3,7,20,.48),inset 0 1px 0 rgba(255,255,255,.26);backdrop-filter:blur(24px) saturate(150%);-webkit-backdrop-filter:blur(24px) saturate(150%)}
-#acc #authStatus{min-height:1.35em;margin:10px auto;color:#fff1c5;text-wrap:pretty}
-#acc #aok{width:min(100%,360px);min-height:54px;margin:12px auto 0}
-#acc #atb{display:flex;gap:10px;margin:2px auto 16px}
-#acc #atb button{flex:1;min-height:48px}
-#menu>h1.lg{min-height:108px!important;height:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:0!important;font-size:clamp(42px,11vw,64px)!important;line-height:.94!important}
-#menu>h1.lg .r{margin-top:4px!important}
-#menu>.tg{position:relative!important;z-index:1}
-.admin-live-panel,.admin-control-panel,.admin-dashboard,.admin-news-panel{background:var(--glass-bg);border-radius:20px}
-.telemetry-privacy-note{padding:10px 12px;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(12,18,38,.46);color:rgba(239,243,255,.84)}
-.admin-live-note{display:block;margin-top:12px;padding:10px 12px;border:1px solid rgba(255,255,255,.12);border-radius:13px;background:rgba(11,16,32,.42);color:rgba(239,243,255,.82)}
-@media(max-width:560px){.scr{width:100%;max-width:100vw}.admin-live-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.admin-tools>*{min-width:0;max-width:100%}#acc{margin-top:8px}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
-@media(prefers-reduced-transparency:reduce){.b,.chip,.gear,.pf,.admin-live-panel,.admin-control-panel,.admin-dashboard,.admin-news-panel,.menu-progress,#acc{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background-color:rgba(20,27,50,.96)!important}}
-.keybind-panel{width:min(100%,520px);margin:10px auto;padding:14px;border:1px solid rgba(232,240,255,.2);border-radius:20px;background:linear-gradient(145deg,rgba(40,50,81,.72),rgba(17,22,43,.72));box-shadow:0 14px 40px rgba(3,8,24,.3),inset 0 1px 0 rgba(255,255,255,.13);text-align:left}
-.keybind-panel h3{margin:0 0 6px}.keybind-panel p{margin:0 0 12px;color:rgba(239,243,255,.75);font-size:13px;line-height:1.4}.keybind-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.keybind-list .b{width:100%;min-width:0;font-size:13px}.keybind-list b{color:#ffe08b}.keybind-panel>#resetKeyBindings{width:100%;margin-top:10px}
-@media(max-width:420px){.keybind-list{grid-template-columns:1fr}}
-</style>
 </head><body>
 <div id="fd"></div><div id="fl"></div><div id="tt"></div>
-<div id="hud" class="hide"><div class="t"><span>🏁 <b id="sc">0</b> м</span><span id="speedValue" class="hud-speed">80 км/ч</span><span>🏆 <b id="bs2">0</b> м</span></div><div id="lc"></div><div id="cw">● <b id="cn">+0</b><small>за заезд</small></div><div id="hint">Води пальцем влево и вправо · или ← → / A D</div><div id="bar"><i id="gf"></i><em id="bt">ПОГОНЯ</em></div></div>
-<div id="menu" class="scr"><div id="onlineCount">🟢 Активных вкладок: <b id="onlineNumber">0</b></div><h1 class="lg" aria-label="Bobik run"><span class="a">BOBIK</span><span class="r">RUN</span></h1><p class="tg">Оторвись от погони!</p>
+<div id="hud" class="hide"><div class="t"><span>🏁 <b id="sc">0</b> м</span><span id="speedValue" class="hud-speed">80 км/ч</span><span>🏆 <b id="bs2">0</b> м</span></div><div id="lc"></div><div id="cw">🪙 <b id="cn">+0</b><small>за заезд</small></div><div id="hint">Води пальцем влево и вправо · или ← → / A D</div><div id="bar"><i id="gf"></i><em id="bt">ПОГОНЯ</em></div></div>
+<div id="menu" class="scr"><div id="onlineCount">🟢 Онлайн: <b id="onlineNumber">0</b></div><h1 class="lg" aria-label="Bobik run"><span class="a">BOBIK</span><span class="r">RUN</span></h1><p class="tg">Оторвись от погони!</p>
 <button id="menuProgress" class="menu-progress" data-go="rewards"><div class="menu-progress-top"><b id="menuLevel">⭐ УРОВЕНЬ 1</b><span id="menuXpPercent">0%</span></div><div class="menu-progress-bar"><i id="menuXpFill"></i></div><div class="menu-progress-bottom"><span id="menuXpText">0 / 128 XP</span><small>Награды и задания →</small></div></button><button class="b" data-go="mode">Играть</button><button class="b g" data-go="shop"><i>🛍</i>Магазин</button><button class="chip" id="pb" data-go="prof"><span id="pa2"></span><b id="pn2"></b></button><button class="b g" data-go="leaders"><i>🏆</i>Лидеры</button><button class="b g" data-go="rewards"><i>🎁</i>Награды</button><button class="gear" data-go="set" aria-label="Настройки">⚙</button><button class="newbtn" data-go="log" aria-label="Что нового" title="Что нового">?</button><button id="newsSide" class="news-side" data-go="news" aria-label="Новости" title="Новости"><span>📰</span></button><p id="vr"></p></div>
-<div id="set" class="scr hide"><h2>Настройки</h2><button class="b g hide" id="adminOpen">🛡 Админ-панель</button><button class="b g" id="resetSettings">↺ Сбросить настройки</button><button class="b g settings-code-link" data-go="codes">🎟 Промокоды</button><button class="b" data-go="menu">Назад</button></div><div id="codes" class="scr hide"><h2>Активация кода</h2><input class="pf" id="codeInput" maxlength="40" placeholder="Введи код"><button class="b" id="redeemCode">Активировать</button><p id="codeStatus"></p><button class="b g" data-go="set">Назад</button></div><div id="leaders" class="scr hide"><h2>🏆 Таблица лидеров</h2><div id="leaderTabs"></div><div id="leaderRows"></div><button class="b" data-go="menu">Назад</button></div><div id="pubp" class="scr hide"><div id="pubAv"></div><h2 id="pubName"></h2><p id="pubBio"></p><div id="pubRec"></div><button class="b" id="pubBack">Назад</button></div><div id="news" class="scr hide"><div class="news-head"><button class="news-back" data-go="menu" aria-label="Назад">←</button><div><h2>📰 Новости игры</h2><p>Последние события и обновления Bobik Run</p></div></div><div id="newsList"><p class="news-state">Откройте новости, чтобы загрузить свежие публикации.</p></div></div><div id="rewards" class="scr hide"><h2>🎁 Награды</h2><p class="rewards-intro">Получай XP, повышай уровень и открывай награды.</p><div id="rewardNav"></div><div id="rewardContent"><p class="reward-muted">Система наград загружается…</p></div><button class="b" data-go="menu">Назад</button></div><div id="admin" class="scr hide"><h2>🛡 Админ-панель</h2><section class="admin-dashboard"><div class="admin-dashboard-head"><div><b>📡 Центр управления</b><small>Состояние игры и общая статистика</small></div><button class="b g" id="adminDashboardRefresh" type="button">↻ Обновить</button></div><div id="adminDashboard"><p class="news-state">Загружаю статистику…</p></div></section><p id="adminInfo">Найди аккаунт по имени игрока</p><div class="admin-tools admin-search"><input class="pf" id="adminSearch" maxlength="14" placeholder="Имя игрока (от 2 символов)"><button class="b" id="adminSearchBtn">🔎 Найти</button></div><div class="admin-tools"><span>Срок бана:</span><select id="adminHours"><option value="2">2 часа</option><option value="24" selected>24 часа</option><option value="876000">Навсегда</option></select></div><div class="admin-tools"><input class="pf" id="globalMessageInput" maxlength="240" placeholder="Глобальное сообщение всем игрокам"><button class="b" id="globalMessageSend">📢 Отправить всем</button></div><div class="admin-tools"><select id="interruptTarget"><option value="">Выбери игрока для остановки</option></select><input class="pf" id="interruptMessage" maxlength="160" value="Админ сказал: перерыв на печеньки 🍪" placeholder="Подпись игроку"><button class="b g" id="interruptSend">⛔ Прервать игру</button></div><section class="admin-live-panel"><h3>📡 Наблюдение за забегом</h3><p class="admin-live-note">Администратор видит снимки игрового состояния примерно раз в секунду: положение на дороге, транспорт, препятствия и показатели раунда. Камера, микрофон и запись экрана не используются.</p><div class="admin-tools"><select id="adminControlTarget"><option value="">Выбери игрока</option></select><button class="b" id="adminWatchStart" type="button">Начать наблюдение</button><button class="b g" id="adminWatchStop" type="button">Остановить</button></div><div id="adminLiveView"><p class="news-state">Игрок не выбран.</p></div><div id="adminLiveActions" class="admin-live-actions hide"><h4>Действия во время наблюдения</h4><div class="admin-live-quick"><button class="b g" data-live-act="slow">🐌 Замедлить</button><button class="b g" data-live-act="boost">⚡ Ускорить</button><button class="b g" data-live-act="bobik">🐶 Бобик</button><button class="b g" data-live-act="clear">↺ Сброс</button><button class="b g" data-live-act="interrupt">⛔ Остановить забег</button></div><div class="admin-tools"><input id="adminLiveSpeed" class="pf" type="number" min="5" max="250" step="1" value="90" placeholder="Скорость, км/ч"><select id="adminLiveEffectSeconds"><option value="15">15 сек</option><option value="30" selected>30 сек</option><option value="60">1 мин</option><option value="180">3 мин</option><option value="300">5 мин</option></select><button class="b" id="adminLiveApply" type="button">Применить к наблюдаемому</button></div><div class="admin-tools"><input class="pf" id="adminLiveMessage" maxlength="160" placeholder="Сообщение всем игрокам (в т.ч. наблюдаемому)"><button class="b g" id="adminLiveNoticeSend">📢 Всем</button></div></div></section><section class="admin-control-panel"><h3>🎛️ Игровые эффекты</h3><div class="admin-tools"><select id="adminEffect"><option value="slow">Замедление</option><option value="boost">Ускорение</option><option value="manual">Ручная скорость</option><option value="bobik">Все модели игрока — Бобик</option><option value="clear">Сбросить эффекты</option></select><input id="adminSpeedKmh" class="pf" type="number" min="5" max="250" step="1" value="90" placeholder="Скорость, км/ч"><select id="adminControlSeconds"><option value="15">15 секунд</option><option value="30" selected>30 секунд</option><option value="60">1 минута</option><option value="180">3 минуты</option><option value="300">5 минут</option></select><label class="admin-force-label"><input id="adminForceBobik" type="checkbox"> Принудительно включить Бобика (персонаж и машина)</label><button class="b" id="adminApplyControl" type="button">Применить с уведомлением игрока</button></div></section><section class="admin-control-panel"><h3>🎁 Выдать награду</h3><div class="admin-tools"><input id="adminGrantCoins" class="pf" type="number" min="0" max="100000000" step="1" value="0" placeholder="Монеты"><input id="adminGrantXP" class="pf" type="number" min="0" max="24366487" step="1" value="0" placeholder="XP"><input id="adminGrantReason" class="pf" maxlength="100" placeholder="Причина / подпись игроку"><button class="b" id="adminGrantSend" type="button">Выдать монеты и XP</button></div></section><section class="admin-news-panel" id="adminNewsPanel"><div class="admin-news-heading"><h3>📰 Управление новостями</h3><p>Создавай публикации, исправляй текст или удаляй старые новости.</p></div><input class="pf" id="newsTitle" maxlength="90" placeholder="Заголовок новости"><textarea class="pf" id="newsBody" maxlength="1200" rows="4" placeholder="Текст новости"></textarea><div class="admin-news-form-actions"><button class="b" id="publishNews">Опубликовать новость</button><button class="b g hide" id="cancelNewsEdit" type="button">Отмена</button></div><h4>Опубликованные новости</h4><div id="adminNewsList"><p class="news-state">Загружаю список новостей…</p></div></section><div id="adminRows"></div><button class="b g" data-go="set">Назад</button></div>
-<div id="mode" class="scr hide"><h2>Режим игры</h2><button class="b g" id="mdiff"></button><div id="ml"></div><button class="b" data-go="menu">Назад</button></div><div id="cm" class="scr hide"><div class="cmx" id="cmx"></div><div id="cmn"><button class="b g" data-cm="-1">◀</button><span id="cmc"></span><button class="b" id="cmf" data-cm="1">▶</button></div><button class="b g" data-go="go">Пропустить</button></div><div id="shop" class="scr hide"><h2>Магазин</h2><p>● <b id="sk2">0</b></p><div id="stb"><button class="b g" data-t="0">Персонажи</button><button class="b g" data-t="1">Машины</button></div><div id="sl"></div><button class="b" data-go="menu">Назад</button></div><div id="prof" class="scr hide"><h2>Профиль</h2><div id="pavw"><div id="pav"></div><button type="button" class="pen" id="pen" aria-label="Изменить аватарку" aria-expanded="false">✏️</button></div><div id="pedit" class="hide"><label class="b g" for="pfi">📷 Загрузить своё фото</label><input type="file" id="pfi" accept="image/*" hidden><button class="b g" id="pfx">Убрать своё фото</button><div id="pgl"></div></div><input class="pf" id="pnm" maxlength="14" placeholder="Твоё имя"><textarea class="pf" id="pds" maxlength="300" rows="6" placeholder="Описание"></textarea>
+<div id="set" class="scr hide"><h2>Настройки</h2><button class="b g hide" id="adminOpen">🛡 Админ-панель</button><button class="b g" id="resetSettings">↺ Сбросить настройки</button><button class="b g settings-code-link" data-go="codes">🎟 Промокоды</button><button class="b" data-go="menu">Назад</button></div><div id="codes" class="scr hide"><h2>Активация кода</h2><input class="pf" id="codeInput" maxlength="40" placeholder="Введи код"><button class="b" id="redeemCode">Активировать</button><p id="codeStatus"></p><button class="b g" data-go="set">Назад</button></div><div id="leaders" class="scr hide"><h2>🏆 Таблица лидеров</h2><div id="leaderTabs"></div><div id="leaderRows"></div><button class="b" data-go="menu">Назад</button></div><div id="pubp" class="scr hide"><div id="pubAv"></div><h2 id="pubName"></h2><p id="pubBio"></p><div id="pubRec"></div><button class="b" id="pubBack">Назад</button></div><div id="news" class="scr hide"><div class="news-head"><button class="news-back" data-go="menu" aria-label="Назад">←</button><div><h2>📰 Новости игры</h2><p>Последние события и обновления Bobik Run</p></div></div><div id="newsList"><p class="news-state">Откройте новости, чтобы загрузить свежие публикации.</p></div></div><div id="rewards" class="scr hide"><h2>🎁 Награды</h2><p class="rewards-intro">Получай XP, повышай уровень и открывай награды.</p><div id="rewardNav"></div><div id="rewardContent"><p class="reward-muted">Система наград загружается…</p></div><button class="b" data-go="menu">Назад</button></div><div id="admin" class="scr hide"><h2>🛡 Админ-панель</h2><section class="admin-dashboard"><div class="admin-dashboard-head"><div><b>📡 Центр управления</b><small>Состояние игры и общая статистика</small></div><button class="b g" id="adminDashboardRefresh" type="button">↻ Обновить</button></div><div id="adminDashboard"><p class="news-state">Загружаю статистику…</p></div></section><p id="adminInfo">Найди аккаунт по имени игрока</p><div class="admin-tools admin-search"><input class="pf" id="adminSearch" maxlength="14" placeholder="Имя игрока (от 2 символов)"><button class="b" id="adminSearchBtn">🔎 Найти</button></div><div class="admin-tools"><span>Срок бана:</span><select id="adminHours"><option value="2">2 часа</option><option value="24" selected>24 часа</option><option value="876000">Навсегда</option></select></div><div class="admin-tools"><input class="pf" id="globalMessageInput" maxlength="240" placeholder="Глобальное сообщение всем игрокам"><button class="b" id="globalMessageSend">📢 Отправить всем</button></div><div class="admin-tools"><select id="interruptTarget"><option value="">Выбери игрока для остановки</option></select><input class="pf" id="interruptMessage" maxlength="160" value="Админ сказал: перерыв на печеньки 🍪" placeholder="Подпись игроку"><button class="b g" id="interruptSend">⛔ Прервать игру</button></div><section class="admin-live-panel"><h3>📡 Прямая трансляция раунда</h3><p class="admin-live-note">Буквальная трансляция забега: та же дорога, машина и персонаж игрока, полиция сзади, скорость и события. Кадры идут по Realtime-каналу (~8 в секунду); если канал недоступен, сцена автоматически питается быстрыми снимками (~0.7 с) — без многосекундной задержки. Это не запись экрана или звука.</p><div class="admin-tools"><select id="adminControlTarget"><option value="">Выбери игрока</option></select><button class="b" id="adminWatchStart" type="button">Смотреть трансляцию</button><button class="b g" id="adminWatchStop" type="button">Остановить</button></div><div id="adminLiveView"><p class="news-state">Игрок не выбран.</p></div><div id="adminLiveActions" class="admin-live-actions hide"><h4>Действия во время трансляции</h4><div class="admin-live-quick"><button class="b g" data-live-act="slow">🐌 Замедлить</button><button class="b g" data-live-act="boost">⚡ Ускорить</button><button class="b g" data-live-act="bobik">🐶 Бобик</button><button class="b g" data-live-act="clear">↺ Сброс</button><button class="b g" data-live-act="interrupt">⛔ Остановить забег</button></div><div class="admin-tools"><input id="adminLiveSpeed" class="pf" type="number" min="5" max="250" step="1" value="90" placeholder="Скорость, км/ч"><select id="adminLiveEffectSeconds"><option value="15">15 сек</option><option value="30" selected>30 сек</option><option value="60">1 мин</option><option value="180">3 мин</option><option value="300">5 мин</option></select><button class="b" id="adminLiveApply" type="button">Применить к наблюдаемому</button></div><div class="admin-tools"><input class="pf" id="adminLiveMessage" maxlength="160" placeholder="Сообщение всем игрокам (в т.ч. наблюдаемому)"><button class="b g" id="adminLiveNoticeSend">📢 Всем</button></div></div></section><section class="admin-control-panel"><h3>🎛️ Игровые эффекты</h3><div class="admin-tools"><select id="adminEffect"><option value="slow">Замедление</option><option value="boost">Ускорение</option><option value="manual">Ручная скорость</option><option value="bobik">Все модели игрока — Бобик</option><option value="clear">Сбросить эффекты</option></select><input id="adminSpeedKmh" class="pf" type="number" min="5" max="250" step="1" value="90" placeholder="Скорость, км/ч"><select id="adminControlSeconds"><option value="15">15 секунд</option><option value="30" selected>30 секунд</option><option value="60">1 минута</option><option value="180">3 минуты</option><option value="300">5 минут</option></select><label class="admin-force-label"><input id="adminForceBobik" type="checkbox"> Принудительно включить Бобика (персонаж и машина)</label><button class="b" id="adminApplyControl" type="button">Применить с уведомлением игрока</button></div></section><section class="admin-control-panel"><h3>🎁 Выдать награду</h3><div class="admin-tools"><input id="adminGrantCoins" class="pf" type="number" min="0" max="100000000" step="1" value="0" placeholder="Монеты"><input id="adminGrantXP" class="pf" type="number" min="0" max="24366487" step="1" value="0" placeholder="XP"><input id="adminGrantReason" class="pf" maxlength="100" placeholder="Причина / подпись игроку"><button class="b" id="adminGrantSend" type="button">Выдать монеты и XP</button></div></section><section class="admin-news-panel" id="adminNewsPanel"><div class="admin-news-heading"><h3>📰 Управление новостями</h3><p>Создавай публикации, исправляй текст или удаляй старые новости.</p></div><input class="pf" id="newsTitle" maxlength="90" placeholder="Заголовок новости"><textarea class="pf" id="newsBody" maxlength="1200" rows="4" placeholder="Текст новости"></textarea><div class="admin-news-form-actions"><button class="b" id="publishNews">Опубликовать новость</button><button class="b g hide" id="cancelNewsEdit" type="button">Отмена</button></div><h4>Опубликованные новости</h4><div id="adminNewsList"><p class="news-state">Загружаю список новостей…</p></div></section><div id="adminRows"></div><button class="b g" data-go="set">Назад</button></div>
+<div id="mode" class="scr hide"><h2>Режим игры</h2><button class="b g" id="mdiff"></button><div id="ml"></div><button class="b" data-go="menu">Назад</button></div><div id="cm" class="scr hide"><div class="cmx" id="cmx"></div><div id="cmn"><button class="b g" data-cm="-1">◀</button><span id="cmc"></span><button class="b" id="cmf" data-cm="1">▶</button></div><button class="b g" data-go="go">Пропустить</button></div><div id="shop" class="scr hide"><h2>Магазин</h2><p>🪙 <b id="sk2">0</b></p><div id="stb"><button class="b g" data-t="0">Персонажи</button><button class="b g" data-t="1">Машины</button></div><div id="sl"></div><button class="b" data-go="menu">Назад</button></div><div id="prof" class="scr hide"><h2>Профиль</h2><div id="pavw"><div id="pav"></div><button type="button" class="pen" id="pen" aria-label="Изменить аватарку" aria-expanded="false">✏️</button></div><div id="pedit" class="hide"><label class="b g" for="pfi">📷 Загрузить своё фото</label><input type="file" id="pfi" accept="image/*" hidden><button class="b g" id="pfx">Убрать своё фото</button><div id="pgl"></div></div><input class="pf" id="pnm" maxlength="14" placeholder="Твоё имя"><textarea class="pf" id="pds" maxlength="300" rows="6" placeholder="Описание"></textarea>
 <div class="account-security" style="width:min(92vw,420px);margin:12px auto;padding:12px;border:1px solid #ffffff30;border-radius:14px;background:#ffffff0a;text-align:left">
 <h3 style="margin:4px 0 10px">🔐 Безопасность аккаунта</h3><p style="font-size:12px;opacity:.75">Сессия входа сохраняется на этом устройстве. Не выходи из аккаунта на чужих устройствах.</p>
 <p style="font-size:13px;opacity:.8;margin:4px 0 8px">Смена пароля</p>
@@ -1360,7 +1324,7 @@ setR(cfg.ch);setV(cfg.vh);
 function mkCar(c,L){const g=new THREE.Group();g.add(bx(2.1,.8,4.2,c,0,.7,0),bx(1.7,.65,2,0x1b1f30,0,1.35,.2),bx(2.3,.5,.9,0x101116,0,.3,1.2),bx(2.3,.5,.9,0x101116,0,.3,-1.2));
 if(L){const a=new THREE.Mesh(bg(.7,.22,.4),new THREE.MeshBasicMaterial({color:0xff3030})),b=new THREE.Mesh(bg(.7,.22,.4),new THREE.MeshBasicMaterial({color:0x3070ff}));a.position.set(-.45,1.8,.2);b.position.set(.45,1.8,.2);g.add(a,b);g.userData.l=[a,b]}return g}
 const CH=[0,1,2,3,4].map(i=>mkCar(i%2?0x20306e:0xe4e8f0,1));CH.forEach(c=>sc.add(c));
-let bobikLiveObjectId=0;const OB=[],SH=[],sg=new THREE.SphereGeometry(.45,10,8).scale(1,1,2.4),sm=new THREE.MeshBasicMaterial({color:0xff7a1a}),
+const OB=[],SH=[],sg=new THREE.SphereGeometry(.45,10,8).scale(1,1,2.4),sm=new THREE.MeshBasicMaterial({color:0xff7a1a}),
 stG=new THREE.PlaneGeometry(1.8,44).rotateX(-PI/2),stM=new THREE.MeshBasicMaterial({color:0xff2a2a,transparent:true,opacity:.4,depthWrite:false});
 const bT=cv(64,64,(g,w,h)=>{g.fillStyle="#0a7a55";g.fillRect(0,0,w,h);g.strokeStyle="#9dffd0";g.lineWidth=7;[6,26,46].forEach(y=>{g.beginPath();g.moveTo(10,y+16);g.lineTo(32,y);g.lineTo(54,y+16);g.stroke()})}),
 lT=cv(64,64,(g,w,h)=>{g.fillStyle="#5a3210";g.fillRect(0,0,w,h);g.fillStyle="#2c1805";[[16,16],[46,22],[22,46],[48,48],[32,32]].forEach(([x,y])=>{g.beginPath();g.arc(x,y,9,0,7);g.fill()});g.strokeStyle="#ff9a1a";g.lineWidth=6;g.strokeRect(3,3,58,58)}),
@@ -1377,7 +1341,7 @@ else if(ty==2){m=bx(3.2,1.1,.6,0xdfe3ec,0,.55,0);m.add(bx(3.3,.3,.62,0xe03030,0,
 else if(ty==3){m=new THREE.Mesh(RG,mc(0xffb020));hw=1.7;hd=2.5}
 else if(ty<6||ty==10){m=new THREE.Mesh(PG,PM[ty==10?2:ty-4]);m.position.y=.07;hw=1.5;hd=2}
 else if(ty==7){m=bx(2.4,2.5,5.2,0xb0b6c4,0,1.55,.9);m.add(bx(2.3,1.8,1.8,0x2f6fd0,0,-.35,-2.7));hw=1.3;hd=3.5}else if(ty==8){m=new THREE.Group();[-.9,0,.9].forEach(x=>{const c=new THREE.Mesh(CG,mc(0xff7a1a));c.position.set(x,.5,0);m.add(c)});hw=1.5;hd=.5}else if(ty==9){m=bx(2.2,1.4,1,0x8d909a,0,.7,0);m.add(bx(2.25,.25,1.05,0xffd23a,0,.35,0));hw=1.2;hd=.6}else{const on=R()<.5;m=mkCar(on?0xffcc00:0x8a8fa0);lt(m,on?HL:TL);hw=1.1;hd=2.1;v=on?16:-9}
-if(!free(x,z,hw,hd,v))return 0;m.position.x=x;m.position.z=z;sc.add(m);OB.push({id:++bobikLiveObjectId,m,hw,hd,ty,k:0,vx:0,v});return 1}
+if(!free(x,z,hw,hd,v))return 0;m.position.x=x;m.position.z=z;sc.add(m);OB.push({m,hw,hd,ty,k:0,vx:0,v});return 1}
 function mk(k){const L=LN.slice().sort(()=>R()-.5),z=-120-speed-R()*10;
 if(k==0){const n=Math.min(3,1+(R()<.4+df*.6?1:0)+(R()<df*1.1?1:0)+(R()<df*df*.8?1:0));for(let i=0;i<n;i++){const r=R();spawn(L[i]+(R()-.5)*.6,z,r<.25?0:r<.45?1:r<.58?2:r<.72?7:r<.86?8:9)}}
 else if(k==1){for(const l of L)if(spawn(l,z,3)){spawn(l,z-16,0);break}}
@@ -1389,19 +1353,12 @@ lw=new THREE.MeshBasicMaterial({color:0xff3a3a,transparent:true,opacity:.25}),lf
 spG=new THREE.CircleGeometry(.9,16).rotateX(-PI/2),bmG=new THREE.SphereGeometry(.7,10,8),CG=new THREE.ConeGeometry(.4,1,8);
 function drone(){const g=new THREE.Group();g.add(bx(1,.3,1,0x20222c),bx(1.9,.08,.14,0x8a90a8,0,.2,0),bx(.14,.08,1.9,0x8a90a8,0,.2,0),bx(.3,.15,.3,0xff2bd6,0,-.2,0));
 const bm=new THREE.Mesh(bg(.12,9,.12),lw),sp=new THREE.Mesh(spG,lw);sc.add(g,bm,sp);
-DR.push({id:++bobikLiveObjectId,g,bm,sp,x:(R()-.5)*14,z:-70,t:0,ph:0,rt:0,ch:dist>=2000,vx:(R()<.5?-1:1)*(4+R()*4),vz:R()*8-6})}
-function bomb(){const x=R()<.55?cl(px+(R()-.5)*3,-8,8):(R()-.5)*16,z=-speed*1.4+(R()-.5)*8,m=new THREE.Mesh(bmG,mc(0x15161c)),r=new THREE.Mesh(spG,lw);r.scale.setScalar(2.8);r.position.set(x,.13,z);m.position.set(x,23,z);sc.add(m,r);BB.push({id:++bobikLiveObjectId,m,r,x,z,t:0})}
+DR.push({g,bm,sp,x:(R()-.5)*14,z:-70,t:0,ph:0,rt:0,ch:dist>=2000,vx:(R()<.5?-1:1)*(4+R()*4),vz:R()*8-6})}
+function bomb(){const x=R()<.55?cl(px+(R()-.5)*3,-8,8):(R()-.5)*16,z=-speed*1.4+(R()-.5)*8,m=new THREE.Mesh(bmG,mc(0x15161c)),r=new THREE.Mesh(spG,lw);r.scale.setScalar(2.8);r.position.set(x,.13,z);m.position.set(x,23,z);sc.add(m,r);BB.push({m,r,x,z,t:0})}
 function clh(){DR.forEach(o=>sc.remove(o.g,o.bm,o.sp));DR.length=0;BB.forEach(b=>sc.remove(b.m,b.r));BB.length=0}
-function fire(x){const st=new THREE.Mesh(stG,stM);st.position.set(x,.08,-16);sc.add(st);SH.push({id:++bobikLiveObjectId,x,t:.8,st,s:null,z:gz})}
+function fire(x){const st=new THREE.Mesh(stG,stM);st.position.set(x,.08,-16);sc.add(st);SH.push({x,t:.8,st,s:null,z:gz})}
 /* состояние */
 let S="menu",t=0,dist=0,speed=14,gap=14,px=0,tx=0,inv=0,shake=0,flash=0,ns=30,nf=3,gz=6,tm=0,last=performance.now();const keys={};let py=0,vy=0,air=0,wr=0,bst=0,slw=0,rg=0,lives=3,lvl=1,bf=62,fv=62,tto,df=0,mi=0,dn=2,bn=3,rc=0,cx=0,tab=0,cmi=0;const T=[30,90,50,70,60,80],hc=()=>cfg.m==2||cfg.m==3;let rocketWave=0;
-const defaultKeyBindings={left:"ArrowLeft",right:"ArrowRight",pause:"KeyP",retry:"Enter",mode0:"Digit1",mode1:"Digit2",mode2:"Digit3",mode3:"Digit4"};
-let keyBindings={...defaultKeyBindings},bindingAction=null;
-const isBindableKeyCode=code=>typeof code==="string"&&/^(?:Key[A-Z]|Digit[0-9]|Arrow(?:Left|Right|Up|Down)|Space|Enter|Escape|Backspace|Numpad[0-9]|F(?:[1-9]|1[0-2]))$/.test(code)&&!new Set(["F5","F11","F12"]).has(code);
-try{const saved=JSON.parse(localStorage.getItem("bobikKeyBindings")||"{}");for(const key of Object.keys(defaultKeyBindings))if(isBindableKeyCode(saved[key]))keyBindings[key]=saved[key];}catch(_){}
-function saveKeyBindings(){try{localStorage.setItem("bobikKeyBindings",JSON.stringify(keyBindings));}catch(_){}}
-function keyBindingLabel(code){if(/^Key[A-Z]$/.test(code))return code.slice(3);if(/^Digit[0-9]$/.test(code))return code.slice(5);if(/^Numpad[0-9]$/.test(code))return "Num "+code.slice(6);return ({ArrowLeft:"←",ArrowRight:"→",ArrowUp:"↑",ArrowDown:"↓",Space:"Пробел",Enter:"Enter",Escape:"Esc",Backspace:"Backspace"})[code]||code;}
-function renderKeyBindings(){const box=E("keybindList");if(box){const rows=[["left","Влево"],["right","Вправо"],["pause","Пауза"],["retry","Запуск / повтор"],["mode0","Обычный режим"],["mode1","Три жизни"],["mode2","Хардкор"],["mode3","Кошмар"]];box.replaceChildren();for(const[id,label]of rows){const button=document.createElement("button"),value=document.createElement("b");button.type="button";button.className="b g";button.dataset.bind=id;button.append(document.createTextNode(label+": "));value.textContent=bindingAction===id?"Нажми клавишу…":keyBindingLabel(keyBindings[id]);button.append(value);box.append(button);}}const hint=E("modeKeyHint");if(hint)hint.textContent="Режим: "+[0,1,2,3].map(i=>keyBindingLabel(keyBindings["mode"+i])).join(" / ")+" выбрать · "+keyBindingLabel(keyBindings.retry)+" запустить / повторить";}
 function hit(k){if(inv>0)return 0;speed=Math.max(8,speed*.45);if(cfg.m===1||cfg.m===2||cfg.m===3)lives--;else gap=Math.max(0,gap-(k?6.5:4.8));inv=1.1;shake=.6;flash=.55;return 1}
 function clr(){clh();OB.forEach(o=>sc.remove(o.m));OB.length=0;SH.forEach(v=>{sc.remove(v.st);v.s&&sc.remove(v.s)});SH.length=0}
 function reset(){clr();t=dist=0;speed=80/3.6;gap=16;T[0]=30;T[1]=90;T[2]=cfg.m===3?speed*7:50;T[3]=70;T[4]=110;T[5]=140;nf=3;rocketWave=0;py=vy=air=wr=bst=slw=rg=0;lvl=1;lives=(cfg.m===2||cfg.m===3)?1:3;df=0;mi=0;dn=2;bn=3;rc=0;inv=0;px=tx=0;shake=flash=0;P.visible=true}
@@ -1447,7 +1404,7 @@ function end(){
   try{clh()}catch(e){}
   SH.forEach(v=>{try{sc.remove(v.st);if(v.s)sc.remove(v.s)}catch(e){}});SH.length=0;
   if(P)P.visible=true;
-  const d=Math.max(0,Math.floor(dist||0)),mi=cl(cfg.m|0,0,3),di=cl(cfg.d|0,0,2),elapsedSeconds=Math.max(1,Math.floor(Number(t)||1));
+  const d=Math.max(0,Math.floor(dist||0)),mi=cl(cfg.m|0,0,3),di=cl(cfg.d|0,0,2);
   if(!Array.isArray(cfg.r))cfg.r=[0,0,0,0];
   cfg.r=Array.from({length:4},(_,i)=>Math.max(0,Number(cfg.r[i])||0));
   if(!Array.isArray(cfg.lr))cfg.lr=[];
@@ -1466,23 +1423,23 @@ function end(){
   if(isCloudUser()){
    progression={earned:0,xp:0,bonusCoins:0,levelCoins:0,missionCoins:0,level:Math.max(1,Number(cfg.level)||1),info:{level:Math.max(1,Number(cfg.level)||1),into:0,needed:0}};
    const runId=bobikServerRunId;bobikServerRunId=null;
-   if(runId){
-    const finishRequest=window.BobikCloudApi.finishRun(runId,d,elapsedSeconds);
-    // Prepare the replay session in parallel with reward settlement, so pressing
-    // "Играть ещё" does not wait for another start-run round trip.
-    window.BobikCloudApi.prepareRun(mi,di).catch(prewarmErr=>console.warn("next run prewarm",prewarmErr));
-    finishRequest.then(result=>{
+   if(runId){window.BobikCloudApi.finishRun(runId,d,Math.max(1,Math.floor(Number(t)||1))).then(async result=>{
     if(result?.success===false)throw new Error(result.error||"Сервер отклонил результат");
-    const huntAward=result?.global_hunt?.success?result.global_hunt:null;
-    const huntXP=Math.floor(Number(huntAward?.reward_xp)||0),huntCoins=Math.floor(Number(huntAward?.reward_coins)||0),huntLevelCoins=Math.floor(Number(huntAward?.level_coins)||0);
-    const coinsAwarded=Math.floor(Number(result?.coins_awarded)||0)+huntCoins+huntLevelCoins,xpAwarded=Math.floor(Number(result?.xp_awarded)||0)+huntXP;
+    const state=result?.state||await window.BobikCloudApi.getState();
+    if(!state?.economy||!state?.progress)throw new Error("Сервер вернул неполное состояние игрока");
+    cfg.c=Number(state.economy.coins)||0;cfg.oc=state.economy.owned_characters||cfg.oc;cfg.ov=state.economy.owned_vehicles||cfg.ov;cfg.ch=Number(state.economy.selected_character)||0;cfg.vh=Number(state.economy.selected_vehicle)||0;cfg.characterUpgrades=state.economy.character_upgrades||{};cfg.vehicleUpgrades=state.economy.vehicle_upgrades||{};
+    cfg.xp=Number(state.progress.xp)||0;cfg.level=Number(state.progress.level)||1;cfg.ach=state.progress.achievements||[];
+    if(state?.stats){cfg.stats={...state.stats,modeRuns:state.stats.modeRuns||[0,0,0,0],modeBest:state.stats.modeBest||[0,0,0,0],diffRuns:state.stats.diffRuns||[0,0,0]};}
+    if(state?.questData)cfg.questData=state.questData;
+    if(Array.isArray(state?.runHistory))cfg.runHistory=state.runHistory;
+    if(state?.r)cfg.r=state.r;if(state?.lr)cfg.lr=state.lr;
+    if(state?.hunt)window.BobikProgress?.setActiveHunt?.(state.hunt);if(result?.hunt)window.BobikProgress?.setActiveHunt?.(result.hunt);if(result?.normal_hunt?.hunt)window.BobikProgress?.setActiveHunt?.(result.normal_hunt.hunt);
+    const huntAward=result?.global_hunt?.success?result.global_hunt:null;const huntXP=Math.floor(Number(huntAward?.reward_xp)||0),huntCoins=Math.floor(Number(huntAward?.reward_coins)||0),huntLevelCoins=Math.floor(Number(huntAward?.level_coins)||0);const coinsAwarded=Math.floor(Number(result?.coins_awarded)||0)+huntCoins+huntLevelCoins,xpAwarded=Math.floor(Number(result?.xp_awarded)||0)+huntXP;
+    const levelInfo=window.BobikProgress?.getLevelInfo?.()||{level:cfg.level,into:0,needed:0};
     const coinsCard=E("res").querySelector(".result-stat.coins"),xpCard=E("res").querySelector(".result-stat.xp"),levelCard=E("res").querySelector(".result-stat.level");
-    // The finish response already confirms the exact server-calculated award.
-    // Paint it now; wallet/progress synchronization must not delay the reward UI.
-    if(coinsCard){coinsCard.querySelector(".stat-value").textContent="+"+coinsAwarded.toLocaleString("ru-RU");coinsCard.querySelector(".stat-extra").textContent="Награда подтверждена сервером · синхронизирую баланс…";}
-    if(xpCard){xpCard.querySelector(".stat-value").textContent="+"+xpAwarded.toLocaleString("ru-RU");xpCard.querySelector(".stat-extra").textContent="Награда подтверждена сервером · обновляю прогресс…";}
-    if(result?.hunt)window.BobikProgress?.setActiveHunt?.(result.hunt);
-    if(result?.normal_hunt?.hunt)window.BobikProgress?.setActiveHunt?.(result.normal_hunt.hunt);
+    if(coinsCard){coinsCard.querySelector(".stat-value").textContent="+"+coinsAwarded.toLocaleString("ru-RU");coinsCard.querySelector(".stat-extra").textContent="Начислено сервером · баланс: "+Math.floor(cfg.c).toLocaleString("ru-RU")+" монет";}
+    if(xpCard){xpCard.querySelector(".stat-value").textContent="+"+xpAwarded.toLocaleString("ru-RU");xpCard.querySelector(".stat-extra").textContent="Текущий уровень: "+cfg.level.toLocaleString("ru-RU");}
+    if(levelCard){levelCard.querySelector(".stat-value").textContent="Уровень "+cfg.level.toLocaleString("ru-RU");levelCard.querySelector(".stat-extra").textContent=cfg.level>=1000?"Достигнут максимальный уровень":Math.floor(levelInfo.into||0).toLocaleString("ru-RU")+" / "+Math.floor(levelInfo.needed||0).toLocaleString("ru-RU")+" XP до следующего уровня";}
     if(huntAward&&(huntXP||huntCoins)){
      const huntNote=document.createElement('article');huntNote.className='result-stat wide hunt-reward-result';
      const huntLabel=document.createElement('span');huntLabel.className='stat-label';huntLabel.textContent='🌍 Глобальная охота выполнена · задание '+Number(huntAward.completed_sequence||0)+'/5';
@@ -1490,73 +1447,14 @@ function end(){
      const huntExtra=document.createElement('small');huntExtra.className='stat-extra';huntExtra.textContent='Награда начислена сервером'+(huntLevelCoins?' · бонус уровня +'+huntLevelCoins.toLocaleString('ru-RU')+' монет':'');
      huntNote.append(huntLabel,huntValue,huntExtra);E('res').appendChild(huntNote);
      toast('🌍 Охота выполнена: +'+huntXP.toLocaleString('ru-RU')+' XP и +'+huntCoins.toLocaleString('ru-RU')+' монет');
-    }else toast("Результат подтверждён сервером");
-    // Full state refresh runs in the background, so the next round and visible
-    // reward do not wait for the second getState request.
-    const stateRequest=result?.state?Promise.resolve(result.state):window.BobikCloudApi.getState();
-    stateRequest.then(state=>{
-     if(!state?.economy||!state?.progress)throw new Error("Сервер вернул неполное состояние игрока");
-     cfg.c=Number(state.economy.coins)||0;cfg.oc=state.economy.owned_characters||cfg.oc;cfg.ov=state.economy.owned_vehicles||cfg.ov;cfg.ch=Number(state.economy.selected_character)||0;cfg.vh=Number(state.economy.selected_vehicle)||0;cfg.characterUpgrades=state.economy.character_upgrades||{};cfg.vehicleUpgrades=state.economy.vehicle_upgrades||{};
-     cfg.xp=Number(state.progress.xp)||0;cfg.level=Number(state.progress.level)||1;cfg.ach=state.progress.achievements||[];
-     if(state?.stats){cfg.stats={...state.stats,modeRuns:state.stats.modeRuns||[0,0,0,0],modeBest:state.stats.modeBest||[0,0,0,0],diffRuns:state.stats.diffRuns||[0,0,0]};}
-     if(state?.questData)cfg.questData=state.questData;
-     if(Array.isArray(state?.runHistory))cfg.runHistory=state.runHistory;
-     if(state?.r)cfg.r=state.r;if(state?.lr)cfg.lr=state.lr;
-     if(state?.hunt)window.BobikProgress?.setActiveHunt?.(state.hunt);
-     const levelInfo=window.BobikProgress?.getLevelInfo?.()||{level:cfg.level,into:0,needed:0};
-     if(coinsCard)coinsCard.querySelector(".stat-extra").textContent="Начислено сервером · баланс: "+Math.floor(cfg.c).toLocaleString("ru-RU")+" монет";
-     if(xpCard)xpCard.querySelector(".stat-extra").textContent="Текущий уровень: "+cfg.level.toLocaleString("ru-RU");
-     if(levelCard){levelCard.querySelector(".stat-value").textContent="Уровень "+cfg.level.toLocaleString("ru-RU");levelCard.querySelector(".stat-extra").textContent=cfg.level>=1000?"Достигнут максимальный уровень":Math.floor(levelInfo.into||0).toLocaleString("ru-RU")+" / "+Math.floor(levelInfo.needed||0).toLocaleString("ru-RU")+" XP до следующего уровня";}
-     sv();if(S!=="play")ui();window.BobikProgress?.renderMenuProgress?.();
-    }).catch(syncErr=>{
-     console.warn("Post-run state refresh failed:",syncErr);
-     if(coinsCard)coinsCard.querySelector(".stat-extra").textContent="Награда подтверждена сервером · баланс обновится при синхронизации";
-     if(xpCard)xpCard.querySelector(".stat-extra").textContent="Награда подтверждена сервером · прогресс сохранён";
-    });
+    }
+    sv();ui();window.BobikProgress?.renderMenuProgress?.();if(!huntAward)toast("Результат подтверждён сервером");
    }).catch(async err=>{
     console.error("Server run finish failed:",err);
+    try{await window.BobikCloudApi.abortRun(runId);}catch(abortErr){console.warn("Server run cleanup failed:",abortErr);}
     E("ot").textContent="Забег не подтверждён";
     const icon=E("over").querySelector(".result-icon");if(icon)icon.textContent="⚠️";
     const note=document.createElement("article");note.className="result-stat wide server-result-error";note.textContent="Сервер не принял результат. Награда и рекорд не начислены. Причина: "+String(err?.message||"ошибка соединения");E("res").appendChild(note);
-    const retry=document.createElement("button");retry.type="button";retry.className="b wide retry-award";retry.textContent="↻ Повторить начисление";
-    retry.addEventListener("click",async()=>{
-     retry.disabled=true;retry.textContent="Проверяю результат…";
-     let paid;
-     try{
-      paid=await window.BobikCloudApi.finishRun(runId,d,elapsedSeconds);
-      if(!paid?.success)throw new Error(paid?.error||"Сервер не подтвердил награду");
-     }catch(retryErr){
-      note.textContent="Не удалось подтвердить забег. Попробуй ещё раз: "+String(retryErr?.message||"ошибка соединения");
-      retry.disabled=false;retry.textContent="↻ Повторить начисление";return;
-     }
-     const huntAward=paid?.global_hunt?.success?paid.global_hunt:null;
-     const coins=Math.floor(Number(paid.coins_awarded)||0)+Math.floor(Number(huntAward?.reward_coins)||0)+Math.floor(Number(huntAward?.level_coins)||0);
-     const xp=Math.floor(Number(paid.xp_awarded)||0)+Math.floor(Number(huntAward?.reward_xp)||0);
-     const cc=E("res").querySelector(".result-stat.coins .stat-value"),xc=E("res").querySelector(".result-stat.xp .stat-value");
-     if(cc)cc.textContent="+"+coins.toLocaleString("ru-RU");
-     if(xc)xc.textContent="+"+xp.toLocaleString("ru-RU");
-     note.textContent="Награда подтверждена сервером.";E("ot").textContent="Забег окончен";if(icon)icon.textContent="🏁";retry.remove();
-     if(huntAward&&(huntAward.reward_xp||huntAward.reward_coins)){
-      const huntNote=document.createElement("article");huntNote.className="result-stat wide hunt-reward-result";
-      const huntLabel=document.createElement("span");huntLabel.className="stat-label";huntLabel.textContent="🌍 Глобальная охота выполнена · задание "+Number(huntAward.completed_sequence||0)+"/5";
-      const huntValue=document.createElement("b");huntValue.className="stat-value";huntValue.textContent="+"+Math.floor(Number(huntAward.reward_xp)||0).toLocaleString("ru-RU")+" XP · +"+Math.floor(Number(huntAward.reward_coins)||0).toLocaleString("ru-RU")+" монет";
-      const huntExtra=document.createElement("small");huntExtra.className="stat-extra";huntExtra.textContent="Награда начислена сервером"+(huntAward.level_coins?" · бонус уровня +"+Math.floor(Number(huntAward.level_coins)||0).toLocaleString("ru-RU")+" монет":"");
-      huntNote.append(huntLabel,huntValue,huntExtra);E("res").appendChild(huntNote);
-     }
-     const stateRequest=paid.state?Promise.resolve(paid.state):window.BobikCloudApi.getState();
-     stateRequest.then(state=>{
-      if(!state?.economy||!state?.progress)throw new Error("Сервер вернул неполное состояние игрока");
-      cfg.c=Number(state.economy.coins)||0;cfg.oc=state.economy.owned_characters||cfg.oc;cfg.ov=state.economy.owned_vehicles||cfg.ov;
-      cfg.ch=Number(state.economy.selected_character)||0;cfg.vh=Number(state.economy.selected_vehicle)||0;
-      cfg.characterUpgrades=state.economy.character_upgrades||{};cfg.vehicleUpgrades=state.economy.vehicle_upgrades||{};
-      cfg.xp=Number(state.progress.xp)||0;cfg.level=Number(state.progress.level)||1;cfg.ach=state.progress.achievements||[];
-      if(state?.r)cfg.r=state.r;if(state?.lr)cfg.lr=state.lr;sv();window.BobikProgress?.renderMenuProgress?.();
-     }).catch(syncErr=>{
-      console.warn("Post-retry state refresh failed:",syncErr);
-      note.textContent="Награда подтверждена сервером. Баланс обновится при следующей синхронизации.";
-     });
-    });
-    E("res").appendChild(retry);
     toast("Не удалось подтвердить забег. Награда не начислена.");
    });}
    else{
@@ -1590,7 +1488,7 @@ function end(){
   const st=(icon,label,value,extra,cls)=>'<article class="result-stat '+(cls||'')+'"><span class="stat-label">'+icon+' '+label+'</span><b class="stat-value">'+value+'</b><small class="stat-extra">'+extra+'</small></article>';
   E("res").innerHTML=
    '<section class="rs-hero"><span>'+(recordBroken?'🏆 Новый рекорд!':'📏 Пройдено за забег')+'</span><b>'+d.toLocaleString("ru-RU")+'<small>м</small></b><em>'+recordNote+'</em></section>'+
-   st('●','Монеты за забег',isCloudUser()?'После проверки':'+'+earned.toLocaleString("ru-RU"),isCloudUser()?'Результат отправлен на сервер':'Базовые +'+Math.floor(progression.baseCoins||0)+' · бонус +'+Math.floor(progression.bonusCoins||0)+' · XP за монеты +'+Math.floor(progression.coinXP||0)+' · баланс: '+Math.floor(cfg.c||0).toLocaleString("ru-RU")+' монет','coins')+
+   st('🪙','Монеты за забег',isCloudUser()?'После проверки':'+'+earned.toLocaleString("ru-RU"),isCloudUser()?'Результат отправлен на сервер':'Базовые +'+Math.floor(progression.baseCoins||0)+' · бонус +'+Math.floor(progression.bonusCoins||0)+' · XP за монеты +'+Math.floor(progression.coinXP||0)+' · баланс: '+Math.floor(cfg.c||0).toLocaleString("ru-RU")+' монет','coins')+
    st('⭐','Получено XP','+'+Math.floor(progression.xp||0).toLocaleString("ru-RU"),'Текущий уровень: '+Math.floor(progression.level||1),'xp')+
    (forced?'<article class="result-stat wide"><span class="stat-label">Сообщение</span><b class="stat-value" style="font-size:15px">'+esc(forced)+'</b></article>':'');
   py=vy=air=wr=0;
@@ -1601,7 +1499,7 @@ function end(){
   const emergencyCoins=Math.max(0,Math.floor(Number(rc)||0));
   const emergencyXP=Math.max(0,Math.floor(Number(cfg.lastRunXP)||0));
   E("res").innerHTML='<section class="rs-hero"><span>📏 Пройдено за забег</span><b>'+emergencyDistance.toLocaleString("ru-RU")+'<small>м</small></b><em>Результаты сохранены локально</em></section>'+
-   '<article class="result-stat coins"><span class="stat-label">● Монеты за забег</span><b class="stat-value">+'+emergencyCoins.toLocaleString("ru-RU")+'</b><small class="stat-extra">Баланс: '+Math.floor(Number(cfg.c)||0).toLocaleString("ru-RU")+' монет</small></article>'+
+   '<article class="result-stat coins"><span class="stat-label">🪙 Монеты за забег</span><b class="stat-value">+'+emergencyCoins.toLocaleString("ru-RU")+'</b><small class="stat-extra">Баланс: '+Math.floor(Number(cfg.c)||0).toLocaleString("ru-RU")+' монет</small></article>'+
    '<article class="result-stat xp"><span class="stat-label">⭐ Получено XP</span><b class="stat-value">+'+emergencyXP.toLocaleString("ru-RU")+'</b><small class="stat-extra">Уровень '+Math.max(1,Number(cfg.level)||1)+'</small></article>';
  }finally{
   S="over";
@@ -1611,24 +1509,20 @@ function end(){
 function gq(){rd.shadowMap.enabled=dl.castShadow=true;sc.traverse(o=>{if(o.material)o.material.needsUpdate=true});rs()}
 function ui(){E("mdiff").textContent="Сложность: "+DN[cfg.d]+"  ↻";E("mdiff").disabled=false;window.sd2&&sd2();window.sui&&sui();document.querySelectorAll("#ml .md").forEach((e,i)=>e.classList.toggle("on",i==cfg.m))}
 E("mdiff").onclick=()=>{cfg.d=(cfg.d+1)%3;sv();ui();window.BobikCloudApi?.prepareRun?.(cfg.m,cfg.d).catch(err=>console.warn("run prewarm",err));};
-E("resetSettings").insertAdjacentHTML("afterend",'<section class="keybind-panel"><h3>⌨️ Клавиши на компьютере</h3><p>Нажми кнопку действия, затем выбери клавишу. Назначения сохраняются на этом устройстве.</p><div id="keybindList" class="keybind-list"></div><button type="button" class="b g" id="resetKeyBindings">Вернуть стандартные клавиши</button></section>');
-renderKeyBindings();
-document.addEventListener("click",e=>{const bind=e.target.closest("[data-bind]");if(bind){bindingAction=bind.dataset.bind;renderKeyBindings();toast("Нажми новую клавишу или Esc для отмены");return}if(e.target.closest("#resetKeyBindings")){keyBindings={...defaultKeyBindings};bindingAction=null;saveKeyBindings();renderKeyBindings();toast("Стандартные клавиши восстановлены");}});
-addEventListener("keydown",e=>{if(bindingAction){e.preventDefault();e.stopImmediatePropagation();if(e.code==="Escape"){bindingAction=null;renderKeyBindings();return}if(!isBindableKeyCode(e.code)){toast("Эту клавишу нельзя назначить");return}const conflicts=Object.entries(keyBindings).find(([id,code])=>id!==bindingAction&&code===e.code);if(conflicts){toast("Эта клавиша уже назначена: "+keyBindingLabel(e.code));return}keyBindings[bindingAction]=e.code;bindingAction=null;saveKeyBindings();renderKeyBindings();return}keys[e.code]=1;if(e.repeat)return;if(!E("mode").classList.contains("hide")){const mode=Object.keys(defaultKeyBindings).filter(id=>id.startsWith("mode")).findIndex(id=>keyBindings[id]===e.code);if(mode>=0){e.preventDefault();if(mode===3&&cfg.m!==3)cfg.d=2;cfg.m=mode;sv();ui();window.BobikCloudApi?.prepareRun?.(cfg.m,cfg.d).catch(err=>console.warn("key mode prewarm",err));return}if(e.code===keyBindings.retry){e.preventDefault();start();return}}if(S==="over"&&e.code===keyBindings.retry){e.preventDefault();E("over").querySelector('[data-go="play"]')?.click();}});
 E("resetSettings").onclick=()=>{Object.assign(cfg,{d:1,q:2,lo:0,tt:0,dl:1,wx:1,fv:1,fp:0,sn:2,mu:2,sv:100,mv:100,sens:100});sv();window.sui&&sui();rs();ui();toast("Настройки сброшены")};
 
 document.addEventListener("click",async e=>{
-const buyUp=e.target.closest("[data-upgrade-buy]");if(buyUp){if(buyUp.dataset.busy==="1")return;const kind=buyUp.dataset.upgradeBuy,index=Number(buyUp.dataset.upgradeIndex),stat=buyUp.dataset.upgradeStat;if(!["character","vehicle"].includes(kind)||!Number.isInteger(index)||!(["speed","maneuver","resistance"].includes(stat))){toast("Некорректное улучшение");return;}ensureUpgrades();const store=kind==='character'?cfg.characterUpgrades:cfg.vehicleUpgrades;const lv=upgradeLevel(kind,index,stat),cost=250*(lv+1);if(lv>=5){toast('Максимальный уровень');return;}if(!((kind==='character'?cfg.oc:cfg.ov)||[]).includes(index)){toast('Сначала открой этот предмет');return;}if(isCloudUser()){buyUp.dataset.busy="1";buyUp.disabled=true;try{const result=await window.BobikCloudApi.purchaseUpgrade(kind,index,stat);let state=result?.state;if(!state){try{state=await window.BobikCloudApi.getState();}catch(syncError){const confirmed=result?.result;if(confirmed?.success===true&&Number.isFinite(Number(confirmed.coins_spent))&&Number.isInteger(Number(confirmed.upgrade_level))){cfg.c=Math.max(0,(Number(cfg.c)||0)-Number(confirmed.coins_spent));ensureUpgrades();(kind==='character'?cfg.characterUpgrades:cfg.vehicleUpgrades)[index][stat]=Number(confirmed.upgrade_level);sv();spUI();window.sd2&&sd2();toast('Улучшение куплено сервером; баланс синхронизируется позже');return;}throw syncError;}}if(!state?.economy)throw new Error("Сервер не вернул состояние игрока");cfg.c=Number(state.economy.coins)||0;cfg.characterUpgrades=state.economy.character_upgrades||{};cfg.vehicleUpgrades=state.economy.vehicle_upgrades||{};sv();spUI();window.sd2&&sd2();toast('Улучшение подтверждено сервером');}catch(err){toast('Покупка не выполнена: '+(err.message||err));buyUp.dataset.busy="0";buyUp.disabled=false;}return;}if((Number(cfg.c)||0)<cost){toast('Не хватает '+cost+' монет');return;}cfg.c-=cost;store[index][stat]=lv+1;sv();spUI();window.sd2&&sd2();toast('Улучшение куплено: '+(lv+1)+' уровень');return;}
+const buyUp=e.target.closest("[data-upgrade-buy]");if(buyUp){if(buyUp.dataset.busy==="1")return;const kind=buyUp.dataset.upgradeBuy,index=Number(buyUp.dataset.upgradeIndex),stat=buyUp.dataset.upgradeStat;if(!["character","vehicle"].includes(kind)||!Number.isInteger(index)||!(["speed","maneuver","resistance"].includes(stat))){toast("Некорректное улучшение");return;}ensureUpgrades();const store=kind==='character'?cfg.characterUpgrades:cfg.vehicleUpgrades;const lv=upgradeLevel(kind,index,stat),cost=250*(lv+1);if(lv>=5){toast('Максимальный уровень');return;}if(!((kind==='character'?cfg.oc:cfg.ov)||[]).includes(index)){toast('Сначала открой этот предмет');return;}if(isCloudUser()){buyUp.dataset.busy="1";buyUp.disabled=true;try{const result=await window.BobikCloudApi.purchaseUpgrade(kind,index,stat);const state=result?.state||await window.BobikCloudApi.getState();if(!state?.economy)throw new Error("Сервер не вернул состояние игрока");cfg.c=Number(state.economy.coins)||0;cfg.characterUpgrades=state.economy.character_upgrades||{};cfg.vehicleUpgrades=state.economy.vehicle_upgrades||{};sv();spUI();window.sd2&&sd2();toast('Улучшение подтверждено сервером');}catch(err){toast('Покупка не выполнена: '+(err.message||err));buyUp.dataset.busy="0";buyUp.disabled=false;}return;}if((Number(cfg.c)||0)<cost){toast('Не хватает '+cost+' монет');return;}cfg.c-=cost;store[index][stat]=lv+1;sv();spUI();window.sd2&&sd2();toast('Улучшение куплено: '+(lv+1)+' уровень');return;}
 const tb=e.target.closest("[data-t]");if(tb){tab=cl(Number(tb.dataset.t)||0,0,1);spI=0;shp();return;}
 const pa=e.target.closest("[data-a]");if(pa){cfg.pa=+pa.dataset.a;sv();prf();return}
 const cg=e.target.closest("[data-cm]");if(cg){cmg(+cg.dataset.cm);return}const mb=e.target.closest("[data-m]");if(mb){const nextMode=+mb.dataset.m;if(nextMode===3&&cfg.m!==3)cfg.d=2;cfg.m=nextMode;sv();ui();start();return}const b=e.target.closest("[data-go]");if(!b)return;const g=b.dataset.go;if(g=="go"){cfg.cs=1;sv();start()}else if(g=="play")start();else{if(g=="menu"){S="menu";reset()}if(g!=="mode")window.BobikCloudApi?.cancelPreparedRun?.();show(g);ui();if(g=="mode")window.BobikCloudApi?.prepareRun?.(cfg.m,cfg.d).catch(err=>console.warn("run prewarm",err));if(g=="shop")shp();if(g=="prof")prf();if(g=="news")window.loadGameNews?.();if(g=="leaders")window.drawLeaders?.();if(g=="admin")window.drawAdmin?.()}});
-addEventListener("keyup",e=>keys[e.code]=0);
+addEventListener("keydown",e=>keys[e.code]=1);addEventListener("keyup",e=>keys[e.code]=0);
 let pointerSteering=false;const pt=e=>{if(S=="play"){const sens=cl(Number(cfg.sens)||100,50,150)/100;tx=cl((e.clientX/innerWidth-.5)*22*sens,-8.4,8.4)}};
 addEventListener("pointerdown",e=>{if(S=="play"){pointerSteering=true;pt(e)}});addEventListener("pointermove",e=>{if(pointerSteering&&S=="play")pt(e)});addEventListener("pointerup",()=>pointerSteering=false);addEventListener("pointercancel",()=>pointerSteering=false);
 const MN=["Обычный","Три жизни","Хардкор","Кошмар"],sg2=c=>'<svg viewBox="0 0 64 64">'+c+'</svg>',hr=x=>'<path transform="translate('+x+' 34)" d="M0-4C-8-14-16-2 0 12 16-2 8-14 0-4z" fill="#ff3b5c"/>',
 MI=[sg2('<path d="M8 42a24 24 0 0148 0" stroke="#ffb020" stroke-width="7" fill="none"/><path d="M32 42l13-17" stroke="#fff" stroke-width="4"/><circle cx="32" cy="42" r="5" fill="#fff"/>'),sg2(hr(12)+hr(32)+hr(52)),sg2('<path d="M32 5L7 54h50z" fill="#d93650" stroke="#ffb6c1" stroke-width="3"/><path d="M32 19v19" stroke="#fff" stroke-width="5"/><circle cx="32" cy="45" r="3.5" fill="#fff"/>'),sg2('<path d="M5 32Q17 12 32 12t27 20Q44 52 32 52T5 32Z" fill="#241044" stroke="#b58aff" stroke-width="4" stroke-linejoin="round"/><circle cx="32" cy="32" r="9" fill="#a56cff" stroke="#e1caff" stroke-width="2"/><path d="M9 55L55 9" stroke="#d7b7ff" stroke-width="6" stroke-linecap="round"/><path d="M9 55L55 9" stroke="#6e35b5" stroke-width="2" stroke-linecap="round"/>')],
 MT=["Классика: столкновение или ракета сокращает отрыв от погони. Поймали — конец.","Три жизни. Каждое столкновение отнимает сердце; когда сердца закончатся, забег завершится.","Хардкор: одна жизнь, повышенная скорость и плотные препятствия. Любая ошибка заканчивает забег.","Кошмар: постоянная ночь, тёмная атмосфера и менее плотный серый туман. Погоня неумолимо сокращает отрыв — вернуть его можно только ускорителями."],
-CL=[["Билд 40 · v1.9.5","Приватность, вход и Liquid Glass",["Публичная трансляция с точной позицией и объектами раунда удалена: админ-наблюдение теперь получает авторизованные снимки состояния примерно раз в секунду.","Публичное присутствие больше не отправляет UUID аккаунта; счётчик показывает активные игровые вкладки.","Для ошибок сети входа добавлены понятные русские сообщения; форма входа объявляет статус доступности вспомогательным технологиям. Проверка нового пароля согласована с политикой Supabase: минимум 8 символов, буква и цифра; вход остаётся совместим со старыми паролями от 6 символов.","Клиентские сообщения об ошибках наград экранируются перед HTML-рендерингом.","Повышены контраст и чёткость стеклянных поверхностей, видимость фокуса, размеры касаний и поддержка уменьшения анимации и прозрачности."]],["1.9.5","Исправления надёжности, быстрого повтора и серверных запросов",["После восстановления облачного аккаунта сервер заранее готовит первый забег, пока игрок находится в главном меню.","После смерти сервер заранее готовит сессию следующего забега в фоне; кнопка «Играть ещё» не отправляет второй запрос запуска.","Подтверждённые сервером монеты и XP показываются сразу после ответа о завершении; полная синхронизация баланса и прогресса идёт в фоне.","Логика монет, XP, рекордов, охоты и серверной проверки результата остаётся на сервере.","Изменения не требуют SQL-миграций."]],["1.9.8","Единая модель и быстрая трансляция",["Ноги в 3D-предпросмотре полностью убраны: персонаж сливается со своим транспортом ровно так, как он едет в игре — единая модель без зазоров и лишних деталей.","В предпросмотре профиля (своём и публичном) показывается та же композиция, что в магазине и в игре: машина и персонаж как одно целое.","Трансляция раунда у админа больше не задерживается на секунды: если Realtime-канал недоступен, сцена автоматически питается быстрыми снимками состояния (~0.7 секунды) вместо медленной телеметрии.","Состояние игрока публикуется раз в секунду вместо двух — статус «кто в забеге» обновляется заметно живее.","Экран смерти сокращён: пройденная дистанция, монеты и полученный XP — вся остальная статистика убрана; сообщения администратора и награды охоты по-прежнему показываются."]],["1.9.7","Буквальная трансляция раунда и посадка моделей",["Админ-панель показывает буквальную трансляцию забега: та же дорога, машина и персонаж игрока, полиция сзади, живой HUD с дистанцией, скоростью и полосой погони — как в игре.","Трансляция идёт по Realtime-каналу (~8 кадров в секунду) без опроса базы — задержка около 100–150 мс, индикатор LIVE показывает измеренную задержку.","Персонажи в 3D-предпросмотре теперь сидят на своём транспорте: ноги вытянуты вперёд вдоль крыши, ботинки на ней; убран зазор, из-за которого просвечивал фон.","Фон 3D-предпросмотра приведён к единому цвету сцены — ничего не просвечивает по краям.","Тег «СОЗДАТЕЛЬ» больше не показывается в профиле (своём и публичном); в таблице лидеров он остался.","Кнопка сообщения в трансляции подписана честно: «Всем» — это глобальная рассылка.","Действия во время наблюдения сохранены: замедлить, ускорить, Бобик, сброс, ручная скорость, остановить забег — применяются мгновенно.","Исправлены редкие сбои кнопок «Новости» и «Админ-панель» сразу после открытия игры, пока облако ещё загружается.","Миниатюры галереи аватаров больше не показывают битую картинку, если фото повреждено."]],["1.9.6","Живое наблюдение, 3D-ноги и профили из лидеров",["Админ-наблюдение стало живым: мини-карта дороги с позицией игрока и полицией, строка «что делает игрок» (прыжок, ускорение, замедление, столкновение, пауза), жизни, полоса погони и график дистанции.","Прямо из наблюдения можно применить любой эффект (замедление, ускорение, Бобик, ручная скорость), остановить забег или написать игроку — всё в реальном времени.","Статистика админ-панели переведена на Liquid Glass и показывает «кто в забеге прямо сейчас» и журнал последних действий администратора.","3D-предпросмотр профиля стал резче: полное разрешение экрана, высокопроизводительный режим GPU и мягкие тени.","Персонажи в предпросмотре получили ноги: теперь видно ботинки и штаны вместо торса, висящего в воздухе.","В таблице лидеров по уровням появились аватарки и заголовки, а нажатие на игрока открывает его профиль из любой вкладки, включая таблицу охотников.","Аватарка в своём профиле: исправлено отображение и редактирование, фото загружается в более высоком качестве (256 px), кнопка-карандаш работает с первого раза.","Исправлена кнопка «Заново» в меню паузы — раньше она не запускала новый забег.","Возврат из публичного профиля возвращает на ту вкладку, откуда ты пришёл: лидеры, охота или админ-панель."]],["1.9.5 (база)","Профили и единая 3D-модель",["Исправлено отображение аватарки и работа кнопки её изменения.","Удалён выбор любимого персонажа: в профиле показываются фактически выбранные персонаж и машина.","Персонаж и машина объединены в одну вращающуюся 3D-модель в собственном и публичных профилях.","В профилях отображаются теги «Создатель» и «Formula 1», если они назначены аккаунту.","Сохранены покупки, прогресс, настройки и рекорды.","Обновлён кэш PWA."]], ["1.9.0","Исправления интерфейса и запуска",["Исправлено скрытие экранов: магазин, награды, новости, таблица лидеров и игровой экран больше не должны накладываться друг на друга.","Главное меню переработано: статус онлайн и увеличенный логотип подняты выше, основные кнопки опущены ниже для обзора игрового фона.","Кнопка «Улучшения» удалена из вкладок магазина; улучшения перенесены в предпросмотр выбранного персонажа или машины.","Убраны лишние внешние Liquid Glass рамки у новостей, наград и таблицы лидеров.","Основные действия оформлены жёлтыми кнопками; Хардкор выделен красным стеклом, Кошмар — чёрным.","Исправлены проверка сессии и повторный запуск забега.","Версия игры остаётся 1.9.0."]], ["1.9.0","Финальная серверная версия и исправления безопасности",["Магазин, Лидеры и Награды находятся в одной нижней строке из трёх равных кнопок; Лидеры — ровно в центре.","Кнопка «Что нового» заменена компактным значком «?». Кнопки настроек, вопроса и новостей выровнены и больше не съезжают.","Модуль уровней, XP, достижений, ежедневных и дополнительных заданий встроен прямо в index.html.","В случае сбоя системы прогрессии экран завершения всё равно показывает результат, монеты и XP.","Улучшения персонажа и машины доступны из отдельной вкладки магазина и влияют на характеристики в забеге.","Красный и чёрный Liquid Glass режимов Хардкор и Кошмар стал прозрачнее.","Исправлены расположение CSS и обновление PWA-кэша.","Авторизованные забеги запускаются и завершаются через bobik-run-api.","Для авторизованных аккаунтов монеты, XP, рекорды, покупки и улучшения подтверждаются сервером.","При выходе из аккаунта активная серверная сессия забега отменяется."]],["1.9.0","Уровни, награды и охота",["Добавлены уровни 1–1000 с XP, прогресс-баром в главном меню и денежной наградой за каждый новый уровень.","XP за забеги зависит от дистанции, сложности и режима; количество монет за матч получает дополнительный сбалансированный XP-бонус.","В профиле отображаются уровень, три самых сложных достижения и пять лучших забегов по выбранным режиму и сложности.","В таблице лидеров появилась отдельная вкладка рейтинга по уровням.","Добавлена кнопка «Награды»: достижения, три ежедневных и десять дополнительных заданий, а также глобальная охота для всех игроков.","Глобальная охота автоматически меняет цель после первого успешного выполнения и награждает победителя большим количеством XP." ]],["1.8.0","Супер обнова Бобика",[
+CL=[["1.9.8","Единая модель и быстрая трансляция",["Ноги в 3D-предпросмотре полностью убраны: персонаж сливается со своим транспортом ровно так, как он едет в игре — единая модель без зазоров и лишних деталей.","В предпросмотре профиля (своём и публичном) показывается та же композиция, что в магазине и в игре: машина и персонаж как одно целое.","Трансляция раунда у админа больше не задерживается на секунды: если Realtime-канал недоступен, сцена автоматически питается быстрыми снимками состояния (~0.7 секунды) вместо медленной телеметрии.","Состояние игрока публикуется раз в секунду вместо двух — статус «кто в забеге» обновляется заметно живее.","Экран смерти сокращён: пройденная дистанция, монеты и полученный XP — вся остальная статистика убрана; сообщения администратора и награды охоты по-прежнему показываются."]],["1.9.7","Буквальная трансляция раунда и посадка моделей",["Админ-панель показывает буквальную трансляцию забега: та же дорога, машина и персонаж игрока, полиция сзади, живой HUD с дистанцией, скоростью и полосой погони — как в игре.","Трансляция идёт по Realtime-каналу (~8 кадров в секунду) без опроса базы — задержка около 100–150 мс, индикатор LIVE показывает измеренную задержку.","Персонажи в 3D-предпросмотре теперь сидят на своём транспорте: ноги вытянуты вперёд вдоль крыши, ботинки на ней; убран зазор, из-за которого просвечивал фон.","Фон 3D-предпросмотра приведён к единому цвету сцены — ничего не просвечивает по краям.","Тег «СОЗДАТЕЛЬ» больше не показывается в профиле (своём и публичном); в таблице лидеров он остался.","Кнопка сообщения в трансляции подписана честно: «Всем» — это глобальная рассылка.","Действия во время трансляции сохранены: замедлить, ускорить, Бобик, сброс, ручная скорость, остановить забег — применяются мгновенно.","Исправлены редкие сбои кнопок «Новости» и «Админ-панель» сразу после открытия игры, пока облако ещё загружается.","Миниатюры галереи аватаров больше не показывают битую картинку, если фото повреждено."]],["1.9.6","Живое наблюдение, 3D-ноги и профили из лидеров",["Админ-наблюдение стало живым: мини-карта дороги с позицией игрока и полицией, строка «что делает игрок» (прыжок, ускорение, замедление, столкновение, пауза), жизни, полоса погони и график дистанции.","Прямо из наблюдения можно применить любой эффект (замедление, ускорение, Бобик, ручная скорость), остановить забег или написать игроку — всё в реальном времени.","Статистика админ-панели переведена на Liquid Glass и показывает «кто в забеге прямо сейчас» и журнал последних действий администратора.","3D-предпросмотр профиля стал резче: полное разрешение экрана, высокопроизводительный режим GPU и мягкие тени.","Персонажи в предпросмотре получили ноги: теперь видно ботинки и штаны вместо торса, висящего в воздухе.","В таблице лидеров по уровням появились аватарки и заголовки, а нажатие на игрока открывает его профиль из любой вкладки, включая таблицу охотников.","Аватарка в своём профиле: исправлено отображение и редактирование, фото загружается в более высоком качестве (256 px), кнопка-карандаш работает с первого раза.","Исправлена кнопка «Заново» в меню паузы — раньше она не запускала новый забег.","Возврат из публичного профиля возвращает на ту вкладку, откуда ты пришёл: лидеры, охота или админ-панель."]],["1.9.5","Профили и единая 3D-модель",["Исправлено отображение аватарки и работа кнопки её изменения.","Удалён выбор любимого персонажа: в профиле показываются фактически выбранные персонаж и машина.","Персонаж и машина объединены в одну вращающуюся 3D-модель в собственном и публичных профилях.","В профилях отображаются теги «Создатель» и «Formula 1», если они назначены аккаунту.","Сохранены покупки, прогресс, настройки и рекорды.","Обновлён кэш PWA."]], ["1.9.0","Исправления интерфейса и запуска",["Исправлено скрытие экранов: магазин, награды, новости, таблица лидеров и игровой экран больше не должны накладываться друг на друга.","Главное меню переработано: статус онлайн и увеличенный логотип подняты выше, основные кнопки опущены ниже для обзора игрового фона.","Кнопка «Улучшения» удалена из вкладок магазина; улучшения перенесены в предпросмотр выбранного персонажа или машины.","Убраны лишние внешние Liquid Glass рамки у новостей, наград и таблицы лидеров.","Основные действия оформлены жёлтыми кнопками; Хардкор выделен красным стеклом, Кошмар — чёрным.","Исправлены проверка сессии и повторный запуск забега.","Версия игры остаётся 1.9.0."]], ["1.9.0","Финальная серверная версия и исправления безопасности",["Магазин, Лидеры и Награды находятся в одной нижней строке из трёх равных кнопок; Лидеры — ровно в центре.","Кнопка «Что нового» заменена компактным значком «?». Кнопки настроек, вопроса и новостей выровнены и больше не съезжают.","Модуль уровней, XP, достижений, ежедневных и дополнительных заданий встроен прямо в index.html.","В случае сбоя системы прогрессии экран завершения всё равно показывает результат, монеты и XP.","Улучшения персонажа и машины доступны из отдельной вкладки магазина и влияют на характеристики в забеге.","Красный и чёрный Liquid Glass режимов Хардкор и Кошмар стал прозрачнее.","Исправлены расположение CSS и обновление PWA-кэша.","Авторизованные забеги запускаются и завершаются через bobik-run-api.","Для авторизованных аккаунтов монеты, XP, рекорды, покупки и улучшения подтверждаются сервером.","При выходе из аккаунта активная серверная сессия забега отменяется."]],["1.9.0","Уровни, награды и охота",["Добавлены уровни 1–1000 с XP, прогресс-баром в главном меню и денежной наградой за каждый новый уровень.","XP за забеги зависит от дистанции, сложности и режима; количество монет за матч получает дополнительный сбалансированный XP-бонус.","В профиле отображаются уровень, три самых сложных достижения и пять лучших забегов по выбранным режиму и сложности.","В таблице лидеров появилась отдельная вкладка рейтинга по уровням.","Добавлена кнопка «Награды»: достижения, три ежедневных и десять дополнительных заданий, а также глобальная охота для всех игроков.","Глобальная охота автоматически меняет цель после первого успешного выполнения и награждает победителя большим количеством XP." ]],["1.8.0","Супер обнова Бобика",[
 "Режим «Кошмар»: вечная ночь 00:00, отсутствие луны и неба, тёмная атмосфера, менее плотный серый туман и постоянно сокращающаяся шкала погони — отрыв возвращают только ускорители.",
 "Хардкор выделен красным Liquid Glass; Кошмар имеет отдельную тёмную атмосферу и собственную музыку.",
 "В режимах «Три жизни» и «Хардкор» исправлена шкала жизней, в остальных режимах работает шкала погони.",
@@ -1661,11 +1555,8 @@ CL[0][2].push("Кошмар: одна жизнь и постоянно убыв�
 "Экран смерти показывает монеты, режим, сложность, дистанцию, рекорд и расстояние до рекорда.",
 "Исправлено размещение кнопок режимов и размеры панелей на мобильных экранах."
 );
-E("ml").innerHTML=MN.map((n,i)=>'<button class="b g md mode-'+i+'" data-m="'+i+'">'+MI[i]+'<div><b>'+n+'</b><span>'+MT[i]+'<em>● +'+["1","1,25","1,5","2"][i]+' в секунду</em></span></div></button>').join("");
-E("ml").insertAdjacentHTML("afterend",'<p id="modeKeyHint" style="margin:4px auto 12px;color:rgba(239,243,255,.76);font-size:13px;text-align:center"></p>');
-renderKeyBindings();
+E("ml").innerHTML=MN.map((n,i)=>'<button class="b g md mode-'+i+'" data-m="'+i+'">'+MI[i]+'<div><b>'+n+'</b><span>'+MT[i]+'<em>🪙 +'+["1","1,25","1,5","2"][i]+' в секунду</em></span></div></button>').join("");
 E("cg").innerHTML=CL.map(([v,n,l])=>"<h3>v"+v+(n?" «"+n+"»":"")+"</h3><ul>"+l.map(x=>"<li>"+x+"</li>").join("")+"</ul>").join("");
-CL[0][2].push("Настраиваемые клавиши компьютера: движение, пауза, повтор и выбор четырёх режимов; назначения сохраняются на устройстве.","Если сервер временно отклоняет завершение забега, его сессия не отменяется автоматически: доступна безопасная повторная отправка результата.","Повторный забег использует подготовленную заранее серверную сессию, чтобы сократить ожидание после смерти.","Назначения клавиш проверяются по допустимым кодам и безопасно выводятся из локального хранилища.","При сбое обновления баланса уже подтверждённая сервером награда остаётся отмеченной как полученная.","Символ монеты заменён на совместимый со старыми системными шрифтами значок.");
 E("vr").textContent="v"+CL[0][0];
 const tf=(x,y,z)=>'<g transform="translate('+x+' '+y+') scale('+z+')">',
 GB=(x,y,z)=>tf(x,y,z)+'<ellipse cy="24" rx="22" ry="12" fill="#2a2a30"/><circle r="15" fill="#2a2a30"/><ellipse cy="3" rx="10" ry="9" fill="#8a7b84"/><circle cx="-4" cy="-2" r="2" fill="#fff"/><circle cx="4" cy="-2" r="2" fill="#fff"/><path d="M-4 7q4 3 8 0" stroke="#111" fill="none"/></g>',
@@ -1680,7 +1571,7 @@ CM=[[BK("#1b1740")+'<circle cx="130" cy="22" r="11" fill="#ffe9a8"/>'+RD+TK(110,
 [BK("#2a1d5c")+'<path d="M0 30h60M0 50h40M0 70h70M0 90h50" stroke="#fff" stroke-opacity=".4" stroke-width="2"/>'+RD+TK(100,76,1.1)+PC(28,84,.9)+BU(110,8,"НЕ ДОГОНИТЕ!"),"Но Прыщавый жмёт на газ — и начинается ПОГОНЯ!"]];
 function cmr(){E("cmx").innerHTML='<div class="pn"><svg viewBox="0 0 160 110">'+CM[cmi][0]+'</svg><i>'+CM[cmi][1]+'</i></div>';E("cmc").textContent=(cmi+1)+" / "+CM.length;E("cmf").textContent=cmi==CM.length-1?"Погнали!":"▶"}
 function cmg(d){if(d>0&&cmi==CM.length-1)start();else{cmi=cl(cmi+d,0,CM.length-1);cmr()}}
-addEventListener("keydown",e=>{if(S!="play"&&!E("cm").classList.contains("hide")){if(e.code===keyBindings.right)cmg(1);if(e.code===keyBindings.left)cmg(-1)}});
+addEventListener("keydown",e=>{if(S!="play"&&!E("cm").classList.contains("hide")){if(e.code=="ArrowRight")cmg(1);if(e.code=="ArrowLeft")cmg(-1)}});
 // Permanent upgrades for the currently selected character and vehicle.
 function ensureUpgrades(){
  if(!cfg.characterUpgrades||typeof cfg.characterUpgrades!=='object')cfg.characterUpgrades={};
@@ -1697,7 +1588,7 @@ function renderUpgradePanel(target=E('spUpgradePanel'),characterIndex=cfg.ch,veh
   const owned=(kind==='character'?cfg.oc:cfg.ov)||[];const isOwned=Array.isArray(owned)&&owned.includes(index);
   return '<section class="upgrade-card '+(isOwned?'':'is-locked')+'"><div class="upgrade-card-title"><b>'+title+'</b><small>'+(isOwned?'Можно улучшать':'Сначала открой')+'</small></div>'+Object.entries(statNames).map(([key,label])=>{
    const lv=upgradeLevel(kind,index,key),cost=250*(lv+1),disabled=!isOwned||lv>=5||Number(cfg.c||0)<cost;
-   return '<div class="upgrade-line"><div class="upgrade-label"><b>'+label+'</b><small>Уровень '+lv+'/5 · +'+(lv*3.5).toFixed(1)+'%</small><div class="upgrade-pips">'+Array.from({length:5},(_,i)=>'<i class="'+(i<lv?'on':'')+'"></i>').join('')+'</div></div><button type="button" class="b upgrade-buy" data-upgrade-buy="'+kind+'" data-upgrade-index="'+index+'" data-upgrade-stat="'+key+'" '+(disabled?'disabled':'')+'>'+(lv>=5?'МАКС':!isOwned?'ЗАКРЫТО':('● '+cost))+'</button></div>';
+   return '<div class="upgrade-line"><div class="upgrade-label"><b>'+label+'</b><small>Уровень '+lv+'/5 · +'+(lv*3.5).toFixed(1)+'%</small><div class="upgrade-pips">'+Array.from({length:5},(_,i)=>'<i class="'+(i<lv?'on':'')+'"></i>').join('')+'</div></div><button type="button" class="b upgrade-buy" data-upgrade-buy="'+kind+'" data-upgrade-index="'+index+'" data-upgrade-stat="'+key+'" '+(disabled?'disabled':'')+'>'+(lv>=5?'МАКС':!isOwned?'ЗАКРЫТО':('🪙 '+cost))+'</button></div>';
   }).join('')+'</section>';
  };
  const selectedIndex=kind==='vehicle'?vehicleIndex:characterIndex;
@@ -1706,21 +1597,21 @@ function renderUpgradePanel(target=E('spUpgradePanel'),characterIndex=cfg.ch,veh
 }
 function shp(){const L=tab?VN:CD,own=tab?cfg.ov:cfg.oc,sel=tab?cfg.vh:cfg.ch;E("sk2").textContent=cfg.c|0;
 document.querySelectorAll("#stb [data-t]").forEach(b=>b.classList.toggle("on",+b.dataset.t==tab));
-E("sl").innerHTML=L.map((o,i)=>'<button class="sk'+(sel==i?" on":"")+(own.includes(i)?"":" lock")+'" data-p="'+i+'"><i>'+(tab?VP(i):AV(i))+'</i><b>'+o[0]+'</b><span>'+(sel==i?"✔ Выбрано":own.includes(i)?"Куплено":"● "+o[1])+'</span></button>').join("");
+E("sl").innerHTML=L.map((o,i)=>'<button class="sk'+(sel==i?" on":"")+(own.includes(i)?"":" lock")+'" data-p="'+i+'"><i>'+(tab?VP(i):AV(i))+'</i><b>'+o[0]+'</b><span>'+(sel==i?"✔ Выбрано":own.includes(i)?"Куплено":"🪙 "+o[1])+'</span></button>').join("");
 const rail=E("sl");if(rail){requestAnimationFrame(()=>{const item=rail.children[sel];if(!item)return;const railRect=rail.getBoundingClientRect(),itemRect=item.getBoundingClientRect();const target=rail.scrollLeft+itemRect.left-railRect.left-(rail.clientWidth-itemRect.width)/2;rail.scrollTo({left:Math.max(0,Math.min(target,rail.scrollWidth-rail.clientWidth)),behavior:"smooth"});});}}
 let spI=0,spR=null,spF=0,spS=0;
 function spUI(){const L=tab?VN:CD,o=L[spI],own=tab?cfg.ov:cfg.oc,sel=tab?cfg.vh:cfg.ch,b=E("spb"),x=E("spx");if(!o)return;delete b.dataset.modalAction;b.disabled=false;x.textContent="Закрыть";E("spn").textContent=o[0];
 E("spDesc").textContent=tab?CAR_STATS[spI].desc:(CHAR_INFO[spI]||"Гонщик Bobik Run.");
 E("spStory").textContent=tab?"История машины: "+["Служебная цистерна, которую механики переделали для дальних заездов.","Тяжёлый внедорожник из старого полицейского автопарка. Выдержал десятки погонь.","Лёгкий городской автомобиль, собранный из деталей трёх разных машин.","Экспериментальный жёлтый болид. Его создатель уверяет, что он быстрее ветра."][spI]:(CHAR_LORE[spI]||"История этого гонщика ещё пишется на трассе.");
-E("spPrice").textContent="Стоимость: "+(o[1]===0?"Бесплатно":o[1]+" ●");
+E("spPrice").textContent="Стоимость: "+(o[1]===0?"Бесплатно":o[1]+" 🪙");
 E("spStats").innerHTML=(()=>{const car=tab?CAR_STATS[spI]:{speed:1,maneuver:1,resistance:1},ch=tab?{speed:1,maneuver:1,resistance:1}:CHAR_STATS[spI],rows=[["Скорость",car.speed*ch.speed],["Манёвренность",car.maneuver*ch.maneuver],["Сопротивление замедлению",car.resistance*ch.resistance]];return rows.map(([label,val])=>'<div class="shop-stat"><span>'+label+'</span><b>'+Math.round(val*100)+'%</b><i><em style="width:'+cl(val/1.35*100,0,100)+'%"></em></i></div>').join("")})() ;
 const upgradeKind=tab?"vehicle":"character";
 const upgradeCaption=E("spUpgradeCaption");if(upgradeCaption)upgradeCaption.textContent=tab?"Улучшения выбранной машины":"Улучшения выбранного персонажа";
 renderUpgradePanel(E("spUpgradePanel"),tab?cfg.ch:spI,tab?spI:cfg.vh,upgradeKind);
 if(sel==spI){E("spq").textContent="Сейчас выбрано";b.textContent="Выбрано";b.disabled=true}
 else if(own.includes(spI)){E("spq").textContent="Уже у тебя";b.textContent="Выбрать";b.dataset.modalAction="select"}
-else if(!spS){E("spq").textContent=cfg.c<o[1]?"Не хватает "+((o[1]-cfg.c)|0)+" ●":"Готово к покупке";b.textContent="Купить";b.dataset.modalAction="confirm";b.disabled=cfg.c<o[1]}
-else{E("spq").textContent="Купить «"+o[0]+"» за "+o[1]+" ●?";b.textContent="Да, купить";b.dataset.modalAction="buy";x.textContent="Отмена"}}
+else if(!spS){E("spq").textContent=cfg.c<o[1]?"Не хватает "+((o[1]-cfg.c)|0)+" 🪙":"Готово к покупке";b.textContent="Купить";b.dataset.modalAction="confirm";b.disabled=cfg.c<o[1]}
+else{E("spq").textContent="Купить «"+o[0]+"» за "+o[1]+" 🪙?";b.textContent="Да, купить";b.dataset.modalAction="buy";x.textContent="Отмена"}}
 function spStop(){cancelAnimationFrame(spF);if(spR){spR.dispose();try{spR.forceContextLoss()}catch(e){}spR=null}}
 function spClose(){spStop();E("spModal").classList.add("hide")}
 function spStart(){spStop();const w=Math.min(innerWidth-48,300),h=220,cv=document.createElement("canvas");E("spw").innerHTML="";E("spw").appendChild(cv);
@@ -1739,12 +1630,12 @@ E("spb").addEventListener("click",async()=>{
  const list=tab?VN:CD,owned=tab?cfg.ov:cfg.oc,item=list[spI];if(!item)return;
  if(b.dataset.modalAction==="confirm"){spS=1;spUI();return;}
  if(b.dataset.modalAction==="select"){
-  if(isCloudUser()){try{const result=await window.BobikCloudApi.selectItem(tab?"vehicle":"character",spI);let state=result?.state;if(!state){try{state=await window.BobikCloudApi.getState();}catch(syncError){if(!result?.result)throw syncError;if(tab)cfg.vh=spI;else cfg.ch=spI;toast("Выбор подтверждён сервером; профиль синхронизируется позже");}}if(state?.economy){cfg.c=Number(state.economy.coins)||0;cfg.oc=state.economy.owned_characters||cfg.oc;cfg.ov=state.economy.owned_vehicles||cfg.ov;cfg.ch=Number(state.economy.selected_character)||0;cfg.vh=Number(state.economy.selected_vehicle)||0;}}catch(err){toast("Не удалось выбрать: "+(err.message||err));return;}}
+  if(isCloudUser()){try{const result=await window.BobikCloudApi.selectItem(tab?"vehicle":"character",spI);const state=result?.state||await window.BobikCloudApi.getState();if(state?.economy){cfg.c=Number(state.economy.coins)||0;cfg.oc=state.economy.owned_characters||cfg.oc;cfg.ov=state.economy.owned_vehicles||cfg.ov;cfg.ch=Number(state.economy.selected_character)||0;cfg.vh=Number(state.economy.selected_vehicle)||0;}}catch(err){toast("Не удалось выбрать: "+(err.message||err));return;}}
   else if(tab)cfg.vh=spI;else cfg.ch=spI;
   sv();setR(cfg.ch);setV(cfg.vh);shp();spClose();toast("Выбрано: "+item[0]);return;
  }
  if(b.dataset.modalAction==="buy"){
-  if(isCloudUser()){try{const result=await window.BobikCloudApi.purchaseItem(tab?"vehicle":"character",spI);let state=result?.state;if(!state){try{state=await window.BobikCloudApi.getState();}catch(syncError){if(!result?.result)throw syncError;cfg.c=Math.max(0,(Number(cfg.c)||0)-Number(item[1]||0));if(!owned.includes(spI))owned.push(spI);if(tab)cfg.vh=spI;else cfg.ch=spI;toast("Покупка подтверждена сервером; баланс синхронизируется позже");}}if(state?.economy){cfg.c=Number(state.economy.coins)||0;cfg.oc=state.economy.owned_characters||cfg.oc;cfg.ov=state.economy.owned_vehicles||cfg.ov;cfg.ch=Number(state.economy.selected_character)||0;cfg.vh=Number(state.economy.selected_vehicle)||0;}}catch(err){toast("Покупка не выполнена: "+(err.message||err));return;}}
+  if(isCloudUser()){try{const result=await window.BobikCloudApi.purchaseItem(tab?"vehicle":"character",spI);const state=result?.state||await window.BobikCloudApi.getState();if(state?.economy){cfg.c=Number(state.economy.coins)||0;cfg.oc=state.economy.owned_characters||cfg.oc;cfg.ov=state.economy.owned_vehicles||cfg.ov;cfg.ch=Number(state.economy.selected_character)||0;cfg.vh=Number(state.economy.selected_vehicle)||0;}}catch(err){toast("Покупка не выполнена: "+(err.message||err));return;}}
   else {if(cfg.c<item[1]){toast("Не хватает монет");spS=0;spUI();return;}cfg.c-=item[1];if(!owned.includes(spI))owned.push(spI);if(tab)cfg.vh=spI;else cfg.ch=spI;}
   sv();setR(cfg.ch);setV(cfg.vh);shp();spClose();toast(isCloudUser()?"Покупка подтверждена сервером":"Куплено: "+item[0]);
  }
@@ -1766,7 +1657,7 @@ function prf(){
  initProfileMarkup();
  // v1.9.6: never re-run the full profile wiring twice — it used to reset the avatar
  // editor and rebind handlers on every sync, which made the pencil button feel dead.
- if(prf.wired){renderOwnAvatar();E("pfx").style.display=safePhoto(cfg.pu)?"":"none";const cu2=safePhoto(cfg.pu)?'<img alt="Аватар профиля" src="'+cfg.pu+'" onerror="this.style.display=\'none\'">':"";E("pgl").innerHTML=(cu2?'<div data-a="-1" class="'+(cfg.pa<0?"on":"")+'">'+cu2+'</div>':"")+CD.map((o,i)=>'<div data-a="'+i+'" class="'+(i==cfg.pa?"on":"")+'">'+AV(i)+'</div>').join("");E("pnm").value=cfg.pn||"";E("pds").value=cfg.pd||"";E("pst").textContent="● "+(cfg.c|0)+" · Рекорды: "+cfg.r.join(" / ")+" м";window.BobikProgress?.renderOwnProfile?.();return;}
+ if(prf.wired){renderOwnAvatar();E("pfx").style.display=safePhoto(cfg.pu)?"":"none";const cu2=safePhoto(cfg.pu)?'<img alt="Аватар профиля" src="'+cfg.pu+'" onerror="this.style.display=\'none\'">':"";E("pgl").innerHTML=(cu2?'<div data-a="-1" class="'+(cfg.pa<0?"on":"")+'">'+cu2+'</div>':"")+CD.map((o,i)=>'<div data-a="'+i+'" class="'+(i==cfg.pa?"on":"")+'">'+AV(i)+'</div>').join("");E("pnm").value=cfg.pn||"";E("pds").value=cfg.pd||"";E("pst").textContent="🪙 "+(cfg.c|0)+" · Рекорды: "+cfg.r.join(" / ")+" м";window.BobikProgress?.renderOwnProfile?.();return;}
  prf.wired=true;
  const editor=E("pedit");
  if(editor){editor.classList.add("hide");editor.style.removeProperty("display");}
@@ -1777,10 +1668,10 @@ function prf(){
  E("pds").value=cfg.pd||"";
  const cu=safePhoto(cfg.pu)?'<img alt="Аватар профиля" src="'+cfg.pu+'" onerror="this.style.display=\'none\'">':"";
  E("pgl").innerHTML=(cu?'<div data-a="-1" class="'+(cfg.pa<0?"on":"")+'">'+cu+'</div>':"")+CD.map((o,i)=>'<div data-a="'+i+'" class="'+(i==cfg.pa?"on":"")+'">'+AV(i)+'</div>').join("");
- E("pst").textContent="● "+(cfg.c|0)+" · Рекорды: "+cfg.r.join(" / ")+" м";
+ E("pst").textContent="🪙 "+(cfg.c|0)+" · Рекорды: "+cfg.r.join(" / ")+" м";
  if(typeof refreshAccountEmail==="function")refreshAccountEmail();
  const pav=E("pav");
- if(pav&&!E("profileTitle"))pav.insertAdjacentHTML("afterend",'<div id="profileTitle" class="profile-title-slot"></div><p class="telemetry-privacy-note">Во время забега администратор видит текущее внутриигровое состояние: положение на дороге, персонажа, транспорт, препятствия и игровые параметры. Снимки обновляются примерно раз в секунду; камера, микрофон и запись экрана не используются. Любое изменение параметров сопровождается уведомлением.</p>');
+ if(pav&&!E("profileTitle"))pav.insertAdjacentHTML("afterend",'<div id="profileTitle" class="profile-title-slot"></div><p class="telemetry-privacy-note">Во время забега администратор может видеть игровой статус, режим, дистанцию, скорость и выбранные модели. Любое изменение параметров сопровождается уведомлением.</p>');
  if(typeof refreshAccountEmail==="function")refreshAccountEmail();
  window.BobikProgress?.renderOwnProfile?.();
  loadOwnPublicTitle();
@@ -1817,7 +1708,7 @@ function toast(s,q){if(q)return;const e=E("tt");e.textContent=s;e.style.opacity=
 function loop(now){requestAnimationFrame(loop);const dt=Math.min(.05,(now-last)/1e3||.016);last=now;if(window.PZ){rd.render(sc,cam);return}tm+=dt;const dm=DM[cfg.d];
 if(S=="play"){t+=dt;const cr=dt*[1,1.25,1.5,2][cfg.m];if(!isCloudUser())cfg.c+=cr;rc+=cr;const car=CAR_STATS[cl(cfg.vh|0,0,CAR_STATS.length-1)],char=CHAR_STATS[cl(cfg.ch|0,0,CHAR_STATS.length-1)],speedBonus=car.speed*char.speed*upgradeMultiplier("speed"),maneuverBonus=car.maneuver*char.maneuver*upgradeMultiplier("maneuver"),resistanceBonus=car.resistance*char.resistance*upgradeMultiplier("resistance"),vb=(24+12*Math.log10(1+Math.min(dist,6000)/60))*speedBonus,adminCtl=window.__BobikAdminControl||null,avg=adminCtl?.speed_override_kmh?cl(Number(adminCtl.speed_override_kmh)/3.6,5/3.6,250/3.6):vb*(hc()?1.1:1)*cl(Number(adminCtl?.speed_multiplier)||1,.25,3),slowFactor=cl(.62+(resistanceBonus-1)*.22,.48,.82),vt=bst>0?avg*1.3:slw>0?avg*slowFactor:avg;const response=rg>0?1.9:bst>0?2.4:slw>0?1.35:.42;speed+=(vt-speed)*Math.min(1,dt*response);bst=Math.max(0,bst-dt);slw=Math.max(0,slw-dt*resistanceBonus);rg=Math.max(0,rg-dt);
 if(cfg.m===3)gap=Math.max(0,gap-dt*(.58+Math.min(t,180)/520));else gap=Math.min(22,gap+(speed-vb*(.92+Math.min(t,240)/4000)*dm.c*(hc()?1.1:1))*.3*dt);dist+=speed*dt;df=Math.pow(Math.min(dist/6000,1)*.8,.6);lvl=1+(df*10|0);MS.forEach((m,i)=>{if(dist>=m[0]&&mi<=i){mi=i+1;toast(m[1],1)}});
-{const ks=(18+speed*.4)*dt*maneuverBonus*(cl(Number(cfg.sens)||100,50,150)/100);if(keys[keyBindings.left]||(keyBindings.left==="ArrowLeft"&&keys.KeyA))tx-=ks;if(keys[keyBindings.right]||(keyBindings.right==="ArrowRight"&&keys.KeyD))tx+=ks}tx=cl(tx,-8.4,8.4);inv=Math.max(0,inv-dt)}
+{const ks=(18+speed*.4)*dt*maneuverBonus*(cl(Number(cfg.sens)||100,50,150)/100);if(keys.ArrowLeft||keys.KeyA)tx-=ks;if(keys.ArrowRight||keys.KeyD)tx+=ks}tx=cl(tx,-8.4,8.4);inv=Math.max(0,inv-dt)}
 else if(S=="menu"){speed=14;gap=14;tx=Math.sin(tm*.6)*3.2}else speed=Math.max(0,speed-40*dt);
 const d=tx-px,steer=CAR_STATS[cl(cfg.vh|0,0,CAR_STATS.length-1)].maneuver*CHAR_STATS[cl(cfg.ch|0,0,CHAR_STATS.length-1)].maneuver*upgradeMultiplier("maneuver"),mv=Math.sign(d)*Math.min(Math.abs(d),(22+speed*.45)*dt*steer),vl=mv/dt;px+=mv;
 const dz=speed*dt;roadT.offset.y+=dz/14.3;
@@ -1878,7 +1769,7 @@ function sky(k,w,nt,a){
  const g=kg;
  if(cfg.m===3){
   const grad=g.createLinearGradient(0,0,0,512);
-  grad.addColorStop(0,"#090b1c");grad.addColorStop(.42,"#171329");grad.addColorStop(.76,"#302039");grad.addColorStop(1,"#54283f");
+  grad.addColorStop(0,"#10131b");grad.addColorStop(.42,"#171a23");grad.addColorStop(.76,"#25252b");grad.addColorStop(1,"#34343a");
   g.globalAlpha=1;g.fillStyle=grad;g.fillRect(0,0,512,512);
   g.fillStyle="rgba(85,12,24,.12)";
   for(let i=0;i<12;i++){const y=205+i*25;g.beginPath();g.ellipse(256,y,330-i*13,20+i*3,0,0,H);g.fill()}
@@ -1925,9 +1816,9 @@ PY.forEach(p=>{p.position.z+=dz;if(p.position.z>24)p.position.z-=280;p.visible=o
 gr.visible=!(lo==2&&nx<0);if(v&&nx>=0){CP.normal.set(0,0,lo==2?-1:1);CP.constant=lo==2?bz:-bz}else{CP.normal.set(0,1,0);CP.constant=100}}
 function gOff(dz){GT.forEach(t=>t&&(t.offset.y=(t.offset.y+dz/20)%1));
 if(nx>=0){bz+=dz;const f=Math.min(1,Math.max(0,(bz+150)/170));if(!wset&&f>.5){wset=1;wx=wxN}
-c1.setHex(LO[lo].cb).lerp(c2.setHex(LO[nx].cb),f);mc(0x4b5066).color.copy(c1);if(cfg.m===3){sc.fog.near=24;sc.fog.far=64;sc.fog.color.set(0x211827)}else sc.fog.far=((LO[lo].f||170)*(1-f)+(LO[nx].f||170)*f)*(1-.3*wxk);
+c1.setHex(LO[lo].cb).lerp(c2.setHex(LO[nx].cb),f);mc(0x4b5066).color.copy(c1);if(cfg.m===3){sc.fog.near=24;sc.fog.far=64;sc.fog.color.set(0x292a31)}else sc.fog.far=((LO[lo].f||170)*(1-f)+(LO[nx].f||170)*f)*(1-.3*wxk);
 if(bz>40){lo=nx;nx=-1;bz=-9999;gr.material.map=gtex(LO[lo].g|0);mc(0x4b5066).color.setHex(LO[lo].cb)}}
-if(cfg.m===3){sc.background=KT;sc.fog.near=24;sc.fog.far=64;sc.fog.color.set(0x211827)}
+if(cfg.m===3){sc.background=KT;sc.fog.near=24;sc.fog.far=64;sc.fog.color.set(0x292a31)}
 U.bz.value=nx>=0?bz:-9999}
 
 BR.add(bx(28,3,400,0x555a66,0,-1.6,-150),bx(.25,1,400,0xcfd4dc,-13.7,.9,-150),bx(.25,1,400,0xcfd4dc,13.7,.9,-150),bx(.2,.14,400,0xe8eaf0,-13.7,1.45,-150),bx(.2,.14,400,0xe8eaf0,13.7,1.45,-150));
@@ -1959,8 +1850,8 @@ function lit(){
  const k=K(tod),n=k[7],w=wxk+=((wx?1:0)-wxk)*.12,L=LO[lo],nt=true,a=0;
  sa=a;sky(k,w,nt,a);
  if(cfg.m===3){
-  sc.fog.color.set(0x211827);sc.fog.near=3;sc.fog.far=165;
-  am.color.set(0x9a7894);am.intensity=.62;dl.color.set(0xb17b91);dl.intensity=.22;d2.intensity=.08;
+  sc.fog.color.set(0x292a31);sc.fog.near=3;sc.fog.far=165;
+  am.color.set(0x777d8a);am.intensity=.62;dl.color.set(0x777d8a);dl.intensity=.22;d2.intensity=.08;
   BM.forEach(m=>m.emissiveIntensity=.055);
  }else{
   sc.fog.color.copy(k[2]).lerp(GY,.55*w);sc.fog.near=40*(1-.4*w);sc.fog.far=(L.f||170)*(1-.3*w);
@@ -1995,7 +1886,7 @@ window.sui=()=>{
  const sens=cl(Number(cfg.sens)||100,50,150);sb.innerHTML=discrete+vol("svR","🔊","Эффекты","sn")+vol("mvR","🎵","Музыка","mu")+'<label class="rng compact"><span>🎮 Чувствительность<b id="sensv">'+sens+'%</b></span><input type="range" id="sensR" data-setting="sens" min="50" max="150" step="5" value="'+sens+'" style="--v:'+((sens-50)/100*100)+'%"></label>';
 };
 /* аккаунт и профиль сбоку */
-window.sd2=()=>{E("pa2").innerHTML=cfg.pa<0&&cfg.pu?'<img alt="" src="'+cfg.pu+'">':AV(Math.max(0,cfg.pa|0));E("pn2").textContent=cfg.pn||"Игрок";E("vr").innerHTML="v"+CL[0][0]+"<br>● "+(cfg.c|0)+" · 🏆 "+Math.max(...cfg.r)+" м"};
+window.sd2=()=>{E("pa2").innerHTML=cfg.pa<0&&cfg.pu?'<img alt="" src="'+cfg.pu+'">':AV(Math.max(0,cfg.pa|0));E("pn2").textContent=cfg.pn||"Игрок";E("vr").innerHTML="v"+CL[0][0]+"<br>🪙 "+(cfg.c|0)+" · 🏆 "+Math.max(...cfg.r)+" м"};
 const ac={a:cfg.pa<0&&!cfg.pu?0:cfg.pa|0,u:cfg.pu||""};
 window.getSignupAvatar=()=>({a:ac.a,u:ac.u});
 function arf(){const im=ac.u?'<img alt="" src="'+ac.u+'">':"";E("aav").innerHTML=ac.a<0&&im?im:AV(Math.max(0,ac.a));E("agl").innerHTML=(im?'<div data-q="-1" class="'+(ac.a<0?"on":"")+'">'+im+"</div>":"")+CD.map((o,i)=>'<div data-q="'+i+'" class="'+(i==ac.a?"on":"")+'">'+AV(i)+"</div>").join("")}
@@ -2010,7 +1901,7 @@ const _r=rd.render.bind(rd);rd.render=(s,c)=>{try{upd()}catch(e){console.error(e
 </script><script>(async()=>{
 const D=document,clone=o=>JSON.parse(JSON.stringify(o));
 const DF=()=>({d:1,q:2,v7:1,b:0,m:0,r:[0,0,0,0],lr:[[0,0,0],[0,0,0],[0,0,0],[0,0,0]],redeemed:[],bannedUntil:0,c:60,oc:[0],ov:[0],ch:0,vh:0,pn:"",pd:"",pa:0,v4:1,wx:1,fv:1,dl:1,lo:0,tt:0,fp:0,sn:2,mu:2,sens:100});
-let cloud=null,activeUser=null,activeSession=null,loginMode=1,cloudTimer=0,saveBusy=false,saveAgain=false,cloudReady=false,adminDashboardCache=null,adminDashboardCacheAt=0;
+let cloud=null,activeUser=null,activeSession=null,loginMode=1,cloudTimer=0,saveBusy=false,saveAgain=false,cloudReady=false,adminDashboardCache=null,adminDashboardCacheAt=0; 
 window.loadOwnPublicTitleFromCloud=async function(){
  const box=E("profileTitle");if(!box||!cloud||!activeUser)return;
  try{const {data,error}=await cloud.from("public_profiles").select("custom_title,title_style,is_creator").eq("user_id",activeUser.id).maybeSingle();if(error)throw error;box.innerHTML=customTitleMarkup(data,{noCreator:1});}
@@ -2030,7 +1921,7 @@ window.syncOwnPublicProfile=async function(){
    }
    if(typeof data.username==="string"&&data.username.trim())cfg.pn=cleanName(data.username);
    if(typeof data.bio==="string")cfg.pd=data.bio;
-
+   
   }
   const photo=cfg.pa<0&&safePhoto(cfg.pu)?cfg.pu:null;
   const {error:upsertError}=await cloud.from("public_profiles").upsert({user_id:activeUser.id,avatar:Math.max(0,cfg.pa|0),photo,bio:String(cfg.pd||"").slice(0,300),favorite_character:Math.max(0,Math.min(CD.length-1,Number(cfg.ch)||0)),favorite_vehicle:Math.max(0,Math.min(VN.length-1,Number(cfg.vh)||0)),updated_at:new Date().toISOString()},{onConflict:"user_id"});
@@ -2095,7 +1986,7 @@ let cloudAuthListenerRegistered=false,cloudRestoreBusy=false,cloudReconnectBusy=
 const accountScreen=E("acc");
 accountScreen.insertAdjacentHTML("afterbegin",'<div id="atb"><button class="b" data-ta="1">Вход</button><button class="b g" data-ta="0">Создать</button></div>');
 E("anm").insertAdjacentHTML("afterend",'<input class="pf" id="apw" type="password" maxlength="72" placeholder="Пароль" autocomplete="current-password">');
-E("apw").insertAdjacentHTML("afterend",'<p id="authStatus" role="status" aria-live="polite" aria-atomic="true" style="font-size:13px;max-width:340px;opacity:.92"></p>');
+E("apw").insertAdjacentHTML("afterend",'<p id="authStatus" style="font-size:13px;max-width:340px;opacity:.85"></p>');
 E("anm").setAttribute("autocomplete","username");
 E("anm").setAttribute("placeholder","Имя игрока");
 
@@ -2111,21 +2002,9 @@ function tb(mode){
   if(photoLabel)photoLabel.classList.toggle("hide",!!loginMode);
   accountScreen.querySelector("p.rg")?.classList.toggle("hide",!!loginMode);
   E("apw").setAttribute("autocomplete",loginMode?"current-password":"new-password");
-  E("apw").setAttribute("minlength",loginMode?"6":"8");
   E("authStatus").textContent="";
 }
 function sayAuth(message){E("authStatus").textContent=message||"";}
-function friendlyAuthError(err){
-  const message=String(err?.message||err||"");
-  const status=Number(err?.status||err?.context?.status||0);
-  if(/USERNAME_TAKEN|profiles_username_key_unique|duplicate key/i.test(message))return "Это имя игрока уже занято. Выбери другое.";
-  if(/Invalid login credentials|неверное имя игрока или пароль/i.test(message))return "Неверное имя игрока или пароль.";
-  if(status===429||/too many requests|rate.?limit/i.test(message))return "Слишком много попыток входа. Подожди немного и попробуй снова.";
-  if(/404|function not found|account-gateway.*not found|not found.*account-gateway/i.test(message))return "Сервис входа временно недоступен. Попробуй позже или сообщи разработчику.";
-  if(/Failed to send a request|Failed to fetch|NetworkError|network request|load failed|ERR_CONNECTION|fetch failed|timed? ?out|превышено время ожидания/i.test(message))return "Не удалось связаться с сервером входа. Проверь интернет и попробуй ещё раз.";
-  if(status>=500)return "Сервер входа временно не ответил. Попробуй ещё раз через минуту.";
-  return message||"Не удалось выполнить вход. Проверь данные и попробуй ещё раз.";
-}
 function cleanName(v){return String(v||"").normalize("NFKC").trim().replace(/[<>]/g,"").slice(0,14)}
 function signupAuthEmail(){return "u"+crypto.randomUUID().replace(/-/g,"")+"@accounts.example.com";}
 function normalizeCfg(){
@@ -2235,7 +2114,7 @@ function attachCloudAuthListener(){
       stopCloudRestoreRetries();
       cloudNeedsReconnect=!!cfg.acc;
       E("adminOpen").classList.add("hide");adminDashboardCache=null;adminDashboardCacheAt=0;
-      window.BobikAdminLive?.stop?.();
+      stopSpectateSending();window.BobikAdminLive?.stop?.();
     }
   });
 }
@@ -2246,9 +2125,9 @@ attachCloudAuthListener();
 let onlineChannel=null,onlineHeartbeat=null,seenInterruptId=0,gameRealtimeReady=false;
 /* v1.9.6: remote stop message is shared with the global game block via window. */
 const setRemoteStopMessage=text=>{window.__bobikRemoteStopMessage=text||null};
-const onlineKey="tab-"+crypto.randomUUID();
-function updateOnlineCount(state){const el=E("onlineNumber");if(el)el.textContent=String(Object.keys(state||{}).length);}
-async function trackOnline(){if(!cloud||!cloud.channel)return;if(!onlineChannel){onlineChannel=cloud.channel("bobik-run-online",{config:{presence:{key:onlineKey}}});onlineChannel.on("presence",{event:"sync"},()=>updateOnlineCount(onlineChannel.presenceState()));onlineChannel.subscribe(async status=>{if(status==="SUBSCRIBED"){try{await onlineChannel.track({at:Date.now()});}catch(e){console.warn("presence",e);}}});}else{try{await onlineChannel.track({at:Date.now()});}catch(e){}}}
+const onlineKey=(activeUser?.id||"guest")+"-"+Math.random().toString(36).slice(2);
+function updateOnlineCount(state){const unique=new Set();Object.entries(state||{}).forEach(([key,arr])=>(Array.isArray(arr)?arr:[]).forEach(item=>unique.add(item?.user_id||key)));const el=E("onlineNumber");if(el)el.textContent=String(unique.size);}
+async function trackOnline(){if(!cloud||!cloud.channel)return;if(!onlineChannel){onlineChannel=cloud.channel("bobik-run-online",{config:{presence:{key:onlineKey}}});onlineChannel.on("presence",{event:"sync"},()=>updateOnlineCount(onlineChannel.presenceState()));onlineChannel.subscribe(async status=>{if(status==="SUBSCRIBED"){try{await onlineChannel.track({user_id:activeUser?.id||null,at:Date.now()});}catch(e){console.warn("presence",e);}}});}else{try{await onlineChannel.track({user_id:activeUser?.id||null,at:Date.now()});}catch(e){}}}
 async function updateOwnPresence(){if(!cloud||!activeUser)return;try{await cloud.from("online_presence").upsert({user_id:activeUser.id,username:cfg.pn||"Игрок",last_seen:new Date().toISOString()},{onConflict:"user_id"});}catch(e){console.warn("online heartbeat",e.message)}}
 
 let liveStateTimer=null,adminControlTimer=null,lastAdminControlStamp='',lastAdminControlUpdatedAt='',lastAdminNoticeId=0,adminLiveFeed=[];
@@ -2268,30 +2147,37 @@ function bobikLiveActivity(){
   return bits.join(" · ")||"ведёт машину";
  }catch(_){return "—";}
 }
-function collectBobikSpectateFrame(){
- const n=v=>Math.round((Number(v)||0)*100)/100;
- return {
-  n:cfg.pn||"Игрок",m:cfg.m|0,d:cfg.d|0,
-  x:n(px),y:n(py),z:0,rx:n(P?.rotation?.x||0),dist:n(dist),sp:n(Math.max(0,(speed||0)*3.6)),g:n(cl(Number(gap)||0,0,22)),
-  lv:cl(lives|0,0,3),ci:cfg.ch|0,vi:cfg.vh|0,
-  ef:bst>0?"boost":slw>0?"slow":rg>0?"reg":"",cr:inv>0.35?1:0,j:py>0.25?1:0,
-  obstacles:OB.slice(0,48).map(o=>({id:o.id,t:o.ty,c:o.m.children?.[0]?.material?.color?.getHex?.()??null,x:n(o.m.position.x),y:n(o.m.position.y),z:n(o.m.position.z),rx:n(o.m.rotation.x),ry:n(o.m.rotation.y),rz:n(o.m.rotation.z),hw:n(o.hw),hd:n(o.hd),hit:o.k|0,vx:n(o.vx)})),
-  drones:DR.slice(0,8).map(o=>({id:o.id,x:n(o.g.position.x),y:n(o.g.position.y),z:n(o.g.position.z),ry:n(o.g.rotation.y),phase:o.ph|0,t:n(o.t)})),
-  bombs:BB.slice(0,12).map(b=>({id:b.id,x:n(b.m.position.x),y:n(b.m.position.y),z:n(b.m.position.z),t:n(b.t),exploded:b.e?1:0})),
-  projectiles:SH.slice(0,16).map(v=>({id:v.id,x:n(v.x),y:n(v.s?.position.y??0.1),z:n(v.s?.position.z??v.st?.position.z??v.z),phase:v.s?"shot":"beam",active:1})),
-  traffic:CH.map((c,i)=>({id:"police-"+i,c:i&1?0x20306e:0xe4e8f0,x:n(c.position.x),y:n(c.position.y),z:n(c.position.z),ry:n(c.rotation.y),lights:i&1?"blue":"red-blue"})),
-  ts:Date.now()
- };
-}
-async function publishBobikLiveState(){if(!cloud||!activeUser)return;try{
- const running=S==="play",frame=running?collectBobikSpectateFrame():null;
- const payload={user_id:activeUser.id,username:cfg.pn||"Игрок",is_running:running,mode:running?Number(cfg.m)||0:null,difficulty:running?Number(cfg.d)||0:null,distance_m:running?Math.max(0,Math.floor(dist||0)):0,speed_kmh:running?Math.max(0,Math.round((speed||0)*3.6)):0,character_id:Number(cfg.ch)||0,vehicle_id:Number(cfg.vh)||0,live_frame:frame,seen_at:new Date().toISOString()};
- const ctl=window.__BobikAdminControl;if(ctl&&ctl.is_active)payload.activity=String(ctl.effect||'');
- if(running){payload.lane_x=cl(Number(px)||0,-8.4,8.4);payload.gap_ratio=cl(Number(gap)||0,0,22)/22;payload.lives=cl(Number(lives)||0,0,3);payload.activity=bobikLiveActivity();}
- const {error}=await cloud.from('game_live_state').upsert(payload,{onConflict:'user_id'});if(error)throw error;
- }catch(e){console.warn('Live game state sync:',e.message)}}
+async function publishBobikLiveState(){if(!cloud||!activeUser)return;try{const running=S==="play";const payload={user_id:activeUser.id,username:cfg.pn||"Игрок",is_running:running,mode:running?Number(cfg.m)||0:null,difficulty:running?Number(cfg.d)||0:null,distance_m:running?Math.max(0,Math.floor(dist||0)):0,speed_kmh:running?Math.max(0,Math.round((speed||0)*3.6)):0,character_id:Number(cfg.ch)||0,vehicle_id:Number(cfg.vh)||0,seen_at:new Date().toISOString()};const ctl=window.__BobikAdminControl;if(ctl&&ctl.is_active)payload.activity=String(ctl.effect||'');if(running){payload.lane_x=cl(Number(px)||0,-8.4,8.4);payload.gap_ratio=cl(Number(gap)||0,0,22)/22;payload.lives=cl(Number(lives)||0,0,3);payload.activity=bobikLiveActivity();}const {error}=await cloud.from('game_live_state').upsert(payload,{onConflict:'user_id'});if(error)throw error;}catch(e){console.warn('Live game state sync:',e.message)}}
 async function pollBobikAdminControl(){if(!cloud||!activeUser)return;try{const {data,error}=await cloud.from('game_player_controls').select('effect,speed_multiplier,speed_override_kmh,force_bobik,actor_username,notice,expires_at,is_active,updated_at').eq('user_id',activeUser.id).maybeSingle();if(error)throw error;const active=!!data?.is_active&&Date.parse(data.expires_at||'')>Date.now();const updatedAt=data?.updated_at||'';const stamp=(updatedAt||'none')+':'+(active?'active':'inactive');if(stamp!==lastAdminControlStamp){const wasBobik=!!window.__BobikAdminControl?.force_bobik;window.__BobikAdminControl=active?data:null;lastAdminControlStamp=stamp;if(S==='play'&&wasBobik!==!!(active&&data?.force_bobik)){setR(cfg.ch|0);setV(cfg.vh|0);}if(updatedAt&&updatedAt!==lastAdminControlUpdatedAt&&data?.notice){toast(data.notice);lastAdminControlUpdatedAt=updatedAt;}}const notices=await cloud.from('admin_player_notices').select('id,message').eq('user_id',activeUser.id).is('read_at',null).order('created_at',{ascending:true}).limit(5);if(!notices.error){for(const n of notices.data||[]){if(Number(n.id)>lastAdminNoticeId){lastAdminNoticeId=Math.max(lastAdminNoticeId,Number(n.id));toast(n.message||'Администратор surge изменил ваш игровой аккаунт.');}await cloud.from('admin_player_notices').update({read_at:new Date().toISOString()}).eq('id',n.id).eq('user_id',activeUser.id);}}}catch(e){console.warn('Admin controls poll:',e.message)}}
-function startBobikAdminPolling(){if(liveStateTimer)clearInterval(liveStateTimer);if(adminControlTimer)clearInterval(adminControlTimer);publishBobikLiveState();pollBobikAdminControl();liveStateTimer=setInterval(publishBobikLiveState,1000);adminControlTimer=setInterval(pollBobikAdminControl,1500);}
+function startBobikAdminPolling(){if(liveStateTimer)clearInterval(liveStateTimer);if(adminControlTimer)clearInterval(adminControlTimer);if(spectateFrameTimer)clearInterval(spectateFrameTimer);ensureSpectateChannel();publishBobikLiveState();sendSpectateFrame();pollBobikAdminControl();liveStateTimer=setInterval(publishBobikLiveState,1000);adminControlTimer=setInterval(pollBobikAdminControl,1500);spectateFrameTimer=setInterval(sendSpectateFrame,120);}
+/* v1.9.7: literal real-time round broadcast. The player pushes ~8 frames/second over a
+   Supabase Realtime broadcast channel — no database polling, near-zero latency. */
+let spectateChannel=null,spectateFrameTimer=0;
+function ensureSpectateChannel(){
+ if(!cloud||spectateChannel)return;
+ try{
+  spectateChannel=cloud.channel("bobik-live-round",{config:{broadcast:{self:false,ack:false}}});
+  spectateChannel.subscribe(status=>{if(status==="CHANNEL_ERROR"||status==="TIMED_OUT"||status==="CLOSED"){try{cloud.removeChannel(spectateChannel)}catch(_){}spectateChannel=null;}});
+ }catch(e){console.warn("Bobik spectate channel:",e.message||e);spectateChannel=null;}
+}
+function sendSpectateFrame(){
+ if(!spectateChannel||!activeUser||S!=="play")return;
+ try{
+  spectateChannel.send({type:"broadcast",event:"frame",payload:{
+   u:activeUser.id,n:cfg.pn||"Игрок",m:cfg.m|0,d:cfg.d|0,
+   x:cl(Number(px)||0,-8.4,8.4),dist:Math.max(0,Math.floor(dist||0)),
+   sp:Math.max(0,Math.round((speed||0)*3.6)),g:cl(Number(gap)||0,0,22),
+   lv:cl(lives|0,0,3),ci:cfg.ch|0,vi:cfg.vh|0,
+   ef:bst>0?"boost":slw>0?"slow":rg>0?"reg":"",
+   cr:inv>0.35?1:0,j:py>0.25?1:0,ts:Date.now()
+  }});
+ }catch(e){}
+}
+function stopSpectateSending(){
+ if(spectateFrameTimer){clearInterval(spectateFrameTimer);spectateFrameTimer=0;}
+ if(spectateChannel&&cloud){try{cloud.removeChannel(spectateChannel)}catch(_){}}
+ spectateChannel=null;
+}
 
 function setupGameRealtime(){if(!cloud||gameRealtimeReady)return;gameRealtimeReady=true;trackOnline();startBobikAdminPolling();if(onlineHeartbeat)clearInterval(onlineHeartbeat);updateOwnPresence();onlineHeartbeat=setInterval(()=>{trackOnline();updateOwnPresence()},30000);
  cloud.channel("bobik-global-feed").on("postgres_changes",{event:"INSERT",schema:"public",table:"global_messages"},payload=>{const msg=payload.new?.message;if(msg)toast("📢 " + msg);}).subscribe();
@@ -2423,9 +2309,6 @@ async function finishLogin(session){
     try{await window.BobikCloudApi?.syncProgress?.(cfg.xp||0,cfg.ach||[]);await window.BobikCloudApi?.refreshHunt?.();}catch(progressErr){console.warn("Bobik progression sync:",progressErr.message)}
   }
   show("menu");ui();window.sui&&sui();window.sd2&&sd2();
-  // Warm the default cloud run while the player is still in the main menu.
-  // Opening the mode screen will reuse it instead of starting the first RPC then.
-  if(restored.ok)setTimeout(()=>{const api=window.BobikCloudApi;if(api?.prepareRun)api.prepareRun(cfg.m,cfg.d).catch(prewarmErr=>console.warn("initial run prewarm",prewarmErr));},0);
   if(!restored.ok)toast("☁️ Аккаунт сохранён. Облако временно не ответило — игра не переключена в офлайн, подключение повторяется автоматически.");
 }
 
@@ -2437,7 +2320,7 @@ E("aok").onclick=async()=>{
   }
   const name=cleanName(E("anm").value),password=E("apw").value;
   if(name.length<2)return sayAuth("Имя игрока — минимум 2 символа.");
-  if(!loginMode&&(password.length<8||!/\p{L}/u.test(password)||!/[0-9]/.test(password)))return sayAuth("Пароль должен содержать минимум 8 символов, одну букву и одну цифру.");
+  if(!loginMode&&(password.length<8||!/\p{L}/u.test(password)))return sayAuth("Пароль должен содержать минимум 8 символов и хотя бы одну букву.");
   if(loginMode&&password.length<6)return sayAuth("Пароль должен содержать не менее 6 символов.");
   E("aok").disabled=true;E("aok").textContent=loginMode?"Входим…":"Создаём…";
   try{
@@ -2446,7 +2329,7 @@ E("aok").onclick=async()=>{
       if(gateway.error){
         let detail=String(gateway.error.message||gateway.error);
         try{const body=await gateway.error.context?.clone?.().json();if(body?.error)detail=String(body.error);else if(body?.message)detail=String(body.message);}catch(_){}
-        if(/404|function not found|not found/i.test(detail))throw Object.assign(new Error(detail),{status:404});
+        if(/404|function not found|not found|account-gateway/i.test(detail))throw new Error("Сервер входа не установлен. Разверни функцию account-gateway из папки supabase/functions.");
         throw new Error(detail);
       }
       if(gateway.data?.error)throw new Error(gateway.data.error);
@@ -2472,7 +2355,8 @@ E("aok").onclick=async()=>{
       }
     }
   }catch(err){
-    sayAuth(friendlyAuthError(err));
+    const msg=String(err?.message||"Ошибка входа");
+    sayAuth(msg.includes("USERNAME_TAKEN")||msg.includes("profiles_username_key_unique")||msg.includes("duplicate key")?"Это имя игрока уже занято. Выбери другое.":msg.includes("Invalid login credentials")?"Неверное имя игрока или пароль.":msg);
   }finally{E("aok").disabled=false;E("aok").textContent=loginMode?"Войти":"Создать аккаунт";}
 };
 
@@ -2528,7 +2412,7 @@ E("changePassword").onclick=async()=>{
   if(!cloud||!activeUser||!activeSession){securityMessage("Сначала войди в аккаунт.",true);return;}
   const current=E("pwCurrent").value,next=E("pwNew").value,repeat=E("pwRepeat").value;
   if(!current){securityMessage("Введи текущий пароль.",true);return;}
-  if(next.length<8||!/\p{L}/u.test(next)||!/[0-9]/.test(next)){securityMessage("Новый пароль должен содержать минимум 8 символов, одну букву и одну цифру.",true);return;}
+  if(next.length<8||!/\p{L}/u.test(next)){securityMessage("Новый пароль должен содержать минимум 8 символов и хотя бы одну букву.",true);return;}
   if(next!==repeat){securityMessage("Новые пароли не совпадают.",true);return;}
   const btn=E("changePassword");btn.disabled=true;securityMessage("Проверяю текущий пароль…");
   try{
@@ -2557,8 +2441,7 @@ E("changeEmail").onclick=async()=>{
   }catch(err){securityMessage(err.message||"Не удалось отправить письмо.",true);}
   finally{btn.disabled=false;}
 };
-cloud?.auth.onAuthStateChange((_event,session)=>{if(session?.user){activeUser=session.user;activeSession=session;refreshAccountEmail();}else if(_event==="SIGNED_OUT")refreshAccountEmail();});
-refreshAccountEmail();
+cloud?.auth.onAuthStateChange((_event,session)=>{if(session?.user){activeUser=session.user;activeSession=session;refreshAccountEmail();}});
 
 D.addEventListener("click",e=>{
   const tab=e.target.closest("[data-ta]");
@@ -2579,18 +2462,17 @@ function customTitleMarkup(p,opts){
     it stays on leaderboard rows only. */
  if(p.is_creator&&!(opts&&opts.noCreator))out.push('<span class="creator-badge glass-creator">✦ СОЗДАТЕЛЬ ✦</span>');
  if(isF1)out.push('<span class="formula1-badge">🏎 ФОРМУЛА 1</span>');
- else if(style==='banana_yellow'||norm==='банан')out.push('<span class="custom-title-badge banana-yellow">🍌 БАНАН 🍌</span>');
- else if(style==='old_god'||norm==='старый бог')out.push('<span class="custom-title-badge old-god">✦ СТАРЫЙ БОГ ✦</span>');
- else if(title&&style==='rook_green')out.push('<span class="custom-title-badge rook-green">⚡ '+esc(title)+' ⚡</span>');
- else if(title)out.push('<span class="custom-title-badge glass-title">'+esc(title)+'</span>');
+ if(title&&!isF1&&style!=='rook_green')out.push('<span class="custom-title-badge glass-title">'+esc(title)+'</span>');
+ else if(title&&!isF1&&style==='rook_green')out.push('<span class="custom-title-badge rook-green">⚡ '+esc(title)+' ⚡</span>');
  return out.join(' ');
 }
 function avHtml(p){return p&&safePhoto(p.photo)?'<img alt="" src="'+p.photo+'">':AV(Math.max(0,Math.min(CD.length-1,(p&&p.avatar)|0)))}
 let leaderRenderSeq=0;
 async function drawLeaders(){return drawLeadersEnhanced();}
 window.drawLeaders=drawLeaders;
-/* 1.9.2 cloud bridge: pre-create a short-lived run session while the mode screen is open. */
-let preparedServerRun=null,preparedServerPromise=null,preparedServerKey='',preparedServerAt=0,preparedServerGeneration=0;
+/* v1.9.5 hotfix: opening the mode screen must not create a server run.
+   A run is created only after the player presses Play. This removes orphaned
+   prewarm sessions, which previously caused RUN_ALREADY_ACTIVE on the next start. */
 window.BobikCloudApi={
  isAuthenticated(){return !!activeUser;},
  async callRunApi(payload){
@@ -2601,31 +2483,9 @@ window.BobikCloudApi={
   return data;
  },
  async startRun(mode,difficulty){return await this.callRunApi({action:"start",mode,difficulty});},
- async prepareRun(mode,difficulty){
-  if(!this.isAuthenticated())return null;
-  const key=String(mode)+":"+String(difficulty);
-  if(preparedServerRun&&preparedServerKey===key&&Date.now()-preparedServerAt<5*60*1000)return preparedServerRun;
-  if(preparedServerPromise&&preparedServerKey===key)return preparedServerPromise;
-  if(preparedServerRun?.run_id)this.abortRun(preparedServerRun.run_id).catch(()=>{});
-  preparedServerRun=null;preparedServerKey=key;preparedServerAt=0;
-  const generation=++preparedServerGeneration;
-  const pending=this.startRun(mode,difficulty).then(result=>{
-   // A cancelled/replaced prewarm must never overwrite a newer session for the same mode.
-   if(generation!==preparedServerGeneration||preparedServerKey!==key){if(result?.run_id)this.abortRun(result.run_id).catch(()=>{});return null;}
-   preparedServerRun=result;preparedServerAt=Date.now();return result;
-  }).finally(()=>{if(preparedServerPromise===pending)preparedServerPromise=null;});
-  preparedServerPromise=pending;return pending;
- },
- async takePreparedRun(mode,difficulty){
-  const key=String(mode)+":"+String(difficulty);
-  if(preparedServerRun&&preparedServerKey===key&&Date.now()-preparedServerAt<5*60*1000){const result=preparedServerRun;preparedServerRun=null;preparedServerKey="";return result;}
-  if(preparedServerPromise&&preparedServerKey===key){const result=await preparedServerPromise;if(result){preparedServerRun=null;preparedServerKey="";return result;}}
-  await this.cancelPreparedRun();return this.startRun(mode,difficulty);
- },
- async cancelPreparedRun(){
-  const run=preparedServerRun;preparedServerGeneration++;preparedServerKey="";preparedServerPromise=null;preparedServerRun=null;preparedServerAt=0;
-  if(run?.run_id)this.abortRun(run.run_id).catch(()=>{});
- },
+ async prepareRun(_mode,_difficulty){return null;},
+ async takePreparedRun(mode,difficulty){return await this.startRun(mode,difficulty);},
+ async cancelPreparedRun(){return true;},
  async finishRun(runId,distance,elapsedSeconds){return await this.callRunApi({action:"finish",run_id:runId,distance,elapsed_seconds:elapsedSeconds});},
  async abortRun(runId){return await this.callRunApi({action:"abort",run_id:runId});},
  async getState(){return await this.callRunApi({action:"state"});},
@@ -2837,8 +2697,10 @@ async function drawAdmin(query=""){
 window.drawAdmin=drawAdmin;
 E("adminOpen").onclick=()=>{if(!activeUser)return toast("Сначала войди в аккаунт");E("adminSearch").value="";resetNewsEditor();show("admin");drawAdminDashboard();drawAdmin("");loadAdminNews();};
 E("adminDashboardRefresh").onclick=()=>{adminDashboardCache=null;adminDashboardCacheAt=0;drawAdminDashboard();};
-let adminWatchTimer=null,adminWatchTarget=null,adminWatchLastFrameAt=0,adminWatchBusy=false,adminWatchGeneration=0,spectateScene=null,spectateLastFrame=null,spectateFrameCount=0,spectateRaf=0;
-/* Admin observation uses owner-authenticated snapshots; no public Realtime frame channel. */
+let adminWatchTimer=null,adminWatchTarget=null,adminWatchLastFrameAt=0,spectateViewChannel=null,spectateScene=null,spectateLastFrame=null,spectateFrameCount=0,spectateRaf=0;
+/* v1.9.7: literal real-time broadcast viewer — the same road, the player's actual car
+   and character, police behind, live HUD. Frames arrive over a Supabase Realtime
+   broadcast channel (~8 per second) and render with interpolation: no DB polling. */
 function disposeSpectateScene(){
  if(spectateRaf){cancelAnimationFrame(spectateRaf);spectateRaf=0;}
  if(spectateScene){
@@ -2853,9 +2715,11 @@ function onSpectateFrame(frame){
  spectateLastFrame=frame;spectateFrameCount++;adminWatchLastFrameAt=Date.now();
  const st=spectateScene.status;
  if(st){
-  const count=(frame.obstacles?.length||0)+(frame.drones?.length||0)+(frame.bombs?.length||0)+(frame.projectiles?.length||0)+(frame.traffic?.length||0);
-  const lag=Math.max(0,Date.now()-(frame.ts||Date.now()));
-  st.textContent="● НАБЛЮДЕНИЕ · скорость "+Math.round(frame.sp||0)+" км/ч · объектов "+count+" · обновлено "+Math.min(9999,lag)+" мс назад";
+  if(frame.src==="rest")st.textContent="🔴 ТРАНСЛЯЦИЯ · обновление ~0.7 с (Realtime-канал недоступен)";
+  else{
+   const lag=Date.now()-(frame.ts||Date.now());
+   st.textContent=(lag<0||lag>2000)?"🔴 ПРЯМАЯ ТРАНСЛЯЦИЯ":"🔴 ПРЯМАЯ ТРАНСЛЯЦИЯ · задержка ~"+cl(lag,0,9999)+" мс";
+  }
  }
 }
 function buildSpectateScene(frame){
@@ -2863,116 +2727,99 @@ function buildSpectateScene(frame){
  disposeSpectateScene();
  host.innerHTML='<div class="alb-stage">'+
   '<div class="alb-hud"><span class="alb-dist">0 м</span><span class="alb-speed">0 км/ч</span><span class="alb-lives"></span></div>'+
-  '<div class="alb-bar"><i></i></div><span class="alb-badge">● СНИМОК</span><span class="alb-mode"></span><i class="alb-flash"></i><span class="alb-object-count">Ожидание кадра…</span></div>'+
-  '<div class="alb-status">Подключаю к снимкам состояния…</div>';
- const scene=new THREE.Scene();scene.background=new THREE.Color(0x11172b);scene.fog=new THREE.Fog(0x11172b,45,180);
- const camera=new THREE.PerspectiveCamera(58,1,.1,280);
+  '<div class="alb-bar"><i></i></div><span class="alb-badge">● LIVE</span><span class="alb-mode"></span><i class="alb-flash"></i></div>'+
+  '<div class="alb-status">Подключаю к прямой трансляции…</div>';
+ const scene=new THREE.Scene();
+ scene.background=cv(64,256,(g,w,h)=>{const q=g.createLinearGradient(0,0,0,h);q.addColorStop(0,"#0b0a24");q.addColorStop(.6,"#221a4a");q.addColorStop(1,"#5c3157");g.fillStyle=q;g.fillRect(0,0,w,h)});
+ scene.fog=new THREE.Fog(0x221a4a,34,150);
+ const camera=new THREE.PerspectiveCamera(60,1,.1,260);
  const renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:"high-performance"});
  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
- const stage=host.querySelector(".alb-stage");stage.insertBefore(renderer.domElement,stage.firstChild);
+ const stage=host.querySelector(".alb-stage");
+ stage.insertBefore(renderer.domElement,stage.firstChild);
  renderer.domElement.style.cssText="position:absolute;inset:0;width:100%;height:100%;display:block";
- scene.add(new THREE.HemisphereLight(0xaab6ff,0x252b40,1.25));
- const sun=new THREE.DirectionalLight(0xffe0b0,1);sun.position.set(-6,14,8);scene.add(sun);
+ scene.add(new THREE.HemisphereLight(0xaab6ff,0x2c2545,1.1));
+ const sun=new THREE.DirectionalLight(0xffe0b0,.9);sun.position.set(-6,14,8);scene.add(sun);
  const disposables=[];
- const makeMat=color=>{const m=new THREE.MeshStandardMaterial({color,roughness:.72,metalness:.08});disposables.push(m);return m;};
- const mats={road:makeMat(0x262b3a),line:makeMat(0xe8ecf4),box:makeMat(0xa8692c),red:makeMat(0xd9323c),white:makeMat(0xe2e7f0),orange:makeMat(0xff8d1b),blue:makeMat(0x2879d0),purple:makeMat(0x8c55d9),yellow:makeMat(0xffd33e),green:makeMat(0x20c879),dark:makeMat(0x202534),car:makeMat(0xc93e42),glass:makeMat(0x8ec9ef),rubber:makeMat(0x10131a),drone:makeMat(0x383c51),bomb:makeMat(0x171a20),laser:makeMat(0xff3a3a),lightRed:makeMat(0xff2030),lightBlue:makeMat(0x306fff)};
- const boxGeo=new THREE.BoxGeometry(1,1,1),coneGeo=new THREE.ConeGeometry(.38,1,8),sphereGeo=new THREE.SphereGeometry(.55,12,10),cylGeo=new THREE.CylinderGeometry(.14,.14,.14,10),planeGeo=new THREE.PlaneGeometry(1,1);
- disposables.push(boxGeo,coneGeo,sphereGeo,cylGeo,planeGeo);
- const box=(parent,w,h,d,material,x=0,y=h/2,z=0)=>{const m=new THREE.Mesh(boxGeo,material);m.scale.set(w,h,d);m.position.set(x,y,z);parent.add(m);return m;};
- const makeCar=(color=0xc93e42,police=false)=>mkCar(color,police?1:0);
- const makeObstacle=row=>{
-  const t=Number(row.t)|0;let m;
-  if(t===0)m=bx(1.7,1.7,1.7,0xa8692c,0,.85,0);
-  else if(t===1)m=makeCar(Number(row.c)||0xdd3333,false);
-  else if(t===2){m=bx(3.2,1.1,.6,0xdfe3ec,0,.55,0);m.add(bx(3.3,.3,.62,0xe03030,0,.2,0));}
-  else if(t===3)m=new THREE.Mesh(RG,mc(0xffb020));
-  else if(t<6||t===10){m=new THREE.Mesh(PG,PM[t===10?2:t-4]);m.position.y=.07;}
-  else if(t===6){const color=Number(row.c)||0xffcc00;m=makeCar(color,false);lt(m,color===0xffcc00?HL:TL);}
-  else if(t===7){m=bx(2.4,2.5,5.2,0xb0b6c4,0,1.55,.9);m.add(bx(2.3,1.8,1.8,0x2f6fd0,0,-.35,-2.7));}
-  else if(t===8){m=new THREE.Group();[-.9,0,.9].forEach(x=>{const c=new THREE.Mesh(CG,mc(0xff7a1a));c.position.set(x,.5,0);m.add(c);});}
-  else if(t===9){m=bx(2.2,1.4,1,0x8d909a,0,.7,0);m.add(bx(2.25,.25,1.05,0xffd23a,0,.35,0));}
-  else m=bx(1.5,1.4,1.5,0x202534,0,.7,0);
-  return m;
- };
- const makeDrone=()=>{
-  const g=new THREE.Group();g.add(bx(1,.3,1,0x20222c),bx(1.9,.08,.14,0x8a90a8,0,.2,0),bx(.14,.08,1.9,0x8a90a8,0,.2,0),bx(.3,.15,.3,0xff2bd6,0,-.2,0));
-  const marker=new THREE.Mesh(spG,lw);marker.position.y=-9.18;g.add(marker);const laserBall=new THREE.Mesh(bg(.12,9,.12),lw);laserBall.position.y=-4.8;g.add(laserBall);return g;
- };
- const makeBomb=row=>{
-  const g=new THREE.Group(),ball=new THREE.Mesh(bmG,mc(0x15161c)),ring=new THREE.Mesh(spG,lw);ring.position.y=.13-(Number(row.y)||0);g.add(ball,ring);return g;
- };
- const makeProjectile=row=>row.phase==="beam"?new THREE.Mesh(stG,stM):new THREE.Mesh(sg,sm);
- const road=new THREE.Mesh(new THREE.PlaneGeometry(19.2,340),mats.road);road.rotation.x=-Math.PI/2;road.position.set(0,-.06,-150);scene.add(road);disposables.push(road.geometry);
- for(const x of [-9.1,-1.8,1.8,9.1]){const line=new THREE.Mesh(boxGeo,mats.line);line.scale.set(.06,.025,340);line.position.set(x,.01,-150);scene.add(line);}
+ const roadTex=cv(128,256,(g,w,h)=>{g.fillStyle="#262b3a";g.fillRect(0,0,w,h);g.fillStyle="#1d2130";g.fillRect(0,0,w*.07,h);g.fillRect(w*.93,0,w*.07,h);g.fillStyle="#e8ecf4";g.fillRect(w*.09,0,3,h);g.fillRect(w*.91,0,3,h);g.fillStyle="#f7d774";[.21,.417,.625,.833].forEach(x=>{for(let y=0;y<h;y+=64)g.fillRect(w*x-2,y,4,34)})});
+ roadTex.wrapT=THREE.RepeatWrapping;roadTex.repeat.set(1,18);
+ const roadGeo=new THREE.PlaneGeometry(19.2,340),roadMat=new THREE.MeshBasicMaterial({map:roadTex});
+ const road=new THREE.Mesh(roadGeo,roadMat);road.rotation.x=-PI/2;road.position.z=-150;scene.add(road);
+ disposables.push(roadGeo,roadMat,roadTex);
+ const pal=[0x39415e,0x2e3550,0x444e70,0x323a56];
+ const blds=[];for(let i=0;i<26;i++){const s=i%2?1:-1,hgt=4+R()*9;const b=bx(3+R()*3,hgt,4,pal[i%4],s*(12.5+R()*7),hgt/2,-8-i*13);b.castShadow=false;b.receiveShadow=false;scene.add(b);blds.push(b);}
  const rig=new THREE.Group();scene.add(rig);
- const pair=window.BobikBuildFavoriteModels(frame.ci||0,frame.vi||0),unit=new THREE.Group();unit.add(pair.vehicle,pair.character);unit.scale.setScalar(.8);rig.add(unit);
+ const pair=window.BobikBuildFavoriteModels(frame.ci||0,frame.vi||0);
+ // v1.9.8: in-game merge — vehicle and character as siblings with the setV() sink,
+ // wrapped in one uniformly scaled unit so the composition matches the game exactly.
+ const unit=new THREE.Group();unit.add(pair.vehicle,pair.character);unit.scale.setScalar(.8);
+ rig.add(unit);
  const wheels=[];pair.vehicle.traverse(o=>{if(o.isMesh&&o.geometry&&o.geometry.type==="CylinderGeometry")wheels.push(o)});
- const flameGeo=new THREE.ConeGeometry(.3,1.2,12),flameMat=new THREE.MeshBasicMaterial({color:0x59c4ff,transparent:true,opacity:.8});disposables.push(flameGeo,flameMat);
- const flame=new THREE.Mesh(flameGeo,flameMat);flame.rotation.x=Math.PI/2;flame.position.set(0,.6,2.1);flame.visible=false;rig.add(flame);
- const hudDist=host.querySelector(".alb-dist"),hudSpeed=host.querySelector(".alb-speed"),hudLives=host.querySelector(".alb-lives"),barFill=host.querySelector(".alb-bar i"),modeEl=host.querySelector(".alb-mode"),flash=host.querySelector(".alb-flash"),statusEl=host.querySelector(".alb-status"),countEl=host.querySelector(".alb-object-count");
- const st={lane:Number(frame.x)||0,py:Number(frame.y)||0,sp:Number(frame.sp)||0,dist:Number(frame.dist)||0,g:Number(frame.g??16),ef:"",cr:0};
+ const police=[0,1,2].map(()=>{const c=mkCar(0x1c2a5e,1);c.rotation.y=PI;scene.add(c);return c});
+ const flameGeo=new THREE.ConeGeometry(.3,1.2,12),flameMat=new THREE.MeshBasicMaterial({color:0x59c4ff,transparent:true,opacity:.8});
+ const flame=new THREE.Mesh(flameGeo,flameMat);flame.rotation.x=PI/2;flame.position.set(0,.6,2.1);flame.visible=false;rig.add(flame);
+ disposables.push(flameGeo,flameMat);
+ const st={lane:frame.x||0,sp:frame.sp||0,dist:frame.dist||0,g:frame.g==null?16:frame.g,ef:"",cr:0};
+ const hudDist=host.querySelector(".alb-dist"),hudSpeed=host.querySelector(".alb-speed"),hudLives=host.querySelector(".alb-lives"),barFill=host.querySelector(".alb-bar i"),modeEl=host.querySelector(".alb-mode"),flash=host.querySelector(".alb-flash"),statusEl=host.querySelector(".alb-status");
+ modeEl.textContent=["Обычный","Три жизни","Хардкор","Кошмар"][frame.m|0]||"";
  let cw=0,chh=0,livesShown=-1,lastMode=-1,lastT=performance.now();
  const resize=()=>{const w=stage.clientWidth||320,h=stage.clientHeight||200;if(w===cw&&h===chh)return;cw=w;chh=h;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();};
- const entities=new Map();
- const addEntity=(key,kind,row)=>{
-  let object;
-  if(kind==="obstacle")object=makeObstacle(row);
-  else if(kind==="traffic")object=makeCar(Number(row.c)||0xe4e8f0,true);
-  else if(kind==="drone")object=makeDrone();
-  else if(kind==="bomb")object=makeBomb(row);
-  else object=makeProjectile(row);
-  object.userData.kind=kind;scene.add(object);entities.set(key,object);return object;
- };
- const syncEntities=f=>{
-  const alive=new Set();
-  const sync=(rows,kind,prefix)=>{(Array.isArray(rows)?rows:[]).forEach(row=>{
-   const key=prefix+String(row.id??"x"),obj=entities.get(key)||addEntity(key,kind,row);alive.add(key);
-   obj.position.set(Number(row.x)||0,Number(row.y)||0,Number(row.z)||0);
-   obj.rotation.set(Number(row.rx)||0,Number(row.ry)||0,Number(row.rz)||0);
-   if(kind==="obstacle"&&row.hit){obj.scale.setScalar(row.hit===1?.88:1);}
-   if(kind==="drone"){obj.rotation.y=Number(row.ry)||0;}
-   if(kind==="bomb"&&row.exploded){obj.scale.setScalar(1.5);}
-   if(kind==="projectile"&&row.phase==="beam"){obj.visible=true;}
-  });};
-  sync(f.obstacles,"obstacle","o:");sync(f.traffic,"traffic","t:");sync(f.drones,"drone","d:");sync(f.bombs,"bomb","b:");sync(f.projectiles,"projectile","p:");
-  for(const [key,obj] of entities){if(!alive.has(key)){scene.remove(obj);entities.delete(key);}}
-  countEl.textContent="Препятствия: "+(f.obstacles?.length||0)+" · дроны: "+(f.drones?.length||0)+" · бомбы: "+(f.bombs?.length||0)+" · снаряды: "+(f.projectiles?.length||0);
- };
  const tick=()=>{
-  spectateRaf=requestAnimationFrame(tick);const now=performance.now(),dt=Math.min(.05,(now-lastT)/1000);lastT=now;const f=spectateLastFrame;
-  if(f){st.lane+=(Number(f.x||0)-st.lane)*Math.min(1,dt*12);st.py+=(Number(f.y||0)-st.py)*Math.min(1,dt*12);st.sp+=(Number(f.sp||0)-st.sp)*Math.min(1,dt*10);st.dist=Number(f.dist)||0;st.g=Number(f.g??16);st.ef=f.ef||"";
-   if(f.cr&&!st.cr){flash.style.opacity=.6;}else if(!f.cr)flash.style.opacity=0;st.cr=f.cr;
-   rig.position.set(st.lane,st.py,0);rig.rotation.z=cl((Number(f.x||0)-st.lane)*-.06,-.3,.3);
+  spectateRaf=requestAnimationFrame(tick);
+  const now=performance.now(),dt=Math.min(.05,(now-lastT)/1000);lastT=now;
+  const f=spectateLastFrame;
+  if(f){
+   st.lane+=(f.x-st.lane)*Math.min(1,dt*7);
+   st.sp+=(f.sp-st.sp)*Math.min(1,dt*5);
+   st.dist+=st.sp/3.6*dt;
+   if(Math.abs(f.dist-st.dist)>60)st.dist=f.dist;
+   st.g=f.g;st.ef=f.ef||"";
+   if(f.cr&&!st.cr){flash.style.opacity=.55;setTimeout(()=>{flash.style.opacity=0},180);}
+   st.cr=f.cr;
+   rig.position.y=f.j?.5:0;
+   rig.rotation.z=cl((f.x-st.lane)*-.06,-.3,.3);
    if(f.m!==lastMode){lastMode=f.m;modeEl.textContent=["Обычный","Три жизни","Хардкор","Кошмар"][f.m|0]||"";}
-   if(f.lv!==livesShown){livesShown=f.lv;hudLives.textContent=(f.m===1||f.m===2||f.m===3)?"♥".repeat(cl(f.lv|0,0,3))||"💀":"";}
-   syncEntities(f);
+   if(f.lv!==livesShown){livesShown=f.lv;hudLives.textContent=(f.m===1||f.m===2)?"♥".repeat(cl(f.lv|0,0,3))||"💀":"";}
   }
-  wheels.forEach(w=>w.rotation.x-=st.sp/3.6*dt/.42);flame.visible=st.ef==="boost";if(flame.visible)flame.scale.setScalar(.8+Math.sin(now/40)*.25);
-  camera.position.set(st.lane*.28,6.2+st.py*.25,15.5);camera.lookAt(st.lane*.4,1.1,-10);
-  hudDist.textContent=Math.floor(st.dist).toLocaleString("ru-RU")+" м";hudSpeed.textContent=Math.round(st.sp)+" км/ч";barFill.style.width=(st.g/22*100).toFixed(1)+"%";
+  roadTex.offset.y-=st.sp/3.6*dt/(340/18);
+  rig.position.x=st.lane;
+  wheels.forEach(w=>w.rotation.x-=st.sp/3.6*dt/.42);
+  blds.forEach(b=>{b.position.z+=st.sp*dt;if(b.position.z>18){b.position.z-=26*13;b.position.x=(b.position.x>0?1:-1)*(12.5+R()*7);}});
+  const pz=5.5+(st.g/22)*3.5;
+  police.forEach((c,i)=>{c.position.z=pz+i*2.6;c.position.x+=((st.lane+[-3.6,0,3.6][i])-c.position.x)*Math.min(1,dt*2);});
+  flame.visible=st.ef==="boost";if(flame.visible)flame.scale.setScalar(.8+Math.sin(now/40)*.25);
+  camera.position.set(st.lane*.3,5.3,12.6);camera.lookAt(st.lane*.45,1.5,-14);
+  hudDist.textContent=Math.floor(st.dist).toLocaleString("ru-RU")+" м";
+  hudSpeed.textContent=Math.round(st.sp)+" км/ч";
+  barFill.style.width=(st.g/22*100).toFixed(1)+"%";
   resize();renderer.render(scene,camera);
  };
- modeEl.textContent=["Обычный","Три жизни","Хардкор","Кошмар"][frame.m|0]||"";
- spectateScene={scene,camera,renderer,status:statusEl,disposables,entities};syncEntities(frame);tick();
+ tick();
+ spectateScene={scene,camera,renderer,status:statusEl,disposables};
 }
 async function adminRefreshWatch(){
- if(!adminWatchTarget||E("admin").classList.contains("hide")||adminWatchBusy)return;
- if(Date.now()-adminWatchLastFrameAt<850)return;
- const target=adminWatchTarget,generation=adminWatchGeneration;
- adminWatchBusy=true;
+ if(!adminWatchTarget||E("admin").classList.contains("hide"))return;
+ if(spectateScene&&Date.now()-adminWatchLastFrameAt<2500)return;
  try{
-  const d=await adminRequest({action:"spectate",user_id:target});
-  if(!adminWatchTarget||adminWatchTarget!==target||generation!==adminWatchGeneration)return;
+  const d=await adminRequest({action:"spectate",user_id:adminWatchTarget});
+  if(!adminWatchTarget)return;
   const running=!!d.is_running&&!d.stale;
-  if(running&&d.live_frame&&typeof d.live_frame==="object"){
-   onSpectateFrame({...d.live_frame,u:adminWatchTarget,src:"rest"});
+  if(running){
+   // v1.9.8: the spectate snapshot itself becomes a frame — the same 3D broadcast scene
+   // is fed from REST (~0.7 s) whenever the Realtime channel is unavailable, so the
+   // multi-second telemetry-card delay is gone.
+   onSpectateFrame({u:adminWatchTarget,src:"rest",m:(d.mode==null?0:Number(d.mode)|0),
+    x:cl(Number(d.lane_x)||0,-8.4,8.4),dist:Math.max(0,Number(d.distance_m)||0),
+    sp:Math.max(0,Math.round(Number(d.speed_kmh)||0)),g:cl(Math.round((Number(d.gap_ratio)||0)*22),0,22),
+    lv:cl(Number(d.lives)||0,0,3),ci:Number(d.character_id)||0,vi:Number(d.vehicle_id)||0,
+    ef:d.active_control==='boost'?'boost':d.active_control==='slow'?'slow':'',cr:0,j:0,ts:Date.now()});
   }else{
    if(spectateScene)disposeSpectateScene();
    if(!spectateScene)adminWatchRender(d);
   }
- }catch(e){const box=E("adminLiveView");if(box&&!spectateScene&&adminWatchTarget===target&&generation===adminWatchGeneration)box.innerHTML='<p class="news-state">Не удалось получить данные: '+esc(e.message)+'</p>';}finally{adminWatchBusy=false;}
+ }catch(e){const box=E("adminLiveView");if(box&&!spectateScene&&adminWatchTarget)box.innerHTML='<p class="news-state">Не удалось получить данные: '+esc(e.message)+'</p>';}
 }
-/* Compact state card while no current run frame is available. */
+/* Compact fallback while no broadcast frames arrive (player idle / tab hidden / old client). */
 function adminWatchRender(d){
  if(spectateScene)return; // never clobber a live broadcast stage
  const box=E("adminLiveView");if(!box)return;
@@ -2988,29 +2835,47 @@ function adminWatchRender(d){
    '<div><small>Эффект админа</small><b>'+esc(d.active_control&&d.active_control!=='none'?({'slow':'замедление','boost':'ускорение','manual':'ручная скорость','bobik':'Бобик'}[d.active_control]||d.active_control):'нет')+'</b></div>'+
    '<div><small>Обновлено</small><b>'+(d.seen_at?new Date(d.seen_at).toLocaleTimeString('ru-RU'):'—')+'</b></div>'+
   '</div>'+
-  '<small class="admin-live-note">Состояние обновляется снимками примерно раз в секунду. Передаются игровые данные; запись экрана и звука не ведётся.</small>';
+  '<small class="admin-live-note">Прямая трансляция ещё не идёт: игрок не в забеге, свернул вкладку или клиент старой версии. Как только игрок начнёт забег — здесь появится живая картинка.</small>';
 }
 window.BobikAdminLive={
  start(target){
-  adminWatchTarget=target;adminWatchGeneration++;adminWatchLastFrameAt=0;spectateFrameCount=0;
-  adminWatchBusy=false;disposeSpectateScene();
+  adminWatchTarget=target;adminWatchLastFrameAt=0;spectateFrameCount=0;
+  if(spectateViewChannel&&cloud){try{cloud.removeChannel(spectateViewChannel)}catch(_){}}
+  spectateViewChannel=null;disposeSpectateScene();
+  if(cloud){try{
+   spectateViewChannel=cloud.channel("bobik-live-round",{config:{broadcast:{self:false,ack:false}}});
+   spectateViewChannel.on("broadcast",{event:"frame"},msg=>{const p=msg&&msg.payload;if(p&&p.u===target)onSpectateFrame(p);});
+   spectateViewChannel.subscribe(status=>{
+    const el=document.querySelector("#adminLiveView .alb-status");
+    if(!el)return;
+    if(status==="SUBSCRIBED"&&!spectateFrameCount)el.textContent="Канал подключён — жду кадры от игрока…";
+    if(status==="CHANNEL_ERROR"||status==="TIMED_OUT")el.textContent="Канал недоступен — показываю телеметрию.";
+   });
+  }catch(e){console.warn("Bobik spectate view:",e.message||e)}}
   const a=E("adminLiveActions");if(a)a.classList.remove("hide");
   if(adminWatchTimer)clearInterval(adminWatchTimer);
   adminRefreshWatch();
-  adminWatchTimer=setInterval(adminRefreshWatch,1000);
+  adminWatchTimer=setInterval(()=>{
+   if(!adminWatchTarget)return;
+   // Broadcast died (player quit / tab hidden): drop the frozen stage, show the status card.
+   if(Date.now()-adminWatchLastFrameAt>4500&&spectateScene)disposeSpectateScene();
+   // Realtime quiet for 2.5 s → poll REST snapshots; they feed the same 3D scene.
+   if(!spectateViewChannel||Date.now()-adminWatchLastFrameAt>2500)adminRefreshWatch();
+  },700);
  },
  stop(){
-  adminWatchTarget=null;adminWatchGeneration++;
+  adminWatchTarget=null;
   if(adminWatchTimer){clearInterval(adminWatchTimer);adminWatchTimer=null;}
-  adminWatchBusy=false;
+  if(spectateViewChannel&&cloud){try{cloud.removeChannel(spectateViewChannel)}catch(_){}}
+  spectateViewChannel=null;
   disposeSpectateScene();
-  const host=E("adminLiveView");if(host)host.innerHTML='<p class="news-state">Наблюдение остановлено.</p>';
+  const host=E("adminLiveView");if(host)host.innerHTML='<p class="news-state">Трансляция остановлена.</p>';
   const a=E("adminLiveActions");if(a)a.classList.add("hide");
  },
  feed(frame){if(adminWatchTarget&&frame&&frame.u===adminWatchTarget)onSpectateFrame(frame);},
  isActive:()=>!!adminWatchTarget
 };
-E("adminWatchStart").onclick=()=>{const t=E("adminControlTarget").value;if(!t)return toast('Выбери игрока');window.BobikAdminLive.start(t);toast('Подключаюсь к наблюдению…');};
+E("adminWatchStart").onclick=()=>{const t=E("adminControlTarget").value;if(!t)return toast('Выбери игрока');window.BobikAdminLive.start(t);toast('Подключаюсь к прямой трансляции…');};
 E("adminWatchStop").onclick=()=>{window.BobikAdminLive.stop();};
 E("adminLiveActions").addEventListener('click',async e=>{
  const btn=e.target.closest('[data-live-act]');if(!btn||!adminWatchTarget)return;
@@ -3077,7 +2942,7 @@ E("redeemCode").onclick=async()=>{
 D.body.insertAdjacentHTML("beforeend",'<button id="bk" class="hide" data-go="menu" aria-label="Назад">‹</button><button id="pz" class="hide" aria-label="Пауза">⏸</button><div id="pm" class="hide"><div class="pp"><h2>Пауза</h2><p id="ps"></p><button class="b" id="pr">▶ Продолжить</button><button class="b g" id="pq">🔄 Заново</button><button class="b g" id="px">🏠 В меню</button></div></div><div id="cdn" class="hide"></div>');
 window.sh2=id=>{if(id==="prof")E("pedit").classList.add("hide");E("bk").classList.toggle("hide",!["set","mode","shop","prof","log","leaders","codes","admin","rewards"].includes(id));E("pz").classList.toggle("hide",id!=="play");};
 let rsm=0;
-const pause=()=>{if(S!=="play"||window.PZ)return;window.PZ=1;E("ps").textContent="🏁 "+(dist|0)+" м · ● +"+(rc|0)+" · 🏆 "+cfg.r[cfg.m]+" м";E("pm").classList.remove("hide");},
+const pause=()=>{if(S!=="play"||window.PZ)return;window.PZ=1;E("ps").textContent="🏁 "+(dist|0)+" м · 🪙 +"+(rc|0)+" · 🏆 "+cfg.r[cfg.m]+" м";E("pm").classList.remove("hide");},
 resume=()=>{if(rsm)return;rsm=1;E("pm").classList.add("hide");let c=3;const n=E("cdn");n.classList.remove("hide");const t=()=>{if(c>0){n.textContent=c--;setTimeout(t,700);}else{n.classList.add("hide");window.PZ=0;rsm=0;}};t();},
 hp=()=>{E("pm").classList.add("hide");window.PZ=0;};
 E("pz").onclick=pause;E("pr").onclick=resume;
@@ -3086,7 +2951,7 @@ E("pz").onclick=pause;E("pr").onclick=resume;
 E("pq").onclick=async()=>{hp();S="over";await start();};
 E("px").onclick=()=>{hp();end();S="menu";reset();show("menu");ui();};
 ["pz","pm","cdn"].forEach(i=>["pointerdown","pointermove"].forEach(t=>E(i).addEventListener(t,e=>e.stopPropagation())));
-addEventListener("keydown",e=>{if(e.code==="Escape"||e.code===keyBindings.pause){E("pm").classList.contains("hide")?pause():resume();}});
+addEventListener("keydown",e=>{if(e.code==="Escape"||e.code==="KeyP"){E("pm").classList.contains("hide")?pause():resume();}});
 D.addEventListener("visibilitychange",()=>{if(D.hidden)pause();});
 
 /* Cloud-save backup on close + periodic save while playing. */
@@ -3264,7 +3129,7 @@ const TS=[["👆","Управление","Води пальцем влево и 
 ["📦","Препятствия","Объезжай ящики, машины и шлагбаумы. Оранжевая рампа: разгонись, взлети и перелети препятствие."],
 ["⚡","Плашки на дороге","Зелёные стрелки — ускорение, коричневая плашка — замедление. Синяя плашка со стрелкой по кругу — регулятор: возвращает скорость, которая была до замедления, и помогает не попасться. Лови зелёные и синие, обходи коричневые."],
 ["🚀","Ракеты, дроны, бомбы","Красная полоса на дороге — сейчас оттуда выстрелят: уйди с неё. С 1000 м появятся дроны с лазерами, с 3000 м — бомбы."],
-["●","Монеты и пауза","Монеты капают каждую секунду заезда — трать их в магазине. Кнопка ⏸ вверху ставит игру на паузу."]];
+["🪙","Монеты и пауза","Монеты капают каждую секунду заезда — трать их в магазине. Кнопка ⏸ вверху ставит игру на паузу."]];
 let ti=0,tcb=null;
 D.body.insertAdjacentHTML("beforeend",'<div id="xdc"><div class="dw"><div class="di">⚠️</div><h2>Предупреждение</h2><p>Эта игра не связана с реальными людьми. Все совпадения — случайность.</p><p>Все герои, имена и события здесь вымышлены и придуманы только для развлечения. Игра не призывает нарушать правила дорожного движения и убегать от полиции — в жизни так делать нельзя.</p><p>Играй в хорошем настроении, а если устали глаза или пальцы — сделай небольшой перерыв.</p></div><button class="b" id="xdk">Понятно, играть</button></div><div id="xz" class="hide"><div class="pp"><div id="xe"></div><h2 id="xh"></h2><p id="xp"></p><div id="xd"></div><button class="b" id="xn"></button><button class="b g" id="xb">Пропустить</button></div></div>');
 function trd(){const s=TS[ti];E("xe").textContent=s[0];E("xh").textContent=s[1];E("xp").textContent=s[2];E("xd").innerHTML=TS.map((_,i)=>'<i class="'+(i==ti?"on":"")+'"></i>').join("");E("xn").textContent=ti==TS.length-1?"Поехали!":"Дальше"}
@@ -3447,12 +3312,12 @@ function attemptHunt(distance,result,mode){
 }
 function setActiveHunt(row){if(!row)return;const value={id:row.hunt_id||row.id||'global',title:row.title||'БЕГИ',icon:row.icon||'👁️',objective:row.objective||'Проедь 3000 м в режиме Кошмара',sequence_index:Number(row.sequence_index)||1,target_distance:Number(row.target_distance)||3000,difficulty:Number(row.difficulty)||2,difficulty_stars:Number(row.difficulty_stars)||8,mode:Number(row.mode??3),hold_hours:Number(row.hold_hours)||5,is_completed:!!row.is_completed,created_at:row.created_at||null};cfg.activeHunt=value;cfg.activeHunts={global:value};delete cfg.activeNormalHunt;save();renderHunt();}
 function setActiveHunts(rows){const list=Array.isArray(rows)?rows:[];const row=list.find(r=>Number(r.id)===1)||list[0];if(row)setActiveHunt(row);else{cfg.activeHunts={global:cfg.activeHunt};delete cfg.activeNormalHunt;save();}}
-function renderMenuProgress(){const p=levelInfo(cfg.xp);const level=E('menuLevel');if(!level)return;level.textContent='⭐ УРОВЕНЬ '+p.level.toLocaleString('ru-RU');E('menuXpText').textContent=p.level===MAX_LEVEL?'МАКСИМАЛЬНЫЙ УРОВЕНЬ':p.into.toLocaleString('ru-RU')+' / '+p.needed.toLocaleString('ru-RU')+' XP';E('menuXpFill').style.width=p.percent+'%';E('menuXpPercent').textContent=p.level===MAX_LEVEL?'MAX':Math.floor(p.percent)+'%';if(E('vr'))E('vr').innerHTML='v1.9.5 · Билд 40<br>⭐ Ур. '+p.level+' · ● '+Math.floor(cfg.c||0)+' · 🏆 '+Math.max(...(cfg.r||[0]))+' м';}
+function renderMenuProgress(){const p=levelInfo(cfg.xp);const level=E('menuLevel');if(!level)return;level.textContent='⭐ УРОВЕНЬ '+p.level.toLocaleString('ru-RU');E('menuXpText').textContent=p.level===MAX_LEVEL?'МАКСИМАЛЬНЫЙ УРОВЕНЬ':p.into.toLocaleString('ru-RU')+' / '+p.needed.toLocaleString('ru-RU')+' XP';E('menuXpFill').style.width=p.percent+'%';E('menuXpPercent').textContent=p.level===MAX_LEVEL?'MAX':Math.floor(p.percent)+'%';if(E('vr'))E('vr').innerHTML='v1.9.5<br>⭐ Ур. '+p.level+' · 🪙 '+Math.floor(cfg.c||0)+' · 🏆 '+Math.max(...(cfg.r||[0]))+' м';}
 function rewardTabs(active){return '<div class="reward-tabs"><button data-rt="ach" class="'+(active==='ach'?'on':'')+'">🏅 Достижения</button><button data-rt="tasks" class="'+(active==='tasks'?'on':'')+'">📋 Задания</button><button data-rt="hunt" class="'+(active==='hunt'?'on':'')+'">🌍 Охота</button></div>';}
 let rewardTab='ach',huntSubtab='about';
 function renderAchievements(){const unlocked=new Set(cfg.ach);const list=achievementList.map(a=>{const got=unlocked.has(a.id);return '<article class="achievement-card '+(got?'unlocked':'locked')+' tier-'+a.tier+'"><div class="achievement-icon">'+a.icon+'</div><div class="achievement-info"><b>'+escapeHtml(a.name)+'</b><span>'+escapeHtml(a.desc)+'</span>'+starRating(a.stars)+'<small>'+(got?'Получено':'Заблокировано')+' · +'+a.xp.toLocaleString('ru-RU')+' XP · +'+a.xp.toLocaleString('ru-RU')+' монет</small></div><i class="achievement-state">'+(got?'✓':'🔒')+'</i></article>';}).join('');return '<div class="rewards-summary"><b>Открыто: '+unlocked.size+' / '+achievementList.length+'</b><span>За каждое достижение начисляются XP и равный монетный бонус</span></div><div class="achievement-list">'+list+'</div>'; }
 function starRating(value){const n=clamp(Math.round(Number(value)||1),1,10);return '<span class="difficulty-stars" aria-label="Сложность '+n+' из 10">'+('★'.repeat(n))+('<span class="star-empty">'+('☆'.repeat(10-n))+'</span>')+'</span>'; }
-function taskCard(t){const pct=clamp(t.progress/Math.max(1,t.target)*100,0,100),stars=t.stars||1,reward=Math.max(0,Number(t.reward)||0),xp=t.rewardType==='xp'?reward:reward,coins=t.rewardType==='coins'?reward:reward,ready=t.nextAt?new Date(t.nextAt).toLocaleTimeString('ru-RU',{hour:'2-digit',minute:'2-digit'}):'';return '<article class="quest-card '+(t.done?'done':'')+'"><div class="quest-top"><b>'+escapeHtml(t.title)+'</b>'+starRating(stars)+'</div><p>'+escapeHtml(t.desc)+'</p><div class="quest-progress"><i style="width:'+pct+'%"></i></div><div class="quest-bottom"><span>'+Math.floor(t.progress).toLocaleString('ru-RU')+' / '+t.target.toLocaleString('ru-RU')+'</span><b>⭐ +'+xp.toLocaleString('ru-RU')+' XP · ● +'+coins.toLocaleString('ru-RU')+' монет</b></div>'+(t.done?'<small class="quest-done">✓ Выполнено · '+(ready?'Новое задание после '+ready:'Новое задание через 6 часов')+'</small>':'')+'</article>'; }
+function taskCard(t){const pct=clamp(t.progress/Math.max(1,t.target)*100,0,100),stars=t.stars||1,reward=Math.max(0,Number(t.reward)||0),xp=t.rewardType==='xp'?reward:reward,coins=t.rewardType==='coins'?reward:reward,ready=t.nextAt?new Date(t.nextAt).toLocaleTimeString('ru-RU',{hour:'2-digit',minute:'2-digit'}):'';return '<article class="quest-card '+(t.done?'done':'')+'"><div class="quest-top"><b>'+escapeHtml(t.title)+'</b>'+starRating(stars)+'</div><p>'+escapeHtml(t.desc)+'</p><div class="quest-progress"><i style="width:'+pct+'%"></i></div><div class="quest-bottom"><span>'+Math.floor(t.progress).toLocaleString('ru-RU')+' / '+t.target.toLocaleString('ru-RU')+'</span><b>⭐ +'+xp.toLocaleString('ru-RU')+' XP · 🪙 +'+coins.toLocaleString('ru-RU')+' монет</b></div>'+(t.done?'<small class="quest-done">✓ Выполнено · '+(ready?'Новое задание после '+ready:'Новое задание через 6 часов')+'</small>':'')+'</article>'; }
 function renderTasks(){const q=cfg.questData;return '<div class="quest-section"><h3>☀️ Ежедневные задания <small>Обновляются каждый день</small></h3>'+q.daily.map(taskCard).join('')+'</div><div class="quest-section"><h3>🧩 Дополнительные задания <small>10 активных · новые появляются после выполнения</small></h3>'+q.regular.map(taskCard).join('')+'</div>';}
 async function renderHuntLeaderboard(){
  const box=E('huntContent');if(!box)return;box.innerHTML='<p class="reward-muted">Загружаю таблицу глобального задания…</p>';
@@ -3501,7 +3366,7 @@ function renderRewards(){ensureState();const nav=E('rewardNav'),content=E('rewar
   else if(huntSubtab==='board')renderHuntLeaderboard();
  }
 }
-function showRewards(tab){rewardTab=tab||'ach';if(!E('rewards'))initRewardsMarkup();show('rewards');try{renderRewards()}catch(err){console.error('Rewards rendering failed:',err);const box=E('rewardContent');if(box)box.innerHTML='<p class="reward-muted">Не удалось отобразить награды: '+escapeHtml(err.message||err)+'</p>';}if(rewardTab==='hunt'){try{window.BobikCloudApi?.refreshHunt?.().then(()=>{if(!E('rewards').classList.contains('hide')&&rewardTab==='hunt')renderRewards();}).catch(()=>{});}catch(_){}}}
+function showRewards(tab){rewardTab=tab||'ach';if(!E('rewards'))initRewardsMarkup();show('rewards');try{renderRewards()}catch(err){console.error('Rewards rendering failed:',err);const box=E('rewardContent');if(box)box.innerHTML='<p class="reward-muted">Не удалось отобразить награды: '+String(err.message||err)+'</p>';}if(rewardTab==='hunt'){try{window.BobikCloudApi?.refreshHunt?.().then(()=>{if(!E('rewards').classList.contains('hide')&&rewardTab==='hunt')renderRewards();}).catch(()=>{});}catch(_){}}}
 function bestLocalRuns(mode,diff){const rows=cfg.runHistory.filter(r=>Number(r.mode)===mode&&Number(r.difficulty)===diff).slice();const legacyDiff=Number(cfg.lr?.[mode]?.[diff])||0,legacyMode=Number(cfg.r?.[mode])||0;if(legacyDiff>0&&!rows.some(r=>Number(r.distance)===legacyDiff))rows.push({distance:legacyDiff,created_at:null,legacy:true});if(diff===0&&legacyMode>0&&!rows.some(r=>Number(r.distance)===legacyMode))rows.push({distance:legacyMode,created_at:null,legacy:true,legacyMode:true});return rows.sort((a,b)=>Number(b.distance)-Number(a.distance)).slice(0,10);}
 function recordSelector(prefix,mode,diff){const options=mode===3?'<button data-record-diff="2" data-prefix="'+prefix+'" class="on">Сложно</button>':DIFFS.map((n,i)=>'<button data-record-diff="'+i+'" data-prefix="'+prefix+'" class="'+(i===diff?'on':'')+'">'+n+'</button>').join('');return '<div class="profile-record-selector"><div class="profile-mode-switch"><button data-record-step="-1" data-prefix="'+prefix+'">‹</button><b id="'+prefix+'Mode">'+MODES[mode]+'</b><button data-record-step="1" data-prefix="'+prefix+'">›</button></div><div class="profile-diff-tabs">'+options+'</div></div>';}
 let ownMode=0,ownDiff=1,pubMode=0,pubDiff=1,publicProfileId=null;
@@ -3593,7 +3458,7 @@ try{
 }catch(initError){
  window.BobikProgressReady=false;
  console.error('Bobik progression initialization failed:',initError);
-  const box=E('rewardContent');if(box)box.innerHTML='<p class="reward-muted">Ошибка загрузки наград: '+escapeHtml(initError.message||initError)+'</p>';
+ const box=E('rewardContent');if(box)box.innerHTML='<p class="reward-muted">Ошибка загрузки наград: '+String(initError.message||initError)+'</p>';
 }
 })();</script>
 <script>if("serviceWorker" in navigator && location.protocol.startsWith("http")){window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js",{updateViaCache:"none"}).catch(console.warn));}</script></body></html>
