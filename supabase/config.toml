@@ -1,0 +1,15 @@
+project_id = "nrmfygckxovwkkhvsywe"
+
+[functions.admin-panel]
+verify_jwt = true
+
+[functions.account-gateway]
+verify_jwt = false
+
+# Password policy for new credentials; existing users and password hashes are not modified.
+[auth]
+password_min_length = 8
+password_requirements = "letters_digits"
+
+[functions.bobik-run-api]
+verify_jwt = true
